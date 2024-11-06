@@ -1,0 +1,38 @@
+<header class="fixed top-0 left-0 w-full bg-[#673AB7] text-white shadow-lg z-20">
+    <nav class="w-full mx-auto flex justify-between items-center p-4">
+        <a href="{{ url_for('home') }}" >
+            <div class="flex items-center">
+                <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="mr-3">
+                <span class="text-3xl font-semibold">HealthCare</span>
+            </div>
+        </a>
+
+
+
+        <div class="nav-links hidden lg:flex space-x-10 font-medium text-xl">
+            <a href="{{ url_for('rekomendasi') }}" class="hover:text-gray-300">Rekomendasi Pengobatan</a>
+            <a href="{{ url_for('artikel') }}" class="hover:text-gray-300">Artikel Penyakit</a>
+            <a href="{{ url_for('wawasan') }}" class="hover:text-gray-300">Wawasan & Tips</a>
+        </div>
+
+        <div class="lg:hidden flex items-center">
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
+        </div>
+    </nav>
+
+    <div class="mobile-menu hidden bg-[#673AB7] text-white space-y-4 py-4 font-medium ml-6 text-xl">
+        <hr>
+        <a href="#" class="block hover:text-gray-300">Rekomendasi Pengobatan</a>
+        <a href="#" class="block hover:text-gray-300">Artikel Penyakit</a>
+        <a href="#" class="block hover:text-gray-300">Wawasan & Tips</a>
+    </div>
+</header>
+
+<script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    function onToggleMenu(icon) {
+        icon.name = icon.name === 'menu' ? 'close' : 'menu';
+        mobileMenu.classList.toggle('hidden');
+    }
+</script>
