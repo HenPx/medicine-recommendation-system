@@ -1,0 +1,57 @@
+{% extends 'layouts/mainMenu.html' %}
+
+{% block content %}
+    <div class="p-6 pt-2 pb-2 space-y-4">
+        <!-- Sidebar with Search Bar -->
+        <div class="w-full md:w-1/4 mb-4 md:mb-0 md:ml-auto">
+            <form action="{{ url_for('artikel_penyakit') }}" method="GET" class="flex items-center">
+                <input 
+                    type="text" 
+                    name="pencarian" 
+                    placeholder="Cari obat" 
+                    class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                    value="{{ request.args.get('pencarian', '') }}"
+                />
+                <!-- Add hidden input to specify the section as 'medicines' -->
+                <input type="hidden" name="section" value="medicines">
+                <button type="submit" class="ml-2 p-2 rounded-lg bg-[#673AB7] text-white">
+                    <img src="{{ url_for('static', filename='images/svg/artikel-search.svg') }}" alt="search Logo">
+                </button>
+            </form>
+            
+            
+        </div>
+        <!-- Header Content -->
+        <div class="flex justify-between space-x-10">
+            {% if medicines %}
+                <div class=" space-y-4">
+                    <img src="{{ url_for('static', filename=medicines['image_path']) }}" alt="{{ medicines['medications']['name'] }}" class="w-[400px] h-auto mb-4">
+
+                    <h1 class="text-3xl font-semibold ">{{medicines.medications.name}}</h1>
+                    <p class=" text-justify">{{medicines.medications.description}}</p>
+                    
+                    <h2 class="text-xl font-semibold ">Ketersediaan</h2>
+                    <p class=" text-justify">{{medicines.medications.availability}}</p>
+                    
+                    <h2 class="text-xl font-semibold ">Efek Samping</h2>
+                    <p class=" text-justify">Efek samping dari obat {{medicines.medications.name}} antara lain:</p>
+                    
+                    <ul class="space-y-1 ">
+                        {% for effect in medicines.medications.side_effects %}
+                            <li class="flex items-center space-x-4">
+                                <span>{{ loop.index }}. {{ effect }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% else %}
+                <p>No articles found for</p>
+            {% endif %}
+
+            
+        </div>
+        <!-- Recommended Content -->
+        
+    </div>
+    
+{% endblock %}

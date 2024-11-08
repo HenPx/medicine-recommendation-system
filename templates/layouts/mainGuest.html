@@ -6,21 +6,27 @@
     <title>HealthCare</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/output-style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </head>
 <body>
-    <div class="flex flex-col min-h-screen font-['Poppins']">
+    <div class="flex flex-col min-h-screen font-['Poppins'] bg-[#FFFDE7]">
         <div class="mb-4">
             {% include 'layouts/navigation.html' %}
         </div>
-        <h1 class="mt-[100px]">MAIN GUEST PAGE</h1>
-    
+        <div class="mb-6">
+            {% include 'partials/header.html' %}
+        </div>
+       
         <!-- Main content area -->
-        {% block content %}
-        <!-- This will be replaced by the specific content of the page -->
-        
-        {% endblock %}
+        <div class=" mb-6">
+            {% block content %}
+            <!-- This will be replaced by the specific content of the page -->
+            
+            {% endblock %}
+         </div>
         <div class="mt-auto">
             {% include 'partials/footer.html' %}
         </div>

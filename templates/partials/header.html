@@ -1,0 +1,181 @@
+<div class="relative w-full h-[439px] overflow-hidden">
+    <div class="absolute inset-0 bg-[#B39DDB] opacity-50 z-10"></div>
+    
+    <!-- Slideshow images -->
+    <div class="w-full h-full">
+        <img src="{{ url_for('static', filename='images/svg/home-stetoskop.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image">
+        <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
+        <img src="{{ url_for('static', filename='images/svg/home-stetoskop.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
+    </div>
+
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center z-20">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Diagnosa Penyakit</h1>
+
+        <!-- Search bar -->
+        <div class="w-2/3 max-w-lg z-31">
+            <form id="symptom-form" action="{{ url_for('recommendation') }}" method="GET" class="flex flex-col space-y-4">
+                <div class="relative">
+                    <!-- Search bar -->
+                    <input 
+                        type="text" 
+                        id="search-bar" 
+                        placeholder="Select your symptoms" 
+                        class="w-full py-3 px-4 border border-purple-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                        autocomplete="off"
+                    />
+
+                    
+                    <!-- Suggestions list with scrollable feature beyond 3 items -->
+                    <div id="suggestions" class="hidden absolute top-full left-0 w-full max-h-36 bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-10 overflow-auto">
+                        <!-- Dynamically added suggestions will appear here -->
+                    </div>
+                    
+                </div>
+    
+                <!-- Selected symptoms container -->
+                <div id="selected-symptoms-container" class="flex flex-wrap gap-2 mt-2">
+                    <!-- Dynamically added selected symptoms will appear here -->
+                </div>
+    
+                <input type="hidden" name="symptoms" id="selected-symptoms" value="">
+    
+                <!-- Predict Disease button -->
+                <button type="submit" id="predict-btn" disabled class="w-full p-3 rounded-lg bg-gray-400 text-white font-bold transition-colors cursor-not-allowed">
+                    Predict Disease
+                </button>
+            </form>
+        </div>
+
+        <p class="mt-4 text-lg text-gray-800">Masukkan setidaknya 5 kata kunci untuk mendiagnosa penyakit anda.</p>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+        <span class="indicator h-3 w-3 rounded-full bg-white opacity-50 cursor-pointer" data-slide="0"></span>
+        <span class="indicator h-3 w-3 rounded-full bg-white opacity-50 cursor-pointer" data-slide="1"></span>
+        <span class="indicator h-3 w-3 rounded-full bg-white opacity-50 cursor-pointer" data-slide="2"></span>
+    </div>
+</div>
+
+
+<!-- JavaScript for Automatic Slideshow with Indicators -->
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow-image');
+    const indicators = document.querySelectorAll('.indicator');
+    const totalSlides = slides.length;
+    const intervalTime = 5000; // 5 detik
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.add('hidden'); 
+            indicators[i].classList.remove('bg-purple-600'); 
+            if (i === index) {
+                slide.classList.remove('hidden');
+                indicators[i].classList.add('bg-purple-600'); 
+            }
+        });
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides; 
+        showSlide(slideIndex);
+    }
+
+
+    showSlide(slideIndex);
+    setInterval(nextSlide, intervalTime);
+
+    indicators.forEach((indicator, idx) => {
+        indicator.addEventListener('click', () => {
+            slideIndex = idx;
+            showSlide(slideIndex);
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const symptomsList = {{ symptoms | tojson }};
+        const searchBar = document.getElementById('search-bar');
+        const suggestions = document.getElementById('suggestions');
+        const selectedSymptomsInput = document.getElementById('selected-symptoms');
+        const selectedSymptomsContainer = document.getElementById('selected-symptoms-container');
+        const predictBtn = document.getElementById('predict-btn');
+        const selectedSymptoms = new Set();
+        let availableSymptoms = [...symptomsList];  // Clone symptoms list to track unselected items
+
+        // Function to update selected symptoms display and button activation
+        function updateSelectedSymptoms() {
+            selectedSymptomsContainer.innerHTML = '';
+            selectedSymptoms.forEach(symptom => {
+                const symptomTag = document.createElement('span');
+                symptomTag.classList.add('px-3', 'py-1', 'rounded-lg', 'bg-red-500', 'text-white', 'flex', 'items-center', 'gap-2', 'cursor-pointer');
+                
+                const symptomText = document.createElement('span');
+                symptomText.textContent = symptom;
+
+                const removeIcon = document.createElement('span');
+                removeIcon.innerHTML = '&times;';
+                removeIcon.classList.add('text-white', 'font-bold', 'cursor-pointer');
+                removeIcon.addEventListener('click', () => {
+                    selectedSymptoms.delete(symptom);
+                    availableSymptoms.push(symptom);  // Re-add to available symptoms
+                    updateSelectedSymptoms();
+                });
+
+                symptomTag.appendChild(symptomText);
+                symptomTag.appendChild(removeIcon);
+                selectedSymptomsContainer.appendChild(symptomTag);
+            });
+
+            selectedSymptomsInput.value = Array.from(selectedSymptoms).join(',');
+
+            // Enable or disable the Predict Disease button based on selected symptoms count
+            if (selectedSymptoms.size >= 5) {
+                predictBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                predictBtn.classList.add('bg-[#673AB7]', 'hover:bg-purple-800', 'cursor-pointer');
+                predictBtn.disabled = false;
+            } else {
+                predictBtn.classList.remove('bg-[#673AB7]', 'hover:bg-purple-800', 'cursor-pointer');
+                predictBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+                predictBtn.disabled = true;
+            }
+        }
+
+        // Handle search bar input and display matching symptoms
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase();
+            const matches = availableSymptoms.filter(symptom => symptom.toLowerCase().includes(query));
+            suggestions.innerHTML = '';
+
+            // Populate suggestions list with matching symptoms, only showing 3 by default and scrolling for more
+            matches.slice(0, 3).forEach(symptom => {
+                const option = document.createElement('div');
+                option.textContent = symptom;
+                option.classList.add('px-4', 'py-2', 'cursor-pointer', 'hover:bg-purple-100');
+                option.addEventListener('click', () => {
+                    if (!selectedSymptoms.has(symptom)) {
+                        selectedSymptoms.add(symptom);
+                        availableSymptoms = availableSymptoms.filter(s => s !== symptom);  // Remove from available symptoms
+                        updateSelectedSymptoms();
+                    }
+                    searchBar.value = '';
+                    suggestions.innerHTML = '';
+                });
+                suggestions.appendChild(option);
+            });
+
+            // Make suggestions visible if there are matches and ensure scrolling for additional items
+            if (matches.length > 0) {
+                suggestions.classList.remove('hidden');
+            } else {
+                suggestions.classList.add('hidden');
+            }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!suggestions.contains(e.target) && e.target !== searchBar) {
+                suggestions.classList.add('hidden');
+            }
+        });
+    });
+</script>

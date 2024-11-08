@@ -1,7 +1,116 @@
 {% extends 'layouts/mainMenu.html' %}
 
 {% block content %}
-    <h1>ARTIKEL PAGE</h1>
-    <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="h-[78px] w-[78px] mr-3">
+
+<div class="flex justify-between items-center p-6 pt-0 pb-4 space-x-4">
+    <div class="flex space-x-4">
+        <button id="articleBtn" class="px-4 py-2 rounded-lg border border-[#673AB7] {% if section == 'articles' %}bg-[#673AB7] text-white{% else %}text-[#673AB7]{% endif %} font-semibold" onclick="showSection('articles')">
+            Artikel
+        </button>
+        <button id="medicineBtn" class="px-4 py-2 rounded-lg border border-[#673AB7] {% if section == 'medicines' %}bg-[#673AB7] text-white{% else %}text-[#673AB7]{% endif %} font-semibold" onclick="showSection('medicines')">
+            Obat
+        </button>
+    </div>
+
+    <div id="searchFormContainer">
+        <form id="articlesSearchForm" action="{{ url_for('artikel_penyakit') }}" method="GET" class="flex items-center" {% if section != 'articles' %}style="display: none;"{% endif %}>
+            <input 
+                type="text" 
+                name="search_query" 
+                placeholder="Cari artikel" 
+                class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                value="{{ search_query }}"
+            />
+            <input type="hidden" name="section" value="articles">
+            <button type="submit" class="ml-2 p-2 rounded-lg bg-[#673AB7] text-white">
+                <img src="{{ url_for('static', filename='images/svg/artikel-search.svg') }}" alt="search Logo">
+            </button>
+        </form>
+
+        <form id="medicinesSearchForm" action="{{ url_for('artikel_penyakit') }}" method="GET" class="flex items-center" {% if section != 'medicines' %}style="display: none;"{% endif %}>
+            <input 
+                type="text" 
+                name="pencarian" 
+                placeholder="Cari obat" 
+                class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                value="{{ pencarian }}"
+            />
+            <input type="hidden" name="section" value="medicines">
+            <button type="submit" class="ml-2 p-2 rounded-lg bg-[#673AB7] text-white">
+                <img src="{{ url_for('static', filename='images/svg/artikel-search.svg') }}" alt="search Logo">
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Article Content Section -->
+<div id="articlesSection" class="flex flex-col space-y-4 p-6 pt-0 pb-0" {% if section != 'articles' %}style="display: none;"{% endif %}>
+    {% if articles %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for article in articles %}
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
+                    <h2 class="text-xl font-semibold text-black mb-2">{{ article.title }}</h2>
+                    <p class="text-gray-700">
+                        {{ article.content.definition.split()[:15] | join(' ') }}{% if article.content.definition.split()|length > 15 %}...{% endif %}
+                    </p>
+                    <a href="{{ url_for('article', title=article.title) }}" 
+                       class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
+                        Selengkapnya →
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Artikel tentang "{{ search_query }}" tidak ditemukan.</p>
+    {% endif %}
+</div>
+
+<!-- Medicine Content Section -->
+<div id="medicinesSection" class="flex flex-col space-y-4 p-6 pt-0 pb-0" {% if section != 'medicines' %}style="display: none;"{% endif %}>
+    {% if medicines %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for medicine in medicines %}
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Obat</p>
+                    <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.medications.name }}</h2>
+                    <p class="text-gray-700">
+                        {{ medicine.medications.description.split()[:15] | join(' ') }}{% if medicine.medications.description.split()|length > 15 %}...{% endif %}
+                    </p>
+                    <a href="{{ url_for('medicine', name=medicine.medications.name) }}" 
+                       class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
+                        Selengkapnya →
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Obat tentang "{{ pencarian }}" tidak ditemukan.</p>
+    {% endif %}
+</div>
+
+<script>
+    function showSection(section) {
+        // Redirect to the same route with updated section
+        window.location.href = "{{ url_for('artikel_penyakit') }}" + "?section=" + section;
+    }
+
+    // Highlight the active button when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        const articleBtn = document.getElementById('articleBtn');
+        const medicineBtn = document.getElementById('medicineBtn');
+        const section = "{{ section }}";
+
+        if (section === 'articles') {
+            articleBtn.classList.add('bg-[#673AB7]', 'text-white');
+            medicineBtn.classList.remove('bg-[#673AB7]', 'text-white');
+            medicineBtn.classList.add('text-[#673AB7]');
+        } else if (section === 'medicines') {
+            medicineBtn.classList.add('bg-[#673AB7]', 'text-white');
+            articleBtn.classList.remove('bg-[#673AB7]', 'text-white');
+            articleBtn.classList.add('text-[#673AB7]');
+        }
+    });
+</script>
 
 {% endblock %}
