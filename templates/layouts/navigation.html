@@ -1,7 +1,7 @@
-<header class="fixed top-0 left-0 w-full bg-[#673AB7] text-white shadow-lg z-20">
-    <nav class="w-full mx-auto flex justify-between items-center p-4">
+<header class="fixed top-0 left-0 w-full bg-[#673AB7] text-white shadow-lg z-50 shadow-lg">
+    <nav class="w-full mx-auto flex justify-between items-center p-3">
         <a href="{{ url_for('home') }}" >
-            <div class="flex items-center">
+            <div class="flex items-center ">
                 <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="mr-3">
                 <span class="text-3xl font-semibold">HealthCare</span>
             </div>
@@ -11,8 +11,12 @@
 
         <div class="nav-links hidden lg:flex space-x-10 font-medium text-xl">
             <a href="{{ url_for('rekomendasi') }}" class="hover:text-gray-300">Rekomendasi Pengobatan</a>
-            <a href="{{ url_for('artikel') }}" class="hover:text-gray-300">Artikel Penyakit</a>
-            <a href="{{ url_for('wawasan') }}" class="hover:text-gray-300">Wawasan & Tips</a>
+            <a href="{{ url_for('artikel_penyakit') }}" class="hover:text-gray-300">Artikel Penyakit</a>
+            <a href="{{ url_for('wawasan') }}" 
+            class="hover:text-gray-300 border border-2 border-gray-300 rounded-lg px-3 transition duration-200 ease-in-out 
+                    hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 font-bold">
+                Chat Bot
+            </a>
         </div>
 
         <div class="lg:hidden flex items-center">
@@ -22,9 +26,14 @@
 
     <div class="mobile-menu hidden bg-[#673AB7] text-white space-y-4 py-4 font-medium ml-6 text-xl">
         <hr>
-        <a href="#" class="block hover:text-gray-300">Rekomendasi Pengobatan</a>
-        <a href="#" class="block hover:text-gray-300">Artikel Penyakit</a>
-        <a href="#" class="block hover:text-gray-300">Wawasan & Tips</a>
+        <a href="{{ url_for('rekomendasi') }}" class="block hover:text-gray-300">Rekomendasi Pengobatan</a>
+        <a href="{{ url_for('artikel_penyakit') }}" class="block hover:text-gray-300">Artikel Penyakit</a>
+        <a href="{{ url_for('wawasan') }}" 
+        class="inline-block hover:text-gray-300 border border-2 border-gray-300 rounded-lg px-3 py-1 transition duration-200 ease-in-out 
+                hover:bg-gray-200 hover:text-gray-900 hover:border-gray-200 font-bold">
+            Chat Bot
+        </a>
+
     </div>
 </header>
 
