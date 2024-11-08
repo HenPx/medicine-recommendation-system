@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/output-style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="flex flex-col min-h-screen font-['Poppins']">
+        <div class="mb-4">
+            {% include 'layouts/navigation.html' %}
+        </div>
+        <h1 class="mt-[100px]">MAIN GUEST PAGE</h1>
+    
+        <!-- Main content area -->
+        {% block content %}
+        <!-- This will be replaced by the specific content of the page -->
+        
+        {% endblock %}
+        <div class="mt-auto">
+            {% include 'partials/footer.html' %}
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<footer class="bg-[#B39DDB] text-white py-4 px-10 bottom-0 w-full mt-auto">
+    <div class="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-8 ">
+        
+        <!-- Left Column: About Section -->
+        <div class="">
+            <h2 class="text-3xl font-semibold">HealthCare</h2>
+            <p class="mt-4 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+            <p class="mt-4 text-lg font-semibold">
+                Panduan Informasi
+            </p>
+            <div class="mt-2 space-y-2 text-sm font-medium">
+                <a href="#" class="block hover:underline">Bantuan</a>
+                <a href="#" class="block hover:underline">Kebijakan Privasi</a>
+                <a href="#" class="block hover:underline">Syarat & Ketentuan</a>
+                <a href="#" class="block hover:underline">FAQs</a>
+            </div>
+            <p class="mt-6 text-xs font-semibold">&copy; Nama Saya, Hak Cipta Dilindungi</p>
+        </div>
+
+        <!-- Middle Column: Contact Section -->
+        <div class="">
+            <h2 class="text-xl font-semibold">Kontak Kami</h2>
+            <p class="mt-4 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <div class="mt-4 space-y-2">
+
+                <!-- Alamat -->
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-home.svg') }}" alt="footer-home" class=" mr-3">
+                    <p><strong>Alamat:</strong></p>
+                </div>
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-divider.svg') }}" alt="footer-divider" class="ml-3 mr-3">
+                    <p class="text-sm ml-3">Jl. Raya Munggu-Kapal</p>
+                </div>
+                <!-- Email -->
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-mail.svg') }}" alt="footer-mail" class="ml-[2px] mr-3">
+                    <p><strong>Email:</strong></p>
+                </div>
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-divider.svg') }}" alt="footer-divider" class="ml-3 mr-3">
+                    <p class="text-sm ml-3">namasaya@yahoo.com</p>
+                </div>
+                <!-- Hotline -->
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-phone.svg') }}" alt="footer-phone" class=" mr-3">
+                    <p><strong>Hotline:</strong></p>
+                </div>
+                <div class="flex">
+                    <img src="{{ url_for('static', filename='images/svg/footer-divider.svg') }}" alt="footer-divider" class="ml-3 mr-3">
+                    <p class="text-sm ml-3"> +62 822 2982 9482</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Newsletter and Social Links -->
+        <div class="">
+            <h2 class="text-xl font-semibold">NEWSLETTER</h2>
+            <p class="mt-4 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <p class="mt-4 text-lg font-semibold">
+                IKUTI KAMI DI
+            </p>
+            <div class="mt-4 flex space-x-2">
+                <img src="{{ url_for('static', filename='images/svg/footer-fb.svg') }}" alt="footer-fb" class="">
+                <img src="{{ url_for('static', filename='images/svg/footer-twt.svg') }}" alt="footer-twt" class="">
+                <img src="{{ url_for('static', filename='images/svg/footer-ig.svg') }}" alt="footer-ig" class="">
+                <img src="{{ url_for('static', filename='images/svg/footer-wa.svg') }}" alt="footer-wa" class="">
+            </div>
+        </div>
+    </div>
+    <div class="mx-4 mt-2 space-y-2">
+        <hr>
+        <p class="ml-4 text-xs ">HealthCare</p>
+    </div>
+
+</footer>
