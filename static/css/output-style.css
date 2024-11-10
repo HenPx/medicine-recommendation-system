@@ -766,10 +766,6 @@ video {
   height: 439px;
 }
 
-.h-\[78px\] {
-  height: 78px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -800,10 +796,6 @@ video {
 
 .w-\[400px\] {
   width: 400px;
-}
-
-.w-\[78px\] {
-  width: 78px;
 }
 
 .w-fit {

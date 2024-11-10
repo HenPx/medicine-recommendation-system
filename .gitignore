@@ -1,4 +1,6 @@
 # Ignore virtual environment folder
 .venv/
+myvenv/
+__pycache__/
 
 node_modules/

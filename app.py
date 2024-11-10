@@ -1,4 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, session
+import requests
+import os
+import torch
 import json
 import random
 import pickle
@@ -7,7 +10,57 @@ import numpy as np
 
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
+# chatbot handler
+# Hugging Face API setup
+API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
+HUGGINGFACE_API_KEY = "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"
+
+PRIOR_PROMPT = (
+    "You are a friendly chatbot acting as medical consultation assistant. Answer the following questions with detailed, relevant advice. "
+    "Make sure to keep answers accessible and informative for the user. "
+    "Don't make up answer, if you don't know or not sure, just say so and recommend the user to seek professional help. "
+    "If i greet you without asking question, just greet back without generating anything"
+)
+
+def query_huggingface(user_input):
+    headers = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"}
+    # Include the prior prompt and ensure all tokens are generated without truncation
+    payload = {
+        "inputs": f"{PRIOR_PROMPT}\n\nUser: {user_input}\n\nAssistant:",
+        "parameters": {
+            "max_new_tokens": 1024,  # Increase token limit to prevent truncation
+            "return_full_text": False  # Only return the generated assistant response
+        }
+    }
+    response = requests.post(API_URL, headers=headers, json=payload)
+
+    # Check if the response was successful
+    if response.status_code == 200:
+        try:
+            result = response.json()
+            if isinstance(result, list) and len(result) > 0:
+                return result[0].get("generated_text", "Sorry, I couldn't process that.")
+            else:
+                return "Sorry, I couldn't process that."
+        except requests.exceptions.JSONDecodeError:
+            print("Error: Response content is not JSON:", response.text)
+            return "Unable to parse response from Hugging Face API"
+    else:
+        # Log error details if the request was unsuccessful
+        print(f"Error {response.status_code}: {response.text}")
+        return f"Request failed with status code {response.status_code}"
+
+@app.route('/chatbot-konsultasi', methods=['GET', 'POST'])
+def chat():
+    if request.method == 'POST':
+        user_input = request.json.get("message")
+        bot_response = query_huggingface(user_input)
+        return jsonify({"response": bot_response})
+    else:
+        return render_template('pages/chatbot-konsultasi.html')
+    
 # Load article
 def load_article():
     with open('menu2.json', 'r', encoding='utf-8') as file:
