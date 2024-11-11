@@ -15,7 +15,7 @@ app.secret_key = os.urandom(24)
 # chatbot handler
 # Hugging Face API setup
 API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
-HUGGINGFACE_API_KEY = "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"
+HUGGINGFACE_API_KEY = "YOUR_HUGGINGFACE_API_KEY"
 
 PRIOR_PROMPT = (
     "You are a friendly chatbot acting as medical consultation assistant. Answer the following questions with detailed, relevant advice. "
