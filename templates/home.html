@@ -1,9 +1,9 @@
 {% extends 'layouts/mainGuest.html' %}
 
-{% block content %} 
+{% block content %}
 <div class="space-y-6">
     <!-- Slideshow Section with Transparent Background -->
-    <div class=" p-6 flex justify-center border-[#673AB7] rounded-none md:rounded-xl shadow-lg w-fit mx-auto border">
+    <div class="p-6 flex justify-center border-[#673AB7] rounded-none md:rounded-xl shadow-lg w-fit mx-auto border">
         <div class="bg-[#673AB7] flex flex-col items-center p-4 pl-6 pr-6 rounded-xl shadow-lg">
             <!-- Teks Informasi -->
             <div class="flex-1 text-white text-center">
@@ -24,7 +24,7 @@
 
     <div class="flex flex-col md:flex-row py-4 px-16 md:space-x-16">
         <div class="space-y-4 text-justify">
-            <h1  class="text-3xl font-semibold ">Aplikasi Kami</h1>
+            <h1 class="text-3xl font-semibold">Aplikasi Kami</h1>
             <div class="text-md space-y-4">
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ante dapibus fermentum; et faucibus ex quam. 
                     Finibus nam facilisis nunc nisi non placerat et posuere. Nulla quam vestibulum conubia ad convallis! 
@@ -46,16 +46,15 @@
                     Quisque primis blandit nibh vestibulum est adipiscing donec platea. Imperdiet vitae fames sollicitudin non nulla lectus pretium taciti.
                      Finibus interdum feugiat ullamcorper ipsum porttitor mattis lacus. Velit suspendisse fames netus risus, condimentum per facilisi. 
                     Massa morbi parturient elementum nibh tempor habitasse. Facilisi sit laoreet ut nisi massa vehicula nullam nisl id.</p>
-                
             </div>
-            
         </div>
-        <!-- articlesed Artikel -->
+
+        <!-- Artikel Kesehatan -->
         {% if articles %}
         <div class="mt-2">
             <h1 class="text-2xl font-semibold mb-6">Artikel Kesehatan</h1>
             
-            <!-- Menggunakan grid 2 kolom -->
+            <!-- Grid 2 kolom -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {% for article in articles %}
                 <div class="bg-white p-6 rounded-[14px] border-2 border-[#B39DDB] shadow-md w-full">
@@ -67,7 +66,7 @@
                     </p>
                     
                     <!-- Seluruh div sebagai link -->
-                    <a href="{{ url_for('article', title=article.title) }}" 
+                    <a href="{{ url_for('article', slug=article.slug) }}" 
                     class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
                         Selengkapnya →
                     </a>
@@ -75,13 +74,9 @@
                 {% endfor %}
             </div>
         </div>
-    {% else %}
+        {% else %}
         <p>Tidak ada artikel ditemukan</p>
-    {% endif %}
-
+        {% endif %}
     </div>
 </div>
-
-
-
 {% endblock %}

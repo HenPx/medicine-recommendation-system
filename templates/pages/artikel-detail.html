@@ -16,20 +16,20 @@
                     <img src="{{ url_for('static', filename='images/svg/artikel-search.svg') }}" alt="search Logo" >
                 </button>
             </form>
-            
         </div>
+
         <!-- Header Content -->
         <div class="flex flex-col sm:flex-row justify-between sm:space-x-10 ">
             {% if articles %}
-                <div class=" space-y-4">
-                    <h1 class="text-3xl font-semibold ">{{articles.title}}</h1>
-                    <p class=" text-justify">{{articles.content.definition}}</p>
+                <div class="space-y-4">
+                    <h1 class="text-3xl font-semibold ">{{ articles.title }}</h1>
+                    <p class="text-justify">{{ articles.content.definition }}</p>
                     
                     <h2 class="text-xl font-semibold ">Penyebab</h2>
-                    <p class=" text-justify">{{articles.content.causes}}</p>
+                    <p class="text-justify">{{ articles.content.causes }}</p>
                     
                     <h2 class="text-xl font-semibold ">Gejala</h2>
-                    <p class=" text-justify">Gejala {{articles.title}} antara lain:</p>
+                    <p class="text-justify">Gejala {{ articles.title }} antara lain:</p>
                     
                     <ul class="space-y-1 ">
                         {% for symptom in articles.content.symptoms %}
@@ -39,9 +39,8 @@
                         {% endfor %}
                     </ul>
 
-
                     <h2 class="text-xl font-semibold ">Komplikasi</h2>
-                    <p class=" text-justify">Gejala {{articles.title}} antara lain:</p>
+                    <p class="text-justify">Gejala {{ articles.title }} antara lain:</p>
                     
                     <ul class="space-y-1 ">
                         {% for symptom in articles.content.symptoms %}
@@ -69,14 +68,11 @@
                         </p>
                         
                         <!-- Entire div as a clickable link -->
-                        <a href="{{ url_for('article', title=article.title) }}" 
+                        <a href="{{ url_for('article', slug=article.slug) }}" 
                            class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4  text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
                             Selengkapnya →
                         </a>
                     </div>
-                           
-                    
-                    
                     {% endfor %}
                 </div>
             {% else %}
@@ -95,7 +91,7 @@
                         <p class="text-gray-700">
                             {{ medicine.medications.description.split()[:15] | join(' ') }}{% if medicine.medications.description.split()|length > 15 %}...{% endif %}
                         </p>
-                        <a href="{{ url_for('medicine', name=medicine.medications.name) }}" 
+                        <a href="{{ url_for('medicine', slug=medicine.slug) }}" 
                         class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
                             Selengkapnya →
                         </a>

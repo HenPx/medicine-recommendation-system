@@ -18,25 +18,24 @@
                     <img src="{{ url_for('static', filename='images/svg/artikel-search.svg') }}" alt="search Logo">
                 </button>
             </form>
-            
-            
         </div>
+
         <!-- Header Content -->
         <div class="flex justify-between space-x-10">
             {% if medicines %}
-                <div class=" space-y-4">
+                <div class="space-y-4">
                     <img src="{{ url_for('static', filename=medicines['image_path']) }}" alt="{{ medicines['medications']['name'] }}" class="w-[400px] h-auto mb-4">
 
-                    <h1 class="text-3xl font-semibold ">{{medicines.medications.name}}</h1>
-                    <p class=" text-justify">{{medicines.medications.description}}</p>
+                    <h1 class="text-3xl font-semibold ">{{ medicines.medications.name }}</h1>
+                    <p class="text-justify">{{ medicines.medications.description }}</p>
                     
                     <h2 class="text-xl font-semibold ">Ketersediaan</h2>
-                    <p class=" text-justify">{{medicines.medications.availability}}</p>
+                    <p class="text-justify">{{ medicines.medications.availability }}</p>
                     
                     <h2 class="text-xl font-semibold ">Efek Samping</h2>
-                    <p class=" text-justify">Efek samping dari obat {{medicines.medications.name}} antara lain:</p>
+                    <p class="text-justify">Efek samping dari obat {{ medicines.medications.name }} antara lain:</p>
                     
-                    <ul class="space-y-1 ">
+                    <ul class="space-y-1">
                         {% for effect in medicines.medications.side_effects %}
                             <li class="flex items-center space-x-4">
                                 <span>{{ loop.index }}. {{ effect }}</span>
@@ -45,13 +44,9 @@
                     </ul>
                 </div>
             {% else %}
-                <p>No articles found for</p>
+                <p>No medicines found for "{{ request.args.get('pencarian', '') }}"</p>
             {% endif %}
-
-            
         </div>
-        <!-- Recommended Content -->
         
     </div>
-    
 {% endblock %}

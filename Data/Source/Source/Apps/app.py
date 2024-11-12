@@ -4,36 +4,36 @@ import numpy as np
 import pandas as pd
 
 # Load the model and data
-with open('random.pkl', 'rb') as f:
+with open('RandomForest_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open('diseases_list.pkl', 'rb') as f:
+with open('diseases_list_indo.pkl', 'rb') as f:
     diseases_list = pickle.load(f)
 
-with open('symptoms_dict.pkl', 'rb') as f:
+with open('symptoms_dict_indo.pkl', 'rb') as f:
     symptoms_dict = pickle.load(f)
 
 # Load data files from specified paths
-description = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Data/description.csv")
-precautions_df = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Data/precautions_df.csv")
-medications = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Data/medications.csv")
-diets = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Data/diets.csv")
-workout_df = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Data/workout_df.csv")
+description = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/indo/new_desc.csv")
+precautions_df = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/indo/new_pre.csv")
+medications = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Apps/ind/Data-Indo/fix_medication.csv")
+diets = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/Apps/ind/Data-Indo/fix_diets.csv")
+workout_df = pd.read_csv("C:/Users/Widnyana/Downloads/NAMA SAYA/MAHASISWA_NAMA SAYA_V1/Source/indo/workout.csv")
 
 # Helper functions
 def clean_text(data):
-    # Joins items in lists and removes unwanted characters, if any
+    # Joins items in lists and removes unwanted characters like [] and ''
     if isinstance(data, list):
-        return ', '.join([str(item).replace('\n', '').strip() for item in data])
-    return str(data).replace('\n', '').strip()
+        return '\n'.join([str(item).strip().replace("'", "").replace("[", "").replace("]", "") for item in data])
+    return str(data).strip().replace("'", "").replace("[", "").replace("]", "")
 
 def helper(dis):
     # Fetch and clean data
-    desc = clean_text(description[description['Disease'] == dis]['Description'].values[0])
-    pre = [clean_text(pre) for pre in precautions_df[precautions_df['Disease'] == dis][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']].values.flatten()]
-    med = clean_text(medications[medications['Disease'] == dis]['Medication'].values)
-    die = clean_text(diets[diets['Disease'] == dis]['Diet'].values)
-    wrkout = clean_text(workout_df[workout_df['disease'] == dis]['workout'].values)
+    desc = clean_text(description[description['Penyakit'] == dis]['Keterangan'].values[0])
+    pre = [clean_text(pre) for pre in precautions_df[precautions_df['Penyakit'] == dis][['Tindakan pencegahan_1', 'Tindakan pencegahan_2', 'Tindakan pencegahan_3', 'Tindakan pencegahan_4']].values.flatten()]
+    med = clean_text(medications[medications['Penyakit'] == dis]['Pengobatan'].values)
+    die = clean_text(diets[diets['Penyakit'] == dis]['Diet'].values)
+    wrkout = clean_text(workout_df[workout_df['penyakit'] == dis]['olahraga'].values)
     return desc, pre, med, die, wrkout
 
 def get_predicted_value(patient_symptoms):
@@ -62,15 +62,23 @@ if st.button("Predict Disease"):
         st.write(desc)
 
         st.subheader("Precautions")
-        st.write(" • ".join(pre))
+        # Displaying precautions in a list format
+        for idx, precaution in enumerate(pre, 1):
+            st.write(f"{idx}. {precaution}")
 
         st.subheader("Medications")
-        st.write(med)
+        # Splitting the medications and displaying each item as a list
+        for idx, med in enumerate(med.split(','), 1):
+            st.write(f"{idx}. {med.strip()}")
 
         st.subheader("Workout Suggestions")
-        st.write(wrkout)
+        # Displaying workout suggestions in a list format
+        for idx, workout in enumerate(wrkout.split('\n'), 1):
+            st.write(f"{idx}. {workout}")
 
         st.subheader("Diet Recommendations")
-        st.write(die)
+        # Splitting the diet recommendations and displaying each item as a list
+        for idx, diet in enumerate(die.split(','), 1):
+            st.write(f"{idx}. {diet.strip()}")
     else:
         st.write("Please select symptoms to predict the disease.")

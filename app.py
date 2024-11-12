@@ -7,10 +7,16 @@ import random
 import pickle
 import pandas as pd
 import numpy as np
+import re
 
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
+def slugify(text):
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'[^a-zA-Z0-9\-]', '', text)
+    return text.lower()
 
 # chatbot handler
 # Hugging Face API setup
@@ -64,43 +70,44 @@ def chat():
 # Load article
 def load_article():
     with open('menu2.json', 'r', encoding='utf-8') as file:
-        return json.load(file)
+        data = json.load(file)
+        for article in data['articles']:
+            article['slug'] = slugify(article['title'])
+        return data
 
 data = load_article()
 
 # Load medicine
 def load_medicine():
     with open('menu3.json', 'r', encoding='utf-8') as file:
-        return json.load(file)
-    
+        data = json.load(file)
+        for item in data['items']:
+            item['slug'] = slugify(item['medications']['name'])
+        return data
+
 obat = load_medicine()
 
-
-@app.route('/medicine/<name>')
-def medicine(name):
+@app.route('/medicine/<slug>')
+def medicine(slug):
     obat = load_medicine()
-    medicine_data = next((item for item in obat['items'] if item["medications"]["name"] == name), None)
-    
+    medicine_data = next((item for item in obat['items'] if item["slug"] == slug), None)
+
     if medicine_data:
-        recommended_medicine = [item for item in obat['items'] if item["medications"]["name"] != name]
-        
+        recommended_medicine = [item for item in obat['items'] if item["slug"] != slug]
         return render_template('pages/obat-detail.html', medicines=medicine_data, recommend=recommended_medicine)
     else:
         return "Obat tidak ditemukan", 404
     
-@app.route('/article/<title>')
-def article(title):
+@app.route('/article/<slug>')
+def article(slug):
     data = load_article()
     obat = load_medicine()
-
-    article_data = next((item for item in data['articles'] if item["title"] == title), None)
-    
+    article_data = next((item for item in data['articles'] if item["slug"] == slug), None)
 
     if article_data:
-        recommended_articles = [item for item in data['articles'] if item["title"] != title]
+        recommended_articles = [item for item in data['articles'] if item["slug"] != slug]
         filtered_medicines = [medicine for medicine in obat['items'] if medicine['id_penyakit'] == article_data['id']]
-
-        return render_template('pages/artikel-detail.html', articles=article_data, recommend=recommended_articles, medicines = filtered_medicines)
+        return render_template('pages/artikel-detail.html', articles=article_data, recommend=recommended_articles, medicines=filtered_medicines)
     else:
         return "Article tidak ditemukan", 404
     
@@ -171,49 +178,39 @@ def wawasan():
 # Rekomendasi
 
 # Load the model and data files
-with open('data/Source/Source/Apps/random.pkl', 'rb') as f:
+with open('data/Source/Source/Apps/RandomForest_model.pkl', 'rb') as f:
     model = pickle.load(f)
-with open('data/Source/Source/Apps/diseases_list.pkl', 'rb') as f:
+with open('data/Source/Source/Apps/diseases_list_indo.pkl', 'rb') as f:
     diseases_list = pickle.load(f)
-with open('data/Source/Source/Apps/symptoms_dict.pkl', 'rb') as f:
+with open('data/Source/Source/Apps/symptoms_dict_indo.pkl', 'rb') as f:
     symptoms_dict = pickle.load(f)
 
-description = pd.read_csv('data/Source/Source/Data/description.csv')
-precautions_df = pd.read_csv('data/Source/Source/Data/precautions_df.csv')
-medications = pd.read_csv('data/Source/Source/Data/medications.csv')
-diets = pd.read_csv('data/Source/Source/Data/diets.csv')
-workout_df = pd.read_csv('data/Source/Source/Data/workout_df.csv')
+description = pd.read_csv('data/Source/Source/Data/new_desc.csv')
+precautions_df = pd.read_csv('data/Source/Source/Data/new_pre.csv')
+medications = pd.read_csv('data/Source/Source/Data/fix_medication.csv')
+diets = pd.read_csv('data/Source/Source/Data/fix_diets.csv')
+workout_df = pd.read_csv('data/Source/Source/Data/workout.csv')
 
 # Helper function to process data
 def clean_text(data):
+    # Joins items in lists and removes unwanted characters like [] and ''
     if isinstance(data, list):
-        return ', '.join([str(item).replace('\n', '').strip() for item in data])
-    return str(data).replace('\n', '').strip()
+        return '\n'.join([str(item).strip().replace("'", "").replace("[", "").replace("]", "") for item in data])
+    return str(data).strip().replace("'", "").replace("[", "").replace("]", "")
 
 def helper(dis):
-    # Retrieve and clean each data field, ensuring no empty or NaN values are shown
-    desc = clean_text(description[description['Disease'] == dis]['Description'].values[0])
-    
-    # Filter out empty precautions
-    pre = [clean_text(pre) for pre in precautions_df[precautions_df['Disease'] == dis][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']].values.flatten() if pre]
-
-    # Check if each field has a value before displaying
-    med = clean_text(medications[medications['Disease'] == dis]['Medication'].values)
-    med = med if med else 'No specific medication recommended.'
-    
-    die = clean_text(diets[diets['Disease'] == dis]['Diet'].values)
-    die = die if die else 'No specific diet recommended.'
-    
-    wrkout = clean_text(workout_df[workout_df['disease'] == dis]['workout'].values)
-    wrkout = wrkout if wrkout else 'No specific workout recommended.'
-    
+    # Fetch and clean data
+    desc = clean_text(description[description['Penyakit'] == dis]['Keterangan'].values[0])
+    pre = [clean_text(pre) for pre in precautions_df[precautions_df['Penyakit'] == dis][['Tindakan pencegahan_1', 'Tindakan pencegahan_2', 'Tindakan pencegahan_3', 'Tindakan pencegahan_4']].values.flatten()]
+    med = clean_text(medications[medications['Penyakit'] == dis]['Pengobatan'].values)
+    die = clean_text(diets[diets['Penyakit'] == dis]['Diet'].values)
+    wrkout = clean_text(workout_df[workout_df['penyakit'] == dis]['olahraga'].values)
     return desc, pre, med, die, wrkout
 
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(len(symptoms_dict))
-    for symptom in patient_symptoms:
-        if symptom in symptoms_dict:
-            input_vector[symptoms_dict[symptom]] = 1
+    for item in patient_symptoms:
+        input_vector[symptoms_dict[item]] = 1
     return diseases_list[model.predict([input_vector])[0]]
 
 # Flask routes
