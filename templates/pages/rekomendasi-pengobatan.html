@@ -12,28 +12,39 @@
 
         <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Tindakan Pencegahan</h3>
-            <ul class="list-disc ml-5 text-gray-600">
+            <ol class="list-decimal ml-5 text-gray-600">
                 {% for precaution in precautions %}
                     <li>{{ precaution }}</li>
                 {% endfor %}
-            </ul>
+            </ol>
         </section>
 
         <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Pengobatan</h3>
-            <p class="text-gray-600">{{ medications }}</p>
+            <ol class="list-decimal ml-5 text-gray-600">
+                {% for medication in medications %}
+                    <li>{{ medication }}</li>
+                {% endfor %}
+            </ol>
         </section>
 
         <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Saran Olahraga</h3>
-            <p class="text-gray-600">{{ workout }}</p>
+            <ol class="list-decimal ml-5 text-gray-600">
+                {% for exercise in workout %}
+                    <li>{{ exercise }}</li>
+                {% endfor %}
+            </ol>
         </section>
 
         <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Rekomendasi Pola Makan</h3>
-            <p class="text-gray-600">{{ diet }}</p>
-        </section>
+            <ol class="list-decimal ml-5 text-gray-600">
+                {% for item in diet %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ol>
+        </section>        
     </div>
 </body>
-
 {% endblock %}

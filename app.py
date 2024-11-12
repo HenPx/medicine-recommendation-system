@@ -201,11 +201,21 @@ def clean_text(data):
 def helper(dis):
     # Fetch and clean data
     desc = clean_text(description[description['Penyakit'] == dis]['Keterangan'].values[0])
+    
+    # Convert the precautions into a list
     pre = [clean_text(pre) for pre in precautions_df[precautions_df['Penyakit'] == dis][['Tindakan pencegahan_1', 'Tindakan pencegahan_2', 'Tindakan pencegahan_3', 'Tindakan pencegahan_4']].values.flatten()]
+    
+    # Convert medications, diet, and workout into lists (if comma-separated)
     med = clean_text(medications[medications['Penyakit'] == dis]['Pengobatan'].values)
     die = clean_text(diets[diets['Penyakit'] == dis]['Diet'].values)
     wrkout = clean_text(workout_df[workout_df['penyakit'] == dis]['olahraga'].values)
-    return desc, pre, med, die, wrkout
+    
+    # Split comma-separated strings into lists if needed
+    med_list = med.split(', ') if isinstance(med, str) else []
+    diet_list = die.split(', ') if isinstance(die, str) else []
+    workout_list = wrkout.split(', ') if isinstance(wrkout, str) else []
+    
+    return desc, pre, med_list, diet_list, workout_list
 
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(len(symptoms_dict))
@@ -228,16 +238,16 @@ def home():
 def recommendation():
     symptoms = request.args.get('symptoms', '').split(',')
     predicted_disease = get_predicted_value(symptoms)
-    desc, pre, med, die, wrkout = helper(predicted_disease)
+    desc, pre, med_list, diet_list, workout_list = helper(predicted_disease)
     
     return render_template(
         'pages/rekomendasi-pengobatan.html',
         disease=predicted_disease,
         description=desc,
         precautions=pre,
-        medications=med,
-        workout=wrkout,
-        diet=die
+        medications=med_list,
+        workout=workout_list,
+        diet=diet_list
     )
     
 if __name__ == '__main__':
