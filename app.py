@@ -187,7 +187,7 @@ with open('data/Source/Source/Apps/symptoms_dict_indo.pkl', 'rb') as f:
 
 description = pd.read_csv('data/Source/Source/Data/new_desc.csv')
 precautions_df = pd.read_csv('data/Source/Source/Data/new_pre.csv')
-medications = pd.read_csv('data/Source/Source/Data/fix_medication.csv')
+medications = pd.read_csv('data/Source/Source/Data/obat.csv')
 diets = pd.read_csv('data/Source/Source/Data/fix_diets.csv')
 workout_df = pd.read_csv('data/Source/Source/Data/workout.csv')
 
@@ -239,6 +239,10 @@ def recommendation():
     symptoms = request.args.get('symptoms', '').split(',')
     predicted_disease = get_predicted_value(symptoms)
     desc, pre, med_list, diet_list, workout_list = helper(predicted_disease)
+
+    data = load_article()
+    articles=data['articles']
+    selected_articles = random.sample(articles, 2) if len(articles) >= 2 else articles
     
     return render_template(
         'pages/rekomendasi-pengobatan.html',
@@ -247,7 +251,8 @@ def recommendation():
         precautions=pre,
         medications=med_list,
         workout=workout_list,
-        diet=diet_list
+        diet=diet_list,
+        articles=selected_articles
     )
     
 if __name__ == '__main__':
