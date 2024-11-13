@@ -2,38 +2,79 @@
 
 {% block content %}
 <body class="flex justify-center items-center min-h-screen bg-gray-100">
-    <div class="max-w-2xl w-full p-6 bg-white rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4 text-center text-[#673AB7]">Predicted Disease: {{ disease }}</h2>
+    <div class="flex flex-col md:flex-row py-4 px-16 md:space-x-16">
+        <div class="max-w-2xl w-full p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-center text-[#673AB7]">Prediksi Penyakit: {{ disease }}</h2>
 
-        <section>
-            <h3 class="text-xl font-semibold text-gray-700">Description</h3>
-            <p class="text-gray-600">{{ description }}</p>
-        </section>
+            <section>
+                <h3 class="text-xl font-semibold text-gray-700">Deskripsi</h3>
+                <p class="text-gray-600">{{ description }}</p>
+            </section>
 
-        <section class="mt-4">
-            <h3 class="text-xl font-semibold text-gray-700">Precautions</h3>
-            <ul class="list-disc ml-5 text-gray-600">
-                {% for precaution in precautions %}
-                    <li>{{ precaution }}</li>
+            <section class="mt-4">
+                <h3 class="text-xl font-semibold text-gray-700">Tindakan Pencegahan</h3>
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for precaution in precautions %}
+                        <li>{{ precaution }}</li>
+                    {% endfor %}
+                </ol>
+            </section>
+
+            <section class="mt-4">
+                <h3 class="text-xl font-semibold text-gray-700">Pengobatan</h3>
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for medication in medications %}
+                        <li>{{ medication }}</li>
+                    {% endfor %}
+                </ol>
+            </section>
+
+            <section class="mt-4">
+                <h3 class="text-xl font-semibold text-gray-700">Saran Olahraga</h3>
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for exercise in workout %}
+                        <li>{{ exercise }}</li>
+                    {% endfor %}
+                </ol>
+            </section>
+
+            <section class="mt-4">
+                <h3 class="text-xl font-semibold text-gray-700">Rekomendasi Pola Makan</h3>
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for item in diet %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ol>
+            </section>        
+        </div>
+
+        {% if articles %}
+        <div class="mt-2 w-full max-w-md">
+            <h1 class="text-2xl font-semibold mb-6">Artikel Kesehatan</h1>
+            
+            <!-- Remove grid for a single-column layout -->
+            <div class="space-y-6">
+                {% for article in articles %}
+                <div class="bg-white p-6 rounded-[14px] border-2 border-[#B39DDB] shadow-md w-full">
+                    <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
+                    <h2 class="text-xl font-semibold text-black mb-2">{{ article.title }}</h2>
+                    
+                    <p class="text-gray-700">
+                        {{ article.content.definition.split()[:15] | join(' ') }}{% if article.content.definition.split()|length > 15 %}...{% endif %}
+                    </p>
+                    
+                    <!-- Seluruh div sebagai link -->
+                    <a href="{{ url_for('article', slug=article.slug) }}" 
+                    class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
+                        Selengkapnya →
+                    </a>
+                </div>
                 {% endfor %}
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h3 class="text-xl font-semibold text-gray-700">Medications</h3>
-            <p class="text-gray-600">{{ medications }}</p>
-        </section>
-
-        <section class="mt-4">
-            <h3 class="text-xl font-semibold text-gray-700">Workout Suggestions</h3>
-            <p class="text-gray-600">{{ workout }}</p>
-        </section>
-
-        <section class="mt-4">
-            <h3 class="text-xl font-semibold text-gray-700">Diet Recommendations</h3>
-            <p class="text-gray-600">{{ diet }}</p>
-        </section>
+            </div>
+        </div>
+        {% else %}
+        <p>Tidak ada artikel ditemukan</p>
+        {% endif %}
     </div>
 </body>
-
 {% endblock %}

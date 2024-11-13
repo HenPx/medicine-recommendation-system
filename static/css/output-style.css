@@ -766,10 +766,6 @@ video {
   height: 439px;
 }
 
-.h-\[78px\] {
-  height: 78px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -802,10 +798,6 @@ video {
   width: 400px;
 }
 
-.w-\[78px\] {
-  width: 78px;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -821,6 +813,10 @@ video {
 
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
@@ -844,8 +840,8 @@ video {
   cursor: pointer;
 }
 
-.list-disc {
-  list-style-type: disc;
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .grid-cols-1 {

@@ -1,7 +1,139 @@
 {% extends 'layouts/mainMenu.html' %}
 
 {% block content %}
-    <h1>WAWASAN PAGE</h1>
-    <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="h-[78px] w-[78px] mr-3">
+<h1 class="text-2xl font-bold mb-4 text-center text-[#673AB7]" style="text-align:center;">Chat with Our HealthBot</h1>
+<div id="chatbox">
+    <div id="chat"></div>
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="loading-indicator" style="display: none; text-align: center; color: #555; margin-top: 10px;">
+        Processing...
+    </div>
+</div>
+
+<style>
+    /* Styling for the chat layout */
+    #chatbox {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: #f9f9f9;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    #chat {
+        height: 400px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #fff;
+    }
+    .user-message, .bot-message {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    .user-message {
+        text-align: right;
+        background-color: #d1e7dd;
+        color: #0f5132;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    .bot-message {
+        text-align: left;
+        background-color: #f8d7da;
+        color: #842029;
+        align-self: flex-start;
+        margin-right: auto;
+    }
+    /* Flex container for input and button */
+    .input-container {
+        display: flex;
+        width: 100%;
+    }
+    #user-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px 0 0 5px; /* Rounded corners only on left */
+        border-right: none; /* Remove right border to align with button */
+    }
+    button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 0 5px 5px 0; /* Rounded corners only on right */
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    function sendMessage() {
+        const userInput = document.getElementById("user-input").value.trim();
+        const chat = document.getElementById("chat");
+        const loadingIndicator = document.getElementById("loading-indicator");
+
+        if (userInput === "") return;
+
+        // Display user message
+        const userMessage = document.createElement("div");
+        userMessage.className = "user-message";
+        userMessage.textContent = userInput;
+        chat.appendChild(userMessage);
+
+        // Clear input field immediately and show loading indicator
+        document.getElementById("user-input").value = "";
+        loadingIndicator.style.display = "block";
+
+        // Auto-scroll to the bottom
+        chat.scrollTop = chat.scrollHeight;
+
+        // Send user message to the chatbot API
+        fetch("/chatbot-konsultasi", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message: userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const botMessage = document.createElement("div");
+            botMessage.className = "bot-message";
+            botMessage.textContent = data.response || "I'm sorry, I didn't understand that.";
+            chat.appendChild(botMessage);
+
+            // Hide loading indicator after bot response
+            loadingIndicator.style.display = "none";
+
+            // Auto-scroll to the bottom after adding bot response
+            chat.scrollTop = chat.scrollHeight;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "bot-message";
+            errorMessage.textContent = "Oops! Something went wrong. Please try again.";
+            chat.appendChild(errorMessage);
+
+            // Hide loading indicator after error message
+            loadingIndicator.style.display = "none";
+
+            // Auto-scroll to the bottom after adding error message
+            chat.scrollTop = chat.scrollHeight;
+        });
+    }
+</script>
 
 {% endblock %}
