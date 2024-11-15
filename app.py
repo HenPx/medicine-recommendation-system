@@ -206,19 +206,21 @@ def helper(dis):
     # Convert the precautions into a list
     pre = [clean_text(pre) for pre in precautions_df[precautions_df['Penyakit'] == dis][['Tindakan pencegahan_1', 'Tindakan pencegahan_2', 'Tindakan pencegahan_3', 'Tindakan pencegahan_4']].values.flatten()]
     
-    # Convert medications, diet, and workout into lists (if comma-separated)
+    # Fetch medications, diet, and workout data
     med = clean_text(medications[medications['Penyakit'] == dis]['Pengobatan'].values)
     die = clean_text(diets[diets['Penyakit'] == dis]['Diet'].values)
     wrkout = clean_text(workout_df[workout_df['penyakit'] == dis]['olahraga'].values)
     
     # Split comma-separated strings into lists if needed
-    med_list = med.split(', ') if isinstance(med, str) else []
-    diet_list = die.split(', ') if isinstance(die, str) else []
-    workout_list = wrkout.split(', ') if isinstance(wrkout, str) else []
+    med_list = [item.strip() for item in med.split(',')] if isinstance(med, str) else []
+    diet_list = [item.strip() for item in die.split(',')] if isinstance(die, str) else []
+    workout_list = [item.strip() for item in wrkout.split(',')] if isinstance(wrkout, str) else []
+
+    # Split workout text on '\n' to create a list
+    workout_list1 = workout_list[0].split('\n') if isinstance(wrkout, str) else []
     
-    
-    
-    return desc, pre, med_list, diet_list, workout_list
+    return desc, pre, med_list, diet_list, workout_list1
+
 
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(len(symptoms_dict))
