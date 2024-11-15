@@ -2,10 +2,10 @@
     <div class="absolute inset-0 bg-[#B39DDB] opacity-50 z-10"></div>
 
     <!-- Slideshow images -->
-    <div class="w-full h-full">
+    <div id="slideshow" class="w-full h-full">
         <img src="{{ url_for('static', filename='images/svg/home-stetoskop.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image">
-        <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
-        <img src="{{ url_for('static', filename='images/svg/home-stetoskop.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
+        <img src="{{ url_for('static', filename='images/svg/doctor-header.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
+        <img src="{{ url_for('static', filename='images/svg/women-header.svg') }}" alt="Image" class="w-full h-full object-cover slideshow-image hidden">
     </div>
 
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center z-20">
@@ -42,9 +42,10 @@
                 </div>
     
                 <!-- Selected symptoms container -->
-                <div id="selected-symptoms-container" class="flex flex-wrap gap-2 mt-2">
+                <div id="selected-symptoms-container" class="flex flex-wrap gap-2 mt-2 max-h-32 overflow-y-auto">
                     <!-- Dynamically added selected symptoms will appear here -->
                 </div>
+
     
                 <input type="hidden" name="symptoms" id="selected-symptoms" value="">
     
@@ -69,83 +70,102 @@
 <!-- JavaScript -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    const symptomsList = {{ symptoms | tojson }};
-    const searchBar = document.getElementById('search-bar');
-    const suggestions = document.getElementById('suggestions');
-    const dropdown = document.getElementById('dropdown');
-    const dropdownBtn = document.getElementById('dropdown-btn');
-    const selectedSymptomsInput = document.getElementById('selected-symptoms');
-    const selectedSymptomsContainer = document.getElementById('selected-symptoms-container');
-    const predictBtn = document.getElementById('predict-btn');
-    const selectedSymptoms = new Set();
+        const symptomsList = {{ symptoms | tojson }};
+        const searchBar = document.getElementById('search-bar');
+        const suggestions = document.getElementById('suggestions');
+        const dropdown = document.getElementById('dropdown');
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        const selectedSymptomsInput = document.getElementById('selected-symptoms');
+        const selectedSymptomsContainer = document.getElementById('selected-symptoms-container');
+        const predictBtn = document.getElementById('predict-btn');
+        const selectedSymptoms = new Set();
 
-    // Populate dropdown or suggestions with a list of items
-    function populateList(listElement, items, handler) {
-        listElement.innerHTML = '';
-        items.forEach(symptom => {
-            const option = document.createElement('div');
-            option.textContent = symptom;
-            option.classList.add('px-4', 'py-2', 'cursor-pointer', 'hover:bg-purple-100');
-            option.addEventListener('click', () => handler(symptom));
-            listElement.appendChild(option);
-        });
-    }
-
-    // Add symptom to the selected list
-    function addSymptom(symptom) {
-        if (!selectedSymptoms.has(symptom)) {
-            selectedSymptoms.add(symptom);
-            updateSelectedSymptoms();
-        }
-        // Collapse the dropdown after selecting a symptom
-        dropdown.classList.add('hidden');
-        suggestions.classList.add('hidden');
-    }
-
-    // Update selected symptoms display
-    function updateSelectedSymptoms() {
-        selectedSymptomsContainer.innerHTML = '';
-        selectedSymptoms.forEach(symptom => {
-            const tag = document.createElement('span');
-            tag.classList.add('px-3', 'py-1', 'rounded-lg', 'bg-red-500', 'text-white', 'cursor-pointer');
-            tag.textContent = symptom;
-            tag.addEventListener('click', () => {
-                selectedSymptoms.delete(symptom);
-                updateSelectedSymptoms();
+        // Slideshow function
+        let slideIndex = 0;
+        function showSlides() {
+            const slides = document.querySelectorAll('.slideshow-image');
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('hidden', index !== slideIndex);
             });
-            selectedSymptomsContainer.appendChild(tag);
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+        setInterval(showSlides, 3000); // Change image every 3 seconds
+
+        // Populate dropdown or suggestions with a list of items
+        function populateList(listElement, items, handler) {
+            listElement.innerHTML = '';
+            items.forEach(symptom => {
+                if (!selectedSymptoms.has(symptom)) {
+                    const option = document.createElement('div');
+                    option.textContent = symptom;
+                    option.classList.add('px-4', 'py-2', 'cursor-pointer', 'hover:bg-purple-100');
+                    option.addEventListener('click', () => handler(symptom));
+                    listElement.appendChild(option);
+                }
+            });
+        }
+
+        // Add symptom to the selected list
+        function addSymptom(symptom) {
+            if (!selectedSymptoms.has(symptom)) {
+                selectedSymptoms.add(symptom);
+                updateSelectedSymptoms();
+            }
+            // Collapse the dropdown after selecting a symptom
+            dropdown.classList.add('hidden');
+            suggestions.classList.add('hidden');
+        }
+
+        // Update selected symptoms display
+        function updateSelectedSymptoms() {
+            selectedSymptomsContainer.innerHTML = '';
+            selectedSymptoms.forEach(symptom => {
+                const tag = document.createElement('span');
+                tag.classList.add('px-3', 'py-1', 'rounded-lg', 'bg-red-500', 'text-white', 'cursor-pointer', 'flex', 'items-center');
+                tag.textContent = symptom;
+
+                // Add 'x' button for removal
+                const removeBtn = document.createElement('span');
+                removeBtn.textContent = '✖';
+                removeBtn.classList.add('ml-2', 'cursor-pointer');
+                removeBtn.addEventListener('click', () => {
+                    selectedSymptoms.delete(symptom);
+                    updateSelectedSymptoms();
+                });
+
+                tag.appendChild(removeBtn);
+                selectedSymptomsContainer.appendChild(tag);
+            });
+
+            selectedSymptomsInput.value = Array.from(selectedSymptoms).join(',');
+
+            predictBtn.disabled = selectedSymptoms.size < 5;
+            predictBtn.classList.toggle('bg-[#673AB7]', selectedSymptoms.size >= 5);
+            predictBtn.classList.toggle('bg-gray-400', selectedSymptoms.size < 5);
+            predictBtn.classList.toggle('cursor-not-allowed', selectedSymptoms.size < 5);
+            predictBtn.classList.toggle('cursor-pointer', selectedSymptoms.size >= 5);
+        }
+
+        // Show dropdown with full list of symptoms when the dropdown button is clicked
+        dropdownBtn.addEventListener('click', () => {
+            if (dropdown.classList.contains('hidden')) {
+                populateList(dropdown, symptomsList, addSymptom);
+            }
+            dropdown.classList.toggle('hidden');
         });
 
-        selectedSymptomsInput.value = Array.from(selectedSymptoms).join(',');
+        // Show suggestions when typing in the search bar
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase();
+            const matches = symptomsList.filter(symptom => symptom.toLowerCase().includes(query));
+            populateList(suggestions, matches, addSymptom);
+            suggestions.classList.toggle('hidden', matches.length === 0);
+        });
 
-        predictBtn.disabled = selectedSymptoms.size < 5;
-        predictBtn.classList.toggle('bg-[#673AB7]', selectedSymptoms.size >= 5);
-        predictBtn.classList.toggle('bg-gray-400', selectedSymptoms.size < 5);
-        predictBtn.classList.toggle('cursor-not-allowed', selectedSymptoms.size < 5);
-        predictBtn.classList.toggle('cursor-pointer', selectedSymptoms.size >= 5);
-    }
-
-    // Show dropdown with full list of symptoms when the dropdown button is clicked
-    dropdownBtn.addEventListener('click', () => {
-        if (dropdown.classList.contains('hidden')) {
-            populateList(dropdown, symptomsList, addSymptom);
-        }
-        dropdown.classList.toggle('hidden');
+        // Hide dropdown and suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target) && e.target !== dropdownBtn) dropdown.classList.add('hidden');
+            if (!suggestions.contains(e.target) && e.target !== searchBar) suggestions.classList.add('hidden');
+        });
     });
-
-    // Show suggestions when typing in the search bar
-    searchBar.addEventListener('input', () => {
-        const query = searchBar.value.toLowerCase();
-        const matches = symptomsList.filter(symptom => symptom.toLowerCase().includes(query));
-        populateList(suggestions, matches, addSymptom);
-        suggestions.classList.toggle('hidden', matches.length === 0);
-    });
-
-    // Hide dropdown and suggestions when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target) && e.target !== dropdownBtn) dropdown.classList.add('hidden');
-        if (!suggestions.contains(e.target) && e.target !== searchBar) suggestions.classList.add('hidden');
-    });
-});
-
 </script>
