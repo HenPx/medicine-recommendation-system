@@ -22,7 +22,14 @@
         <div class="flex flex-col sm:flex-row justify-between sm:space-x-10 ">
             {% if articles %}
                 <div class="space-y-4">
-                    <h1 class="text-3xl font-semibold ">{{ articles.Name }}</h1>
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="text-3xl font-semibold mb-3">{{ articles.Name }}</h1>
+                        <div class="  mb-4 border-2  border-[#673AB7] shadow-lg overflow-hidden rounded-lg max-w-3xl">
+                            <img src="{{ url_for('static', filename=articles['Image']) }}" alt="{{ articles['Name'] }}" class="min-w-[400px] ">
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-xl font-semibold">Deskripsi</h2>
                     <p class="text-justify">{{ articles.Definition }}</p>
                     
                     <h2 class="text-xl font-semibold">Penyebab</h2>
@@ -54,9 +61,9 @@
                     <p class="text-justify">Gejala {{ articles.Name }} antara lain:</p>
                     
                     <ul class="space-y-1 ">
-                        {% for symptom in articles.Symptoms %}
+                        {% for complication in articles.Complications %}
                             <li class="flex items-center space-x-4">
-                                <span>{{ loop.index }}. {{ symptom }}</span>
+                                <span>{{ loop.index }}. {{ complication }}</span>
                             </li>
                         {% endfor %}
                     </ul>
