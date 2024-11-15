@@ -24,19 +24,17 @@
         <div class="flex justify-between space-x-10">
             {% if medicines %}
                 <div class="space-y-4">
-                    <img src="{{ url_for('static', filename=medicines['image_path']) }}" alt="{{ medicines['medications']['name'] }}" class="w-[400px] h-auto mb-4">
+                    <img src="{{ url_for('static', filename=medicines['Img']) }}" alt="{{ medicines['Nama'] }}" class="w-[400px] h-auto mb-4">
 
-                    <h1 class="text-3xl font-semibold ">{{ medicines.medications.name }}</h1>
-                    <p class="text-justify">{{ medicines.medications.description }}</p>
+                    <h1 class="text-3xl font-semibold ">{{ medicines.Nama }}</h1>
+                    <p class="text-justify">{{ medicines.Deskripsi }}</p>
                     
-                    <h2 class="text-xl font-semibold ">Ketersediaan</h2>
-                    <p class="text-justify">{{ medicines.medications.availability }}</p>
-                    
+
                     <h2 class="text-xl font-semibold ">Efek Samping</h2>
-                    <p class="text-justify">Efek samping dari obat {{ medicines.medications.name }} antara lain:</p>
+                    <p class="text-justify">Efek samping dari obat {{ medicines.Nama }} antara lain:</p>
                     
                     <ul class="space-y-1">
-                        {% for effect in medicines.medications.side_effects %}
+                        {% for effect in medicines.Efek_Samping %}
                             <li class="flex items-center space-x-4">
                                 <span>{{ loop.index }}. {{ effect }}</span>
                             </li>

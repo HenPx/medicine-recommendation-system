@@ -1,0 +1,539 @@
+{
+  "items":[
+    {
+      "Id_Penyakit": "P01",
+      "Id_Obat": "O01-P1",
+      "Nama": "Cindala 10 mg/g Gel 10 g",
+      "Deskripsi": "Obat jerawat rekomendasi dokter spesialis kulit pertama yaitu Cindala. Obat antibiotik topikal ini mengandung Clindamycin yang bisa mengobati jerawat parah pada orang dewasa dan anak-anak yang berusia minimal 12 tahun. Selain itu, Clindamycin akan bekerja mengatasi infeksi serius yang terjadi karena bakteri anaerob atau bakteri aerob gram positif yang rentan. Berikut cara menggunakan obat jerawat ini: 2-3 kali dengan cara mengoleskan tipis-tipis pada kulit jerawat. Masuk dalam kategori obat antibiotik, Cindala hanya bisa digunakan dan dibeli dengan resep dokter.",
+      "Efek_Samping": [
+        "Iritasi kulit: Sensasi terbakar, gatal, kulit kering, kemerahan, kulit berminyak, atau mengelupas di area yang diolesi obat.",
+        "Gangguan pencernaan: Mual, muntah, diare, atau rasa tidak nyaman pada perut.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Kolitis: Peradangan pada usus besar yang dapat menyebabkan diare parah, sakit perut, dan demam. Kondisi ini sangat jarang terjadi tetapi perlu diwaspadai."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Tidak perlu khawatir dengan jerawat membandel, berikut obat jerawat rekomendasi dari dokter spesialis kulit. ✔. [online] halodoc. Available at: https://www.halodoc.com/artikel/7-obat-jerawat-rekomendasi-dokter-spesialis-kulit [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/g-Gel.jpg"
+    },
+    {
+      "Id_Penyakit": "P01",
+      "Id_Obat": "O02-P1",
+      "Nama": "Medi-Klin TR Gel 15 g",
+      "Deskripsi": "Medi-Klin-TR-Gel adalah sediaan topikal berbentuk gel, mengandung antibiotik semisintetik yaitu clindamycin phosphate 1.2% dan Tretinoin 0.025%. Tretinoin bekerja dengan mengeliminasi peningkatan keratinisasi dan penebalan epitel folikel dengan cara mempercepat pergantian sel. Sementara itu, clindamycin phosphate bekerja dengan cara menghambat produksi enzim dan inflamasi atau faktor aktivasi oleh bakteri P. acnes pada sebum. Dokter kerap meresepkan obat ini untuk pengobatan acne vulgaris yang muncul bersama dengan lesi inflamasi dan komedo tertutup maupun terbuka. Berikut cara menggunakan Medi-Klin TR Gel 15 g: Dioleskan pada jerawat sebanyak 1 kali sehari, menjelang tidur malam.",
+      "Efek_Samping": [
+        "Iritasi kulit: Sensasi terbakar, gatal, kulit kering, kemerahan, kulit berminyak, atau mengelupas di area yang diolesi obat.",
+        "Kemerahan: Wajah atau area yang diolesi obat dapat menjadi lebih merah dari biasanya.",
+        "Pengelupasan: Kulit pada area yang diolesi obat dapat mengelupas.",
+        "Kering dan bersisik: Kulit terasa kering dan bersisik.",
+        "Jerawat baru: Awalnya, mungkin muncul jerawat baru sebelum kondisi kulit membaik.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas. Namun jarang terjadi.",
+        "Perubahan warna kulit: Kulit bisa menjadi lebih gelap atau lebih terang. Namun jarang terjadi."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Tidak perlu khawatir dengan jerawat membandel, berikut obat jerawat rekomendasi dari dokter spesialis kulit. ✔. [online] halodoc. Available at: https://www.halodoc.com/artikel/7-obat-jerawat-rekomendasi-dokter-spesialis-kulit [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Medi-Klin-TR-Gel.jpg"
+    },
+    {
+      "Id_Penyakit": "P01",
+      "Id_Obat": "O03-P1",
+      "Nama": "Zelface 20% Cream 10 g",
+      "Deskripsi": "Zelface 20% Cream 10 g yang merupakan produk krim anti jerawat yang mengandung Azelaic Acid. Dokter meresepkan obat ini untuk mengatasi masalah jerawat dan hiperpigmentasi yang efektif. Azelaic Acid sendiri merupakan kandungan utama yang bekerja dengan cara mengurangi jumlah bakteri penyebab jerawat, serta membantu mengecilkan pori-pori kulit. Pemakaian obat ini adalah mengolesnya secara tipis pada jerawat dengan teratur. Hindari kontak langsung dengan mulut dan mata.",
+      "Efek_Samping": [
+        "Iritasi kulit: Sensasi terbakar, gatal, kulit kering, kemerahan, kulit bersisik, atau mengelupas di area yang diolesi obat.",
+        "Kulit terasa tidak nyaman: Kulit terasa sakit, panas, kesemutan, atau seperti tersengat.",
+        "Kemerahan: Kulit menjadi lebih merah dari biasanya."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Tidak perlu khawatir dengan jerawat membandel, berikut obat jerawat rekomendasi dari dokter spesialis kulit. ✔. [online] halodoc. Available at: https://www.halodoc.com/artikel/7-obat-jerawat-rekomendasi-dokter-spesialis-kulit [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Zelface-20-Cream.jpg"
+    },
+    {
+      "Id_Penyakit": "P01",
+      "Id_Obat": "O04-P1",
+      "Nama": "Obat alami jerawat",
+      "Deskripsi": "1. Minyak Pohon Teh (Tea Tree Oil) Minyak esensial yang berasal dari daun pohon teh Melaleuca alternifolia asal Australia ini bisa digunakan mengobati jerawat. Pada sebuah studi (2019), para peneliti menemukan minyak pohon teh dapat mengurangi jumlah jerawat pada manusia karena kemampuan antimikroba dan anti-inflamasinya, bisa membunuh P. acnes. 2. Lidah Buaya (Aloe Vera) Hasil penelitian Hongyu Zhong, dkk. yang dipublikasikan dalam National Library of Medicine (NCBI) menunjukkan jumlah jerawat, lesi, dan kulit kering berkurang ketika menggunakan lidah buaya. Cara menggunakannya adalah dengan mengoleskan gel lidah buaya tipis-tipis pada kulit berjerawat dan biarkan 10-15 menit. Gunakan dua kali sehari untuk hasil maksimal. 3. Madu Madu mengandung hidrogen peroksida dan dapat membantu membunuh bakteri P. Acnes. Dengan cotton bud, oleskan sedikit madu ke jerawat atau bisa juga dijadikan masker. Bersihkan wajah terlebih dulu, lalu oleskan madu ke wajah, biarkan selama 15 menit, dan bilas dengan air bersih. 4. Teh Hijau Teh hijau mengandung antioksidan polifenol yang dapat membantu memecah bahan kimia dan produk limbah perusak sel. Teh hijau juga mengandung senyawa yang dapat membantu mengurangi produksi sebum, membasmi P. Acnes, dan mengurangi peradangan pada kulit. Anda dapat meminum 1.500 mg ekstrak teh hijau per hari, selama 4 minggu berturut-turut. Anda juga bisa mengoleskan ekstrak teh hijau pada kulit wajah selama 8 minggu. 5. Air Perasan Lemon Kandungan asam askorbat yang tinggi pada lemon ampuh menghilangkan jerawat membandel karena membantu mencegah keparahan dan mempercepat proses penyembuhan. Cara menggunakannya dengan membersihkan seluruh area wajah, lalu peras lemon dan aplikasikan airnya sebagai masker. Biarkan selama 10-15 menit, lalu bilas dengan air bersih. Pakai secara rutin untuk hasil maksimal. 6. Bawang Putih Bawang putih memiliki sifat antibakteri, antijamur, antivirus, dan antiseptik dari alisin. Alisin membantu membunuh bakteri penyebab jerawat, mengurangi pembengkakan, peradangan, dan meningkatkan sirkulasi darah. Tempelkan potongan bawang putih pada jerawat atau bekasnya. Biarkan selama 10-15 menit, lalu bilas dengan air bersih. 7. Tomat Tomat mengandung vitamin A dan C, zat anti-inflamasi, dan membantu memperkecil ukuran pori-pori wajah. Cara menggunakannya dengan menempelkan potongan tomat ke seluruh wajah secara merata. Biarkan selama 10 menit, lalu bilas dengan air bersih.",
+      "Efek_Samping": ["Belum ditemukan efek samping."],
+      "Sumber": "Redaksi Halodoc (2024). Tidak perlu khawatir dengan jerawat membandel, berikut obat jerawat rekomendasi dari dokter spesialis kulit. ✔. [online] halodoc. Available at: https://www.halodoc.com/artikel/7-obat-jerawat-rekomendasi-dokter-spesialis-kulit [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/jerawat_alami.jpg"
+    },
+    {
+      "Id_Penyakit": "P02",
+      "Id_Obat": "O01-P2",
+      "Nama": "Obat alami malaria",
+      "Deskripsi": "1. Kayu manis dikenal memiliki sifat antiinflamasi atau antiperadangan, antioksidan, dan antimikroba sehingga dapat membantu mengurangi gejala malaria secara alami. Kayu manis diketahui memiliki kandungan cinnamaldehyde, tannins, limonene, safrole yang mempunyai kemampuan antimikroba. Penelitian di laboratorium juga menunjukkan kayu manis memiliki efek antiplasmodial dan dapat menghambat perkembangan Plasmodium falciparum yang merupakan salah satu penyebab malaria. Biasanya, kayu manis akan direbus dan air rebusannya dikonsumsi setelah dicampur dengan madu.\n2. Kunyit mengandung antioksidan yang dapat membantu meningkatkan daya tahan tubuh. Selain itu, kunyit juga bersifat antiinflamasi sehingga membantu mengurangi gejala nyeri otot sendi yang terjadi pada malaria.\n3. Jus jeruk, dengan kandungan vitamin C yang tinggi, mampu meningkatkan kekebalan tubuh dan mengurangi gejala peradangan seperti demam.\n4. Jahe memiliki sifat antimikroba dan antiinflamasi yang dapat membantu meredakan nyeri dan mengobati mual. Biasanya diminum dengan air panas dan madu.\n5. Perasan jeruk nipis, mirip jus jeruk, dapat membantu mengurangi gejala malaria karena kandungan vitamin C-nya.\n6. Cuka apel dapat digunakan untuk menurunkan demam dengan cara mengompres dahi menggunakan kain yang dicelupkan ke dalam campuran air dan cuka apel.\n7. Madu membantu tubuh melawan infeksi dan mengurangi gejala malaria. Bisa dikonsumsi langsung atau dicampur dengan teh.",
+      "Efek_Samping":  [
+        "Gangguan pencernaan: Mual, muntah, diare, atau sakit perut.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Interaksi dengan obat lain: Beberapa obat alami dapat berinteraksi dengan obat-obatan yang sedang dikonsumsi, sehingga mengurangi atau meningkatkan efektivitasnya."
+      ],
+      "Sumber": "dr. Sepriani Timurtini Limbong (2022). Daftar Bahan Alami untuk Redakan Gejala Malaria. [online] Klikdokter.com. Available at: https://www.klikdokter.com/info-sehat/kesehatan-umum/daftar-bahan-alami-untuk-redakan-gejala-malaria [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/malaria_alami.jpg"
+    },
+    {
+      "Id_Penyakit": "P02",
+      "Id_Obat": "O02-P2",
+      "Nama": "Dihydroartemisinin-piperaquine (DHP)",
+      "Deskripsi": "Dihydroartemisinin-piperaquine (DHP) adalah kombinasi obat untuk mengatasi malaria yang bekerja dengan membunuh parasit di dalam sel darah merah. Obat ini tersedia dalam bentuk tablet dan tablet dispersible dan dapat digunakan untuk mengatasi malaria yang disebabkan oleh Plasmodium falciparum, Plasmodium vivax, atau Plasmodium ovale.",
+      "Efek_Samping": [
+        "Peningkatan risiko perpanjangan interval QT jantung jika digunakan dengan obat antiaritmia.",
+        "Peningkatan risiko efek samping dari midazolam atau omeprazole.",
+        "Peningkatan kadar piperaquine dengan clarithromycin, ritonavir, atau verapamil.",
+        "Penurunan efektivitas DHP dengan rifampicin, carbamazepine, phenytoin, phenobarbital.",
+        "Penurunan efektivitas paracetamol atau teofilin."
+      ],
+      "Sumber": "https://www.alodokter.com/author/eko-yulianto (2023). Dihydroartemisinin-Piperaquine. [online] Alodokter. Available at: https://www.alodokter.com/dihydroartemisinin-piperaquine#:~:text=Dihydroartemisinin%2Dpiperaquine%20(DHP)%20adalah,di%20dalam%20sel%20darah%20merah. [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/DHP.jpg"
+    },
+    {
+      "Id_Penyakit": "P02",
+      "Id_Obat": "O03-P2",
+      "Nama": "Artemisinin-based Combination Therapy (ACT)",
+      "Deskripsi": "ACT adalah kombinasi dari artemisinin dan obat antimalaria lainnya untuk mengatasi malaria yang disebabkan oleh parasit Plasmodium falciparum. Kombinasi ini meningkatkan efektivitas pengobatan dan memperlambat resistensi parasit.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Mual, muntah, diare, sakit perut.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Pusing dan sakit kepala: Efek samping ini biasanya ringan dan sementara.",
+        "Demam ringan setelah pengobatan, terutama pada anak-anak."
+      ],
+      "Sumber": "Malariaconsortium.org. (2017). Malaria Consortium. [online] Available at: https://www.malariaconsortium.org/pages/112.htm [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/ACT.jpg"
+    },
+    {
+      "Id_Penyakit": "P02",
+      "Id_Obat": "O04-P2",
+      "Nama": "Artesunate intravena",
+      "Deskripsi": "Artesunate digunakan untuk mengobati malaria berat yang disebabkan oleh Plasmodium ovale atau Plasmodium vivax. Obat ini bekerja dengan membunuh parasit di dalam sel darah merah dan diberikan melalui suntikan.",
+      "Efek_Samping": [
+        "Peningkatan risiko efek samping jika digunakan dengan axitinib, imatinib, atau diclofenac.",
+        "Penurunan efektivitas dengan nevirapine, ritonavir, carbamazepine, atau phenytoin.",
+        "Sakit kepala, pusing, diare, muntah, sakit perut, perubahan rasa di lidah."
+      ],
+      "Sumber": "Mayo Clinic. (2024). Artesunate (intravenous route). [online] Available at: https://www.mayoclinic.org/drugs-supplements/artesunate-intravenous-route/description/drg-20489625 [Accessed 13 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Artesunate.jpg"
+    },
+    {
+      "Id_Penyakit": "P03",
+      "Id_Obat": "O01-P3",
+      "Nama": "Tenofovir/lamivudine/dolutegravir (TLD)",
+      "Deskripsi": "Tenofovir/lamivudine/dolutegravir (TLD) adalah kombinasi obat antiretroviral yang digunakan untuk mengobati infeksi HIV. Obat ini merupakan salah satu pilihan utama dalam pengobatan HIV karena efektif dalam menekan virus HIV dan memiliki efek samping yang relatif lebih sedikit dibandingkan obat-obatan HIV generasi sebelumnya. TLD terdiri dari tiga jenis obat: Tenofovir: Mencegah virus HIV memperbanyak diri. Lamivudine: Juga mencegah virus HIV memperbanyak diri. Dolutegravir: Mencegah virus HIV menginfeksi sel-sel baru. TLD bekerja dengan cara menghambat siklus hidup virus HIV pada berbagai tahap, sehingga dapat menekan jumlah virus dalam darah dan memperkuat sistem kekebalan tubuh.",
+      "EfekSamping": [
+        "Gangguan pencernaan: Mual, muntah, diare, atau sakit perut.",
+        "Sakit kepala: Rasa tidak nyaman atau nyeri pada kepala.",
+        "Pusing: Sensasi berputar atau tidak seimbang.",
+        "Kelelahan: Rasa lelah yang berlebihan.",
+        "Insomnia: Sulit tidur atau sering terbangun di malam hari.",
+        "Perubahan berat badan: Beberapa orang mungkin mengalami penurunan atau peningkatan berat badan.",
+        "Perubahan lemak tubuh: Distribusi lemak tubuh dapat berubah.",
+        "Masalah pada ginjal: Fungsi ginjal dapat terganggu, terutama pada orang yang sudah memiliki masalah ginjal sebelumnya.",
+        "Masalah pada tulang: Dapat menyebabkan penurunan kepadatan tulang.",
+        "Masalah pada hati: Meskipun jarang, obat ini dapat menyebabkan masalah pada hati.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas."
+      ],
+      "Sumber": "Kemkes.go.id. (2022). Direktorat Jenderal Pelayanan Kesehatan.",
+      "Img": "images/jpg/artikel-obat/TLD.jpg"
+    },
+    {
+      "Id_Penyakit": "P03",
+      "Id_Obat": "O02-P3",
+      "Nama": "Tenofovir/lamivudine/efavirenz (TLE)",
+      "Deskripsi": "Tenofovir/lamivudine/efavirenz (TLE) adalah kombinasi obat antiretroviral yang umum digunakan untuk mengobati infeksi HIV. Kombinasi ini terdiri dari tiga obat aktif: Tenofovir, Lamivudine, Efavirenz. TLE bekerja dengan cara menghambat enzim yang dibutuhkan virus HIV untuk bereplikasi, memperlambat kerusakan sistem kekebalan tubuh yang disebabkan oleh HIV dan membantu meningkatkan kualitas hidup penderita HIV.",
+      "EfekSamping": [
+        "Gangguan pencernaan: Mual, muntah, diare, dan sakit perut.",
+        "Gangguan saraf: Pusing, sakit kepala, insomnia, dan kesulitan berkonsentrasi.",
+        "Ruam kulit: Ruam kemerahan atau gatal-gatal.",
+        "Perubahan lemak tubuh: Penumpukan lemak di perut, punggung atas, atau wajah.",
+        "Depresi: Perubahan suasana hati dan perasaan sedih.",
+        "Kerusakan hati: Fungsi hati yang abnormal.",
+        "Masalah ginjal: Tingkat kreatinin dalam darah meningkat.",
+        "Masalah tulang: Penurunan kepadatan tulang."
+      ],
+      "Sumber": "Hiv.gov. (2024). Efavirenz/Emtricitabine/Tenofovir Disoproxil Fumarate Patient Drug Record | NIH.",
+      "Img": "images/jpg/artikel-obat/TLE.jpg"
+    },
+    {
+      "Id_Penyakit": "P03",
+      "Id_Obat": "O03-P3",
+      "Nama": "Acriptega",
+      "Deskripsi": "Acriptega adalah obat yang digunakan untuk mengobati infeksi virus HIV pada orang dewasa dan remaja berusia 12 tahun ke atas. Obat ini termasuk dalam golongan obat antiretroviral dan merupakan kombinasi dari tiga obat aktif: Tenofovir, Lamivudine, dan Dolutegravir. Acriptega bekerja dengan cara menghambat enzim yang dibutuhkan virus HIV untuk memperbanyak diri, menekan jumlah virus HIV dalam darah dan membantu memulihkan sistem kekebalan tubuh.",
+      "EfekSamping": [
+        "Gangguan pencernaan: Mual, muntah, diare, sakit perut.",
+        "Pusing dan sakit kepala.",
+        "Insomnia (susah tidur).",
+        "Rasa lelah dan tidak enak badan.",
+        "Perubahan berat badan.",
+        "Perubahan lemak tubuh.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Masalah pada hati: Fungsi hati yang abnormal.",
+        "Masalah pada ginjal: Fungsi ginjal yang abnormal.",
+        "Masalah tulang: Penurunan kepadatan tulang."
+      ],
+      "Sumber": "Alodokter.com. (2022). Mengganti obat untuk terapi penderita HIV.",
+      "Img": "images/jpg/artikel-obat/Acriptega.jpg"
+    },
+    {
+      "Id_Penyakit": "P03",
+      "Id_Obat": "O04-P3",
+      "Nama": "Raltegravir",
+      "Deskripsi": "Raltegravir (RGV) adalah obat yang dipakai sebagai bagian dari terapi antiretroviral (ART) yang dikenal dengan nama merek Isentress. Obat ini adalah inhibitor integrase pertama yang bekerja dengan menghambat enzim integrase, mencegah integrasi DNA HIV ke dalam DNA sel induk. Raltegravir tersedia dalam dosis 400mg dua kali sehari, atau tablet kunyah untuk anak-anak yang disesuaikan dengan berat badan.",
+      "EfekSamping": [
+        "Gangguan pencernaan: Mual, muntah, diare, dan sakit perut.",
+        "Sakit kepala.",
+        "Pusing.",
+        "Kelelahan.",
+        "Insomnia.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Kerusakan otot: Rasa sakit otot yang parah, kelemahan otot, dan urin berwarna gelap.",
+        "Masalah hati: Kulit atau mata menguning, urin berwarna gelap, dan sakit perut bagian kanan atas."
+      ],
+      "Sumber": "Spiritia.or.id. (2014). RALTEGRAVIR - Spiritia.",
+      "Img": "images/jpg/artikel-obat/Raltegravir.jpg"
+    },
+    {
+      "Id_Penyakit": "P04",
+      "Id_Obat": "O01-P4",
+      "Nama": "Clinovir 5% Cream 5 g",
+      "Deskripsi": "Obat cacar air ini mengandung Acyclovir yang dapat kamu gunakan untuk mengobati infeksi akibat virus. Misalnya sebagai pengobatan infeksi herpes simpleks pada kulit dan membran mukosa, termasuk herpes genital awal dan herpes zoster.\nCara menggunakan obat Clinovir 5% Cream 5 gram:\n• Obat ini bisa dioleskan pada area kulit yang infeksi sebanyak 5 kali sehari, dengan interval 4 jam, selama 4-10 hari.\nPenggunaan obat ini harus dengan resep dokter. Sebab Clinovir 5% Cream 5 gram merupakan obat keras yang bisa memicu efek samping berupa sensitisasi kontak.\nSaat menggunakan obat, pastikan kamu menghidrasi tubuh dengan minum air minimal 2 liter per hari.",
+      "Efek_Samping": [
+        "Iritasi kulit: Kemerahan, gatal, kulit kering, atau perih pada area yang dioleskan.",
+        "Kulit berminyak: Beberapa orang mungkin mengalami peningkatan produksi minyak setelah menggunakan Clinovir.",
+        "Sensasi terbakar: Sensasi terbakar ringan mungkin terjadi pada beberapa orang."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Apakah kamu atau anggota keluarga menderita cacar air? Simak apa saja pilihan obat cacar air yang bisa dibeli. [online] halodoc. Available at: https://www.halodoc.com/artikel/ini-pilihan-obat-cacar-air-yang-bisa-dibeli-di-apotek [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Clinovir.jpg"
+    },
+    {
+      "Id_Penyakit": "P04",
+      "Id_Obat": "O02-P4",
+      "Nama": "Cetirizine 10 mg 10 Tablet",
+      "Deskripsi": "Cetirizine adalah obat antihistamin yang sering digunakan untuk meredakan gejala alergi, termasuk gatal-gatal. Saat mengalami cacar air, salah satu gejala yang paling mengganggu adalah rasa gatal yang intens akibat ruam. Oleh karena itu, cetirizine sering diresepkan untuk membantu meredakan gatal tersebut.\nCara Kerja Cetirizine:\nSaat tubuh mengalami reaksi alergi, seperti pada kasus cacar air, tubuh akan melepaskan histamin. Histamin inilah yang memicu berbagai gejala alergi, termasuk gatal. Cetirizine bekerja dengan cara memblokir reseptor histamin sehingga mengurangi efeknya dan meredakan gejala gatal.",
+      "Efek_Samping": [
+        "Mengantuk: Efek samping ini paling sering terjadi, terutama pada dosis yang tinggi.",
+        "Pusing: Rasa pusing juga bisa terjadi, terutama saat berdiri tiba-tiba.",
+        "Mulut kering: Kelenjar ludah dapat terpengaruh sehingga menyebabkan mulut terasa kering.",
+        "Sakit kepala: Beberapa orang mungkin mengalami sakit kepala ringan.",
+        "Gangguan pencernaan: Seperti mual, muntah, atau diare.",
+        "Reaksi alergi: Beberapa orang mungkin mengalami reaksi alergi yang serius terhadap cetirizine."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Apakah kamu atau anggota keluarga menderita cacar air? Simak apa saja pilihan obat cacar air yang bisa dibeli. [online] halodoc. Available at: https://www.halodoc.com/artikel/ini-pilihan-obat-cacar-air-yang-bisa-dibeli-di-apotek [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Cetirizinet.jpg"
+    },
+    {
+      "Id_Penyakit": "P04",
+      "Id_Obat": "O03-P4",
+      "Nama": "Obat Alami Chicken pox",
+      "Deskripsi": "1. Kalamin: Kalamin mengandung zinc oksida yang ampuh mengatasi keluhan gatal ketika menderita cacar air, dan biasanya dijual dalam bentuk losion.\n2. Oatmeal: Haluskan oatmeal sampai menjadi tepung, lalu campurkan ke dalam air hangat untuk mandi. Oatmeal dapat meredakan gatal-gatal dan ruam akibat cacar air.\n3. Soda kue: Tambahkan 1 cangkir soda kue ke dalam air hangat untuk mandi.\n4. Teh chamomile: Seduh 2–3 kantong teh chamomile, celupkan kapas, lalu usapkan ke kulit yang gatal.\n5. Madu: Oleskan madu pada bintil cacar untuk mencegah atau memudarkan bekas luka.",
+      "Efek_Samping": [
+        "Reaksi alergi: Beberapa bahan alami dapat menyebabkan reaksi alergi pada kulit, seperti ruam, gatal-gatal, atau bengkak.",
+        "Iritasi kulit: Beberapa bahan alami dapat menyebabkan iritasi pada kulit yang sedang mengalami cacar air.",
+        "Interaksi dengan obat lain: Beberapa bahan alami dapat berinteraksi dengan obat-obatan yang dikonsumsi.",
+        "Tidak efektif: Tidak semua obat alami terbukti efektif dalam mengatasi cacar air."
+      ],
+      "Sumber": "https://www.alodokter.com/author/ananda-intan (2022). 6 Obat Cacar Air Tradisional Paling Ampuh. [online] Alodokter. Available at: https://www.alodokter.com/6-obat-cacar-air-tradisional-paling-ampuh [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/CAA.jpg"
+    },
+    
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O01-P5",
+      "Nama": "Obat Alami Hipertensi",
+      "Deskripsi": "1. Daun Basil: Salah satu tanaman yang bisa dimanfaatkan untuk menurunkan tekanan darah adalah daun basil atau daun kemangi (Ocimum basilicum). Daun kemangi memiliki kandungan eugenol yang disebut bisa menurunkan tekanan darah. Selain itu, kandungan senyawa dalam daun kemangi juga disebut bisa membantu mengendurkan pembuluh darah, sehingga tekanan darah bisa menurun atau kembali normal.\n2. Seledri: Selain daun kemangi, kamu juga bisa memanfaatkan seledri untuk menurunkan tekanan darah. Ada penelitian pada hewan percobaan (tikus) yang menemukan bahwa ekstrak seledri ternyata bisa membantu menurunkan tekanan darah. Selain itu, mengonsumsi seledri juga disebut bisa membantu memelihara kesehatan pembuluh darah.\n3. Bawang Putih: Pengidap hipertensi juga disarankan untuk mengonsumsi bawang putih. Sebab, jenis tanaman yang satu ini bisa membantu menurunkan tekanan darah tinggi serta menjaga kesehatan pembuluh darah. Mengonsumsi bawang putih disebut bisa menurunkan tekanan darah sistolik dan diastolik.\n4. Kayu Manis: Tekanan darah melonjak? Cobalah mengonsumsi kayu manis. Kayu manis disebut bisa membantu menjaga kesehatan organ jantung, termasuk tekanan darah. Hingga kini belum diketahui apa kaitan antara kayu manis dengan hipertensi, tetapi mengonsumsi makanan ini disebut bisa membantu mengendurkan pembuluh darah dan menurunkan tekanan darah.\n5. Jahe: Pengidap hipertensi juga bisa menurunkan tekanan darah dengan mengonsumsi jahe. Tanaman ini sudah lama digunakan untuk membantu menjaga kesehatan organ jantung, termasuk kadar kolesterol dan tekanan darah.\n6. Kapulaga: Kapulaga juga baik untuk pengidap hipertensi. Ada studi yang menyebut bahwa rutin mengonsumsi kapulaga bisa membantu menurunkan tekanan darah.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Mual, muntah, diare, atau sembelit.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas.",
+        "Interaksi dengan obat lain: Beberapa obat alami dapat berinteraksi dengan obat-obatan yang sedang Anda konsumsi, baik obat resep maupun obat bebas. Ini dapat menyebabkan efektivitas obat berkurang atau meningkatkan risiko efek samping.",
+        "Efek samping spesifik: Beberapa tanaman obat memiliki efek samping yang unik. Misalnya, jahe dalam dosis tinggi dapat menyebabkan mual dan heartburn."
+      ],
+      "Sumber": "Redaksi Halodoc (2021). Hipertensi bisa diatasi dengan beberapa cara, salah satunya dengan cara alami. Ada beberapa jenis tanaman yang. [online] halodoc. Available at: https://www.halodoc.com/artikel/6-tanaman-herbal-yang-diklaim-mampu-menurunkan-hipertensi [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/HA.jpg"
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O02-P5",
+      "Nama": "Diuretik",
+      "Deskripsi": "Diuretik loop bekerja dengan cara menghambat penyerapan garam natrium, klorida dan kalium melalui penghambatan pada enzim Na-K-2Cl transporter di ginjal yang mengakibatkan zat-zat tersebut dan air akan dibuang melalui urine. Obat ini biasanya menjadi pilihan pada kondisi kelebihan cairan di dalam tubuh seperti pada penderita gagal jantung maupun gagal ginjal. Terdapat beberapa jenis obat golongan diuretik loop, seperti furosemide, torsemide, dan bumetanide.",
+      "Efek_Samping": [
+        "Peningkatan frekuensi buang air kecil: Ini adalah efek yang diharapkan dari diuretik.",
+        "Pusing atau sakit kepala: Terjadi karena penurunan tekanan darah.",
+        "Kelemahan: Terutama jika terjadi penurunan kadar kalium dalam darah.",
+        "Mulut kering: Terjadi karena hilangnya cairan tubuh.",
+        "Kram otot: Terutama jika terjadi penurunan kadar kalium dalam darah.",
+        "Gangguan keseimbangan elektrolit: Diuretik dapat menyebabkan ketidakseimbangan kadar natrium, kalium, dan elektrolit lainnya dalam darah.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, bengkak pada wajah, bibir, lidah, atau tenggorokan, kesulitan bernapas."
+      ],
+      "Sumber": "Kemkes.go.id. (2022). Direktorat Jenderal Pelayanan Kesehatan. [online] Available at: https://yankes.kemkes.go.id/view_artikel/1994/sepuluh-obat-anti-hipertensi#:~:text=Jenis%20obat%20antihipertensi%20ini%20diantaranya,trandolapril%2C%20quinapril%2C%20dan%20moexipril. [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Diuretik.jpg"
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O02-P5",
+      "Nama": "Aprovel",
+      "Deskripsi": "Aprovel Tablet mengandung irbesartan yang bekerja menghambat kerja angiotensin, yaitu hormon yang menyempitkan pembuluh darah dan meningkatkan tekanan darah. Dengan cara kerjanya tersebut, Aprovel Tablet dapat melemaskan dan melebarkan pembuluh darah sehingga tekanan darah menurun. Hal ini memudahkan jantung untuk memompa darah ke seluruh tubuh. Perlu diketahui bahwa obat ini tidak boleh digunakan oleh ibu hamil karena dapat membahayakan janin. Beri tahu juga kepada dokter jika menderita penyakit liver, gangguan ginjal, diabetes, atau penyakit jantung. Untuk mengonsumsi Aprovel Tablet, telan obat bersama air putih sebelum atau sesudah makan. Dosis akan ditentukan oleh dokter tergantung kondisi kesehatan dan usia Anda. Umumnya, obat diminum 1 tablet, 1 kali sehari.",
+      "Efek_Samping": [
+        "Pusing: Efek samping ini sering terjadi, terutama pada awal pengobatan. Sebaiknya hindari aktivitas yang membutuhkan kewaspadaan tinggi, seperti mengemudi, hingga Anda yakin tidak merasa pusing.",
+        "Lemah: Rasa lelah atau lemah juga sering dilaporkan oleh pasien yang menggunakan Aprovel.",
+        "Sakit kepala: Sakit kepala ringan hingga sedang dapat terjadi.",
+        "Mual dan muntah: Gangguan pencernaan seperti mual dan muntah juga bisa terjadi.",
+        "Ruam kulit: Ruam kulit yang ringan dan gatal dapat muncul pada beberapa orang."
+      ],
+      "Sumber": "https://www.alodokter.com/author/dayana-cinthya (2019). 8 Obat Darah Tinggi Paling Ampuh Atasi Hipertensi. [online] Alodokter. Available at: https://www.alodokter.com/ini-daftar-obat-tekanan-darah-tinggi-yang-perlu-diketahui [Accessed 8 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Aprovel.jpg"
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O03-P5",
+      "Nama": "Concor Tablet",
+      "Deskripsi": "Concor adalah obat yang termasuk dalam golongan beta-blocker. Obat ini bekerja dengan cara memperlambat detak jantung.",
+      "Efek_Samping": [
+        "Pusing dan sakit kepala.",
+        "Kelelahan.",
+        "Mual dan gangguan pencernaan.",
+        "Denyut jantung melambat.",
+        "Tekanan darah rendah.",
+        "Gangguan tidur.",
+        "Depresi."
+      ],
+      "Sumber": "Alodokter (2019).",
+      "Img": "images/jpg/artikel-obat/concor.jpg"
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O03-P5",
+      "Nama": "Concor Tablet",
+      "Deskripsi": "Concor adalah obat yang termasuk dalam golongan beta-blocker. Obat ini bekerja dengan cara memperlambat detak jantung.",
+      "Efek_Samping": [
+        "Pusing dan sakit kepala.",
+        "Kelelahan.",
+        "Mual dan gangguan pencernaan.",
+        "Denyut jantung melambat.",
+        "Tekanan darah rendah.",
+        "Gangguan tidur.",
+        "Depresi."
+      ],
+      "Sumber": "Alodokter (2019).",
+      "Img": "images/jpg/artikel-obat/concor.jpg"
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Id_Obat": "O04-P5",
+      "Nama": "Lasix Tablet",
+      "Deskripsi": "Lasix adalah nama merek dagang dari obat yang mengandung zat aktif furosemide. Obat ini termasuk dalam golongan diuretik loop, yang bekerja dengan cara meningkatkan produksi urine.",
+      "Efek_Samping": "Perlu perhatian karena beberapa bahan dapat menimbulkan efek samping jika dikonsumsi berlebihan.",
+      "Sumber": "Alodokter (2019).",
+      "Img": "images/jpg/artikel-obat/Lasix.jpg"
+    },
+    {
+      "Id_Penyakit": "P06",
+      "Id_Obat": "O01-P6",
+      "Nama": "Obat Alami Hepatitis B",
+      "Deskripsi": "1. Milk thistle\nPemberian milk thistle merupakan salah satu pengobatan hepatitis tradisional yang sudah terkenal sejak lama. Ekstrak tanaman ini telah banyak digunakan untuk mengatasi masalah kesehatan yang berkaitan dengan organ hati, saluran empedu, dan kantung empedu.\nPotensinya pernah dibuktikan oleh sebuah penelitian yang terbit pada jurnal Cellular Microbiology (2013). Dalam penelitian tersebut, terlihat bahwa obat herbal hepatitis ini dapat membantu menghambat virus hepatitis memasuki sel hati.\n2. Teh hijau\nMengonsumsi teh hijau bisa menjadi salah satu cara mengobati penyakit hepatitis secara alami.\n6. Temulawak\nTidak hanya kunyit, temulawak pun mengandung kurkumin. Senyawa kurkumin ini bersifat bersifat antioksidan sehingga bisa mengurangi peradangan pada liver. Jadi, obat herbal hepatitis ini berpotensi mengurangi komplikasi yang diakibatkan peradangan berkepanjangan, seperti kerusakan liver.\n",
+      "Efek_Samping": "Perlu perhatian karena beberapa bahan dapat menimbulkan efek samping jika dikonsumsi berlebihan.",
+      "Sumber": "Hello Sehat. (2022). 7 Obat Herbal yang Berpotensi Mengatasi Hepatitis - Hello Sehat. [online] Available at: https://hellosehat.com/pencernaan/hati/berbagai-cara-mengobati-hepatitis/ [Accessed 9 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/hepatitisB_alami.jpg"
+    },
+    {
+      "Id_Penyakit": "P06",
+      "Id_Obat": "O02-P6",
+      "Nama": "Lamivudine",
+      "Deskripsi": "Lamivudine adalah obat yang digunakan untuk mengobati infeksi virus, terutama Hepatitis B dan HIV (Human Immunodeficiency Virus). Obat ini bekerja dengan cara menghambat pertumbuhan virus dalam tubuh.",
+      "Efek_Samping": [
+        "Gangguan pencernaan.",
+        "Sakit kepala.",
+        "Nyeri otot.",
+        "Kelelahan.",
+        "Ruam kulit.",
+        "Peningkatan enzim hati.",
+        "Kelelahan."
+      ],
+      "Sumber": "https://sardjito.co.id/2019/07/19/hepatitis-b-dan-hepatitis-c-ada-obatnya-ayo-periksa/#:~:text=Pengobatan%20infeksi%20virus%20hepatitis%20B,adefovir%2C%20tenofovir%2C%20entecavir.",
+      "Img": "images/jpg/artikel-obat/lamivudine.jpg"
+    },
+    {
+      "Id_Penyakit": "P06",
+      "Id_Obat": "O03-P6",
+      "Nama": "Telbivudine",
+      "Deskripsi": "Telbivudine adalah obat antivirus yang digunakan dalam penanganan hepatitis B kronis. Obat ini perlu dikonsumsi secara rutin dalam jangka panjang.",
+      "Efek_Samping": [
+        "Sakit kepala.",
+        "Pusing.",
+        "Tubuh merasa lelah.",
+        "Batuk.",
+        "Mual.",
+        "Diare.",
+        "Sakit perut."
+      ],
+      "Sumber": "https://www.alodokter.com/author/hania-salsabila (2020). Telbivudine. [online] Alodokter. Available at: https://www.alodokter.com/telbivudine [Accessed 9 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/telbivudine.jpg"
+    },
+    {
+      "Id_Penyakit": "P06",
+      "Id_Obat": "O04-P6",
+      "Nama": "Adefovir",
+      "Deskripsi": "Adefovir adalah obat untuk menangani hepatitis B kronis dan menurunkan risiko terjadinya komplikasi akibat kondisi tersebut.",
+      "Efek_Samping": [
+        "Sakit kepala.",
+        "Tubuh merasa lelah.",
+        "Batuk.",
+        "Mual atau muntah.",
+        "Diare.",
+        "Sakit perut."
+      ],
+      "Sumber": "https://www.alodokter.com/author/hania-salsabila (2020). Adefovir. [online] Alodokter. Available at: https://www.alodokter.com/adefovir [Accessed 9 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/adefovir.jpg"
+    },
+    {
+      "Id_Penyakit": "P07",
+      "Id_Obat": "O01-P7",
+      "Nama": "Aspirin",
+      "Deskripsi": "Aspirin jantung adalah jenis aspirin dengan dosis rendah yang sering diresepkan untuk mencegah serangan jantung dan stroke. Obat ini bekerja dengan cara menghambat penggumpalan darah, sehingga mengurangi risiko penyumbatan pembuluh darah.",
+      "Efek_Samping": [
+        "Pendarahan.",
+        "Iritasi lambung.",
+        "Reaksi alergi."
+      ],
+      "Sumber": "https://www.alodokter.com/serangan-jantung/pengobatan",
+      "Img": "images/jpg/artikel-obat/aspirin.jpg"
+    },
+    {
+      "Id_Penyakit": "P07",
+      "Id_Obat": "O02-P7",
+      "Nama": "Ticagrelor",
+      "Deskripsi": "Ticagrelor adalah obat pengencer darah untuk mencegah terjadinya penggumpalan darah di dalam pembuluh darah (trombosis). Gumpalan darah ini bisa menyumbat pembuluh darah dan menghambat aliran darah sehingga menyebabkan komplikasi, seperti stroke atau serangan jantung. Ticagrelor termasuk dalam kelompok obat antiplatelet. Obat ini bekerja dengan menghalangi sel keping darah (platelet) agar tidak saling menempel dan membentuk gumpalan darah. Alhasil, risiko terjadinya komplikasi akibat penggumpalan darah bisa berkurang.",
+      "Efek_Samping": [
+        "Mual",
+        "Pusing atau sakit kepala",
+        "Mimisan",
+        "Peningkatan kadar asam urat (hiperurisemia)",
+        "Sesak napas ringan",
+        "Mimisan yang sulit berhenti, kencing berdarah, batuk darah, muntah darah atau muntah seperti bubuk kopi, buang air besar berdarah atau hitam seperti aspal",
+        "Bradikardia, yang gejalanya berupa denyut jantung lambat, nyeri dada, linglung, pusing berat seperti akan pingsan",
+        "Lumpuh sebelah badan, bicara cadel dan tidak beraturan, atau tidak mampu berbicara sama sekali meski penderitanya sadar, penglihatan buram, hilang keseimbangan, wajah tidak simetris atau salah satu sisi wajah turun akibat otot wajah yang melemah",
+        "Sesak napas meski sedang dalam keadaan istirahat atau posisi berbaring",
+        "Denyut jantung cepat, lambat, atau tidak teratur",
+        "Gangguan penglihatan"
+      ],
+      "Sumber": "https://www.alodokter.com/author/elsa_puspita (2019). Ticagrelor. [online] Alodokter. Available at: https://www.alodokter.com/ticagrelor [Accessed 13 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/ticagrelor.jpg"
+    },
+    {
+      "Id_Penyakit": "P07",
+      "Id_Obat": "O03-P7",
+      "Nama": "Clopidogrel",
+      "Deskripsi": "Clopidogrel adalah obat untuk mencegah penyumbatan pembuluh darah dan membantu melancarkan peredaran darah, sehingga obat ini dapat menurunkan risiko terjadinya stroke atau serangan jantung. Clopidogrel dapat digunakan sebagai obat tunggal atau dikombinasikan dengan obat lain. Clopidogrel adalah obat golongan antiplatelet yang bekerja dengan cara mencegah trombosit atau sel keping darah saling menempel dan membentuk gumpalan darah. Obat ini umumnya digunakan untuk mencegah stroke atau serangan jantung pada orang yang sudah pernah mengalaminya, tapi bisa juga digunakan pada kasus baru.",
+      "Efek_Samping": [
+        "Diare",
+        "Mudah mengalami memar atau perdarahan",
+        "Perdarahan sulit berhenti",
+        "Sembelit",
+        "Rasa terbakar di dada (heartburn)",
+        "Nyeri perut",
+        "Perdarahan dari luka, perdarahan gusi yang tidak kunjung berhenti, atau perdarahan spontan, seperti mimisan",
+        "Muntah darah",
+        "Batuk berdarah",
+        "BAB berdarah",
+        "Kencing berdarah atau hematuria",
+        "Kulit atau bagian putih mata (sklera) menguning atau penyakit kuning",
+        "Merasa sangat lelah setiap saat",
+        "Tanda infeksi, seperti demam atau sakit tenggorokan"
+      ],
+      "Sumber": "https://www.alodokter.com/author/radityaw (2014). Clopidogrel. [online] Alodokter. Available at: https://www.alodokter.com/clopidogrel [Accessed 9 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/clopidogrel.jpg"
+    },
+    {
+      "Id_Penyakit": "P07",
+      "Id_Obat": "O04-P7",
+      "Nama": "Obat Alami Pencegahan Penyakit Serangan Jantung",
+      "Deskripsi": "Bawang putih bermanfaat untuk menurunkan kadar kolesterol jahat, mengurangi pembengkakan, dan menurunkan tekanan darah. Dengan konsumsi bawang putih, risiko serangan jantung, stroke, dan tekanan darah tinggi dapat dikurangi. Teh hijau merupakan salah satu obat herbal alami yang dipercaya mampu mengobati berbagai penyakit, termasuk penyakit jantung. Konsumsi teh hijau sebanyak 5-6 gelas per hari diyakini dapat membantu menjaga kesehatan jantung. Jahe adalah tumbuhan yang memiliki khasiat untuk menurunkan tekanan darah, mengurangi kolesterol, dan mencegah pembekuan darah. Jahe juga memiliki sifat anti-inflamasi dan antioksidan yang tinggi. Kunyit merupakan obat herbal alami untuk penyakit jantung. Tumbuhan ini diyakini mampu melindungi otot jantung dan mengurangi pembekuan darah di arteri. Kayu manis memiliki senyawa antiinflamasi yang tinggi, membantu menyeimbangkan tekanan darah dan kolesterol, yang berperan dalam mencegah penyakit jantung. Ginseng telah digunakan sebagai obat tradisional selama ribuan tahun dan memiliki manfaat kesehatan yang besar. Tumbuhan ini sering digunakan untuk menurunkan kolesterol dan tekanan darah tinggi serta menjaga sistem kekebalan tubuh. Ketumbar sering digunakan dalam masakan dan bermanfaat untuk kesehatan jantung. Senyawa diuretik dalam ketumbar dapat menurunkan tekanan darah dan kolesterol jahat, sehingga dapat mengurangi risiko penyakit jantung.",
+      "Efek_Samping": [
+        "Bawang Putih: Iritasi lambung, Pusing, Mual, Peningkatan risiko perdarahan (terutama jika dikonsumsi dengan obat pengencer darah)\n",
+        "Teh Hijau: Insomnia, Jantung berdebar, Peningkatan asam lambung (terutama jika dikonsumsi berlebihan karena kandungan kafein)\n",
+        "Jahe: Iritasi lambung, Mulas, Gangguan pencernaan, Meningkatkan risiko perdarahan jika dikonsumsi dengan antikoagulan\n",
+        "Kunyit: Diare, Kembung, Risiko perdarahan (terutama jika dikonsumsi dalam dosis tinggi atau bersamaan dengan obat pengencer darah)\n",
+        "Kayu Manis: Gangguan hati bila dikonsumsi dalam jumlah berlebih (terutama jenis tertentu dengan kandungan kumarin tinggi)\n",
+        "Ginseng: Insomnia, Sakit kepala, Pusing, Risiko menyebabkan tekanan darah rendah atau peningkatan risiko perdarahan bila dikonsumsi dengan obat jantung lainnya\n",
+        "Ketumbar: Reaksi alergi pada beberapa orang, Dapat menyebabkan penurunan tekanan darah yang berlebihan jika dikonsumsi dalam jumlah besar"
+    ],
+      "Sumber": "Primaya Hospital (2023). Obat Jantung Alami dari Tumbuhan yang Mudah Didapatkan - Primaya Hospital. [online] Primaya Hospital. Available at: https://primayahospital.com/jantung/obat-jantung-alami-dari-tumbuhan/ [Accessed 9 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/alami_jantung.jpg"
+    },
+    
+    {
+      "Id_Penyakit": "P08",
+      "Id_Obat": "O01-P8",
+      "Nama": "Obat Alami Tuberkulosis",
+      "Deskripsi": "Kunyit merupakan salah satu tanaman yang dapat dijadikan obat herbal untuk membantu meredakan gejala TBC. Jahe, atau Zingiber officinale, adalah tanaman yang cukup lazim digunakan sebagai obat tradisional. Teh hijau diambil dari daun Camellia sinensis dan diyakini memiliki beragam manfaat. Meski bukan herbal, asam lemak omega-3 bisa menjadi salah satu cara untuk meredakan gejala TBC. Kekurangan vitamin D dalam tubuh berpotensi meningkatkan risiko terjadinya inflamasi.",
+      "Efek_Samping": [
+        "Kunyit: Iritasi lambung jika dikonsumsi dalam jumlah besar, Risiko peningkatan asam lambung dan masalah pencernaan, Interaksi negatif dengan obat pengencer darah karena meningkatkan risiko perdarahan\n",
+        "Jahe: Gangguan pencernaan, seperti mulas dan perut kembung, Risiko perdarahan jika dikonsumsi bersama dengan obat pengencer darah, Menyebabkan iritasi lambung jika dikonsumsi berlebihan\n",
+        "Teh Hijau: Insomnia, cemas, atau detak jantung cepat jika dikonsumsi dalam jumlah besar, Mengurangi penyerapan zat besi dari makanan, yang dapat memicu anemia, Mual atau gangguan lambung jika dikonsumsi berlebihan\n",
+        "Asam Lemak Omega-3: Gangguan pencernaan seperti mual atau diare jika dikonsumsi dalam dosis tinggi, Risiko perdarahan yang lebih tinggi, terutama jika dikombinasikan dengan obat pengencer darah, Bisa menyebabkan bau napas atau rasa amis setelah mengonsumsi suplemen omega-3\n",
+        "Vitamin D: Hiperkalsemia jika dikonsumsi berlebihan, Risiko kerusakan ginjal karena akumulasi kalsium, Mengalami mual, muntah, atau kehilangan nafsu makan akibat dosis tinggi"
+      ] ,
+      "Sumber": "Hello Sehat. (2020). Pilihan Obat Herbal TBC yang Membantu Mengatasi Gejala.",
+      "Img": "images/jpg/artikel-obat/Tuberkulosis.jpg"
+    },
+    {
+      "Id_Penyakit": "P08",
+      "Id_Obat": "O02-P8",
+      "Nama": "Isoniazid",
+      "Deskripsi": "Isoniazid adalah obat antibiotik untuk mengobati tuberkulosis (TBC).",
+      "Efek_Samping": [
+        "Mual",
+        "Muntah",
+        "Sakit maag",
+        "Pusing",
+        "Lemas",
+        "Tidak nafsu makan",
+        "Diare",
+        "Demam yang berlangsung lebih dari 3 hari",
+        "Pembengkakan kelenjar getah bening",
+        "Sakit tenggorokan",
+        "Pandangan kabur atau nyeri di belakang mata",
+        "Kesemutan di tangan atau kaki",
+        "Nyeri atau bengkak di sendi",
+        "Kejang",
+        "Mudah memar",
+        "Linglung, perubahan suasana hati dan perilaku",
+        "Gejala psikosis",
+        "Gejala penyakit liver"
+      ],
+      "Sumber": "Alodokter. (2015). Isoniazid.",
+      "Img": "images/jpg/artikel-obat/isoniazid.jpg"
+    },
+    {
+      "Id_Penyakit": "P08",
+      "Id_Obat": "O03-P8",
+      "Nama": "Rifampisin",
+      "Deskripsi": "Rifampicin atau rifampin adalah obat antibiotik yang digunakan untuk mengobati dan mencegah beberapa penyakit akibat infeksi bakteri.",
+      "Efek_Samping": [
+        "Warna urine, air liur, keringat, air mata, dan gigi menjadi kemerahan",
+        "Sakit atau rasa panas di perut bagian atas",
+        "Mual, muntah, atau diare",
+        "Demam",
+        "Sakit kepala atau pusing",
+        "Kantuk",
+        "Kelemahan atau nyeri di lengan atau kaki",
+        "Gangguan keseimbangan",
+        "Mati rasa",
+        "Kebingungan",
+        "Sulit konsentrasi",
+        "Perubahan jadwal menstruasi"
+      ],
+      "Sumber": "Alodokter. (2015). Rifampicin.",
+      "Img": "images/jpg/artikel-obat/rifampisin.jpg"
+    },
+    {
+      "Id_Penyakit": "P08",
+      "Id_Obat": "O04-P8",
+      "Nama": "Pirazinamid",
+      "Deskripsi": "Pyrazinamide atau pirazinamid adalah obat untuk mengobati tuberkulosis (TBC).",
+      "Efek_Samping": [
+        "Nyeri sendi atau otot",
+        "Mual atau muntah",
+        "Hilang nafsu makan",
+        "Lelah",
+        "Mudah memar atau perdarahan",
+        "Jantung berdebar",
+        "Serangan asam urat"
+      ],
+      "Sumber": "Alodokter.",
+      "Img": "images/jpg/artikel-obat/pirazinamid.jpg"
+    }
+  ]
+}

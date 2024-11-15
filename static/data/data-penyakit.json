@@ -1,0 +1,342 @@
+{
+  "articles": [
+    {
+      "Id_Penyakit": "P01",
+      "Name": "Jerawat",
+      "Definition": "Salah satu penyakit kulit yang selalu mendapat perhatian bagi para remaja dan dewasa muda adalah jerawat atau dalam bahasa medisnya acne vulgaris. Penyakit ini tidak fatal, tetapi cukup merisaukan karena berhubungan dengan menurunnya kepercayaan diri akibat berkurangnya keindahan wajah penderita. Acne vulgaris (jerawat) merupakan kelainan folikuler umum yang mengenai folikelpilosebae (folikel rambut) yang rentan dan paling rentan dan paling sering ditemukan didaerah muka, leher, serta badan bagian atas. Acne ditandai dengan komedo tertutup (whitehead), komedo terbuka (blackhead), papula, pustula, nodus, dan kista. Angka kejadian acne vulgaris berkisar 85 % dan terjadi pada usia 14 -17 tahun pada wanita dan 16-19 tahun pada laki-laki, dengan lesi predominan adalah komedo dan papul. Acne sudah timbul pada anak usia 9 tahun namun puncaknya pada laki -laki terutama usia 17-18 tahun sedangkan wanita usia 16 -17 tahun. Acne vulgaris umumnya lebih banyak terjadi pada laki -laki dibandingkan dengan wanita pada rentang usia 15-44 tahun yaitu 34 % pada laki -laki dan 27 % pada wanita.",
+      "Causes": [
+        "Acne vulgaris dapat muncul pada semua usia, tetapi pengaruh hormonal yang membuat acne vulgaris muncul pada masa remaja.",
+        "Makanan dengan kadar lemak yang tinggi seperti kacang-kacangan, coklat, keju, susu, goreng-gorengan, karbohidrat, junk food, dan jumlah kalori tinggi.",
+        "Aktifitas fisik meningkat, penggunaan kosmetik yang salah, penggunaan obat dan minuman terlarang, stress, mencuci kulit wajah, kondisi kulit wajah, iklim/suhu/lingkungan.",
+        "Infeksi bakteri (Propioni Bacterium Acnes), dan keturunan.",
+        "Makanan yang berkadar kolesterol tinggi dapat meningkatkan produksi sebum yang menyebabkan peningkatan unsur komedogenik inflamotogenik."
+      ],
+      "Symptoms": [
+        "Komedo: Pori-pori tersumbat yang berwarna hitam (komedo terbuka) atau putih (komedo tertutup).",
+        "Papula: Benjolan kecil berwarna merah di kulit yang terasa lembut.",
+        "Pustula: Benjolan berisi nanah dengan dasar merah yang disebabkan oleh infeksi.",
+        "Nodul: Benjolan yang besar dan keras di bawah permukaan kulit akibat peradangan yang parah.",
+        "Kista: Benjolan besar berisi nanah yang bisa terasa sakit dan terbentuk jauh di dalam kulit."
+      ],
+      "Complications": [
+        "Bekas Jerawat: Beberapa jenis jerawat, seperti nodul dan kista, cenderung meninggalkan bekas luka berupa jaringan parut.",
+        "Pigmentasi: Jerawat bisa meninggalkan bekas warna gelap atau merah setelah sembuh.",
+        "Infeksi Kulit: Jika jerawat dipencet atau digaruk dengan tangan kotor, infeksi bakteri bisa terjadi.",
+        "Gangguan Psikologis: Jerawat yang parah atau bekas jerawat dapat mempengaruhi kepercayaan diri seseorang."
+      ],
+      "Image": "images/jpg/artikel-penyakit/jerawat.jpeg",
+      "Sumber": "Kemkes.go.id. (2024). Direktorat Jenderal Pelayanan Kesehatan. [online] Available at: https://yankes.kemkes.go.id/view_artikel/3235/faktor-pemicu-timbulnya-jerawat [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P02",
+      "Name": "Malaria",
+      "Definition": "Penyakit malaria adalah salah satu jenis penyakit yang disebabkan oleh infeksi parasit. Parasit tersebut ditularkan melalui gigitan nyamuk terutama oleh nyamuk Anopheles. Manusia dapat terkena malaria setelah digigit nyamuk yang terdapat parasit malaria di dalam tubuh nyamuk. Parasit tersebut masuk ke dalam tubuh manusia yang akan menetap di organ hati sebelum siap menyerang sel darah merah. Penyakit ini banyak dijumpai di daerah tropis. Malaria diinfeksikan oleh parasit bersel satu dari kelas Sporozoa, suku Haemosporida dan Plaspodium.",
+      "Causes": [
+        "Plasmodium falciparum: Jenis ini adalah yang paling berbahaya dan dapat menyebabkan malaria parah.",
+        "Plasmodium vivax: Dapat menyebabkan malaria kambuhan karena parasit bisa bersembunyi di hati dan aktif kembali setelah beberapa bulan.",
+        "Plasmodium ovale: Parasit ini memiliki sifat yang mirip dengan P. vivax dan dapat menyebabkan infeksi kambuhan.",
+        "Plasmodium malariae: Parasit ini kurang umum dan menyebabkan gejala malaria yang lebih ringan.",
+        "Plasmodium knowlesi: Biasanya menyerang primata, tetapi dapat menular ke manusia."
+      ],
+      "Symptoms": [
+        "Demam Tinggi: Gejala utama malaria adalah demam tinggi yang muncul secara siklus.",
+        "Menggigil dan Berkeringat: Penderita biasanya mengalami menggigil hebat yang diikuti oleh keluarnya keringat.",
+        "Sakit Kepala dan Nyeri Otot: Penderita sering mengeluhkan sakit kepala parah serta nyeri di otot dan sendi.",
+        "Kelelahan dan Lemah: Penderita malaria seringkali merasa sangat lelah.",
+        "Mual dan Muntah: Gejala ini sering kali menyertai infeksi malaria.",
+        "Anemia: Karena parasit menghancurkan sel darah merah, anemia sering terjadi pada pasien malaria."
+      ],
+      "Complications": [
+        "Malaria Otak: Ini terjadi ketika parasit menyerang pembuluh darah otak, menyebabkan pembengkakan, kejang, atau bahkan koma.",
+        "Kegagalan Organ: Infeksi malaria berat dapat menyebabkan kerusakan pada ginjal, hati, atau paru-paru.",
+        "Anemia Berat: Penghancuran sel darah merah dapat menyebabkan anemia yang parah.",
+        "Hipoglikemia: Gula darah yang sangat rendah dapat terjadi pada penderita malaria parah.",
+        "Gagal Peredaran Darah dan Syok: Dalam kasus malaria berat, aliran darah dapat terganggu, menyebabkan syok."
+      ],
+      "Image": "images/jpg/artikel-penyakit/malaria.png",
+      "Sumber": "Kemkes.go.id. (2022). Direktorat Jenderal Pelayanan Kesehatan. [online] Available at: https://yankes.kemkes.go.id/view_artikel/1329/malaria [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P03",
+      "Name": "AIDS",
+      "Definition": "AIDS adalah tahap lanjut dari infeksi HIV. AIDS adalah suatu sindrom atau kumpulan gejala yang disebabkan oleh kelemahan sistem kekebalan tubuh. Infeksi yang seharusnya ringan bagi individu yang sehat dapat menjadi fatal bagi penderita AIDS. Saat ini, belum ada pengobatan yang dapat menyembuhkan HIV/AIDS. Tujuan pengobatan HIV adalah untuk mendukung sistem kekebalan tubuh sehingga penderita dapat hidup normal dan sehat, serta mencegah berkembang menjadi AIDS.",
+      "Causes": ["Penyebab utama AIDS adalah infeksi oleh virus HIV. Virus ini menyerang sistem kekebalan tubuh yang seharusnya melawan infeksi. HIV merusak sel darah putih yang disebut sel CD4 dan mereplikasi dirinya dalam sel tersebut. Akibatnya, sistem kekebalan tubuh melemah dan tubuh sulit melawan infeksi. Jika tidak diobati, HIV dapat berkembang menjadi AIDS dalam waktu 10-15 tahun. Virus HIV ditularkan melalui kontak langsung dengan darah dan cairan tubuh yang terinfeksi, seperti sperma, cairan vagina, dan ASI. Penularan juga dapat terjadi melalui jarum suntik yang digunakan secara bersamaan. Hubungan seksual juga dapat menjadi jalur penularan, terutama jika terdapat luka kecil yang tidak disadari."],
+      "Symptoms": [
+        "Diare yang berlangsung lebih dari 1 minggu.",
+        "Mual dan muntah.",
+        "Keringat dingin pada malam hari.",
+        "Demam.",
+        "Batuk kering.",
+        "Masalah kulit dan mulut, seperti infeksi jamur.",
+        "Infeksi berulang dan sering.",
+        "Rentan terkena penyakit serius.",
+        "Kelemahan dan kelelahan yang berlebihan.",
+        "Penurunan berat badan.",
+        "Pembengkakan kelenjar getah bening pada leher, ketiak, atau selangkangan yang berlangsung lama.",
+        "Luka sariawan pada mulut, anus, atau area kelamin.",
+        "Infeksi paru-paru (pneumonia).",
+        "Gangguan memori atau kelainan saraf lainnya.",
+        "Depresi, kebingungan, dan perubahan kepribadian.",
+        "Munculnya bercak-bercak pada mulut, hidung, atau kelopak mata dengan berbagai warna, seperti kemerahan, merah jambu, ungu, atau cokelat."
+      ],
+      "Complications": [
+        "Infeksi pada otak: meningitis kriptokokus, HIV-related encephalopathy, toksoplasmosis.",
+        "Infeksi pada mata: infeksi CMV (cytomegalovirus).",
+        "Infeksi pada saluran pencernaan: kriptosporidiosis, infeksi CMV, Mycobacterium Avium Complex.",
+        "Infeksi pada kelamin: kandidiasis, herpes simpleks, infeksi HPV.",
+        "Infeksi pada hati: hepatitis (terutama hepatitis B dan hepatitis C).",
+        "Infeksi pada paru-paru: tuberkulosis, pneumonia berulang.",
+        "Infeksi pada sistem limfatik: limfoma non-Hodgkin.",
+        "Infeksi pada mulut dan tenggorokan: kandidiasis.",
+        "Infeksi pada kulit: herpes simpleks, Kaposi's sarcoma, herpes zoster."
+      ],
+      "Image": "images/jpg/artikel-penyakit/AIDS.png",
+      "Sumber": "Kemkes.go.id. (2021). AIDS. [online] Available at: https://ayosehat.kemkes.go.id/topik-non-penyakit/hivaids--ims/aids [Accessed 5 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P04",
+      "Name": "Chicken Pox",
+      "Definition":  "Cacar air atau dalam istilah dunia kedokteran disebut dengan varicella zoster merupakan suatu penyakit menular yang disebabkan oleh virus. Virus penyebab cacar air disebut dengan Varicella Zoster Virus atau seringkali disingkat dengan VZV. Virus ini merupakan virus yang sama dengan penyebab herpes zoster atau dalam istilah awam kita kenal dengan cacar api atau cacar ular. Perbedaannya adalah ketika pertama kali terinfeksi virus ini maka gejala yang munjul adalah gejala cacar air (varicella zoster), setelahnya virus ini masih hidup dalam tubuh kita namun dalam kondisi 'tertidur' di sistem saraf. Ketika daya tahan tubuh menurun atau terdapat faktor penyebab lainnya maka virus ini dapat kembali menginfeksi tubuh dalam bentuk tampilan cacar api/ cacar air (herpes zoster).",
+      "Causes": [ "Cacar air disebabkan oleh virus Varicella yang bisa menular dengan sangat mudah dan cepat. Infeksi virus ini bisa menyebar melalui udara saat penderita batuk atau bersin, dan kontak langsung dari lendir, air ludah, atau cairan dari luka lepuh. Penularan ini terjadi pada dua hari sebelum ruam muncul hingga seluruh kerak kering pada luka hilang. Sejumlah kondisi dapat menyebabkan seseorang rentan mengalami cacar air, seperti: Belum pernah terkena cacar air, belum menerima vaksin cacar air, memiliki sistem kekebalan tubuh yang lemah, bekerja di tempat umum, dan bayi yang baru lahir dari ibu yang belum divaksinasi cacar air."],
+      "Symptoms": [
+        "Demam",
+        "Pusing",
+        "Lemas",
+        "Nyeri tenggorokan",
+        "Selera makan menurun.",
+        "Ruam merah, yang biasanya berawal dari perut, punggung, atau wajah, dan dapat menyebar ke seluruh tubuh.",
+        "Terdapat 3 tahap perkembangan ruam: Ruam merah menonjol, Ruam menjadi seperti luka lepuh berisi cairan (vesikel), dan Luka lepuh yang pecah menjadi kerak kering."
+      ],
+      "Complications": [
+        "Infeksi Bakteri pada Kulit: Jika lepuhan cacar air terinfeksi, ini bisa menyebabkan infeksi kulit yang lebih serius.",
+        "Pneumonia: Orang dewasa atau individu dengan sistem kekebalan tubuh yang lemah dapat mengalami pneumonia sebagai komplikasi cacar air.",
+        "Radang Otak (Ensefalitis): Meski jarang, ensefalitis atau peradangan otak bisa terjadi, terutama pada orang dengan sistem kekebalan yang lemah.",
+        "Infeksi Organ Internal: Cacar air yang menyebar ke organ dalam bisa menyebabkan komplikasi serius, terutama pada orang dengan daya tahan tubuh rendah.",
+        "Herpes Zoster (Shingles): Setelah sembuh dari cacar air, virus bisa menetap di tubuh dan kembali aktif di kemudian hari sebagai herpes zoster."
+      ],
+      "Image": "images/jpg/artikel-penyakit/Cacar_Air.jpg",
+      "Sumber": "Kemkes.go.id. (2022). Direktorat Jenderal Pelayanan Kesehatan. [online] Available at: https://yankes.kemkes.go.id/view_artikel/1428/mengenal-cacar-air [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P05",
+      "Name": "Hipertensi",
+      "Definition": "Tekanan darah tinggi (hipertensi) adalah kondisi peningkatan tekanan darah di arteri yang dapat meningkatkan risiko stroke, gagal jantung, dan kerusakan ginjal. Tekanan darah dinyatakan dalam dua angka, sistolik (saat jantung berkontraksi) dan diastolik (saat jantung berelaksasi), misalnya 120/80 mmHg. Hipertensi terjadi jika tekanan sistolik ≥140 mmHg atau diastolik ≥90 mmHg, dengan variasi seperti hipertensi sistolik terisolasi yang umum pada lansia. Faktor usia dan aktivitas fisik memengaruhi tekanan darah, yang cenderung lebih tinggi saat pagi dan lebih rendah saat malam. Klasifikasi tekanan darah meliputi normal, normal tinggi, hipertensi ringan, sedang, berat, hingga hipertensi maligna yang sangat berbahaya.",
+      "Causes": [ "Hipertensi esensial atau hipertensi primer adalah jenis hipertensi yang tidak memiliki penyebab spesifik, sedangkan hipertensi sekunder dapat disebabkan oleh beberapa kondisi seperti penyakit ginjal (5-10%), kelainan hormonal atau pemakaian obat tertentu seperti pil KB (1-2%), dan feokromositoma (tumor pada kelenjar adrenal). Faktor risiko yang meningkatkan kemungkinan terkena hipertensi termasuk kegemukan (obesitas), gaya hidup tidak aktif, stres, serta konsumsi alkohol atau garam dalam makanan. Penyakit ginjal yang dapat menyebabkan hipertensi antara lain stenosis arteri renalis, pielonefritis, glomerulonefritis, tumor ginjal, penyakit ginjal polikista, trauma ginjal, dan terapi penyinaran pada ginjal. Gangguan hormonal seperti hiperaldosteronisme, sindrom Cushing, dan feokromositoma juga dapat menjadi penyebab hipertensi."],
+      "Symptoms": [
+        "Sakit kepala",
+        "Perdarahan dari hidung",
+        "Pusing",
+        "Wajah kemerahan",
+        "Kelelahan",
+        "Mual",
+        "Muntah",
+        "Sesak nafas",
+        "Gelisah",
+        "Pandangan kabur"
+      ],
+      "Complications": [
+        "Penyakit Jantung Koroner",
+        "Stroke",
+        "Gagal Jantung",
+        "Kerusakan Ginjal",
+        "Kebutaan",
+        "Aneurisma"
+      ],
+      "Image": "images/jpg/artikel-penyakit/hipertensi.png",
+      "Sumber": "TEKANAN DARAH TINGGI (Hipertensi). (n.d.). Available at: https://p2ptm.kemkes.go.id/uploads/2016/10/Tekanan-Darah-Tinggi-Hipertensi.pdf"
+    
+    },    
+    {
+      "Id_Penyakit": "P06",
+      "Name": "Hepatitis B",
+      "Definition": "Hepatitis B adalah infeksi hati yang berpotensi mengancam jiwa yang disebabkan oleh virus hepatitis B (HBV). Hepatitis juga dikenal luas sebagai penyakit hati dan penyakit kuning. Penyakit ini dapat disebabkan oleh virus, bakteri, parasit, jamur, obat-obatan, bahan kimia, alkohol, cacing, pola makan yang buruk bahkan penyakit autoimun yang bisa menyerang siapa saja dari segala usia. Virus ini paling umum ditularkan dari ibu ke anak selama kelahiran dan persalinan, serta melalui kontak dengan darah atau cairan tubuh lainnya. Ini adalah masalah kesehatan global utama. Ini dapat menyebabkan infeksi kronis dan menempatkan orang pada risiko tinggi kematian akibat sirosis dan kanker hati. Infeksi Hepatitis B sering tidak disadari oleh pasien, selain itu gejala penyakit tidak khas yang dapat menyebabkan tidak tepatnya pengobatan, sehingga diperkirakan pasien baru terdeteksi setelah terjadinya komplikasi. Selain itu pasien Hepatits B sering kali dirawat inap karena berbagai penyakit penyerta yang dialaminya sehingga mendapatkan sejumlah obat yang mungkin berpotensi menginduksi kerusakan hati. Terdapat lima virus hepatitis utama,yaitu HAV, HBV, HCV, HDV dan HEV. Hepatitis B merupakan infeksi serius yang ditularkan secara vertikal maupun horizontal melalui darah atau cairan tubuh.",
+      "Causes": [
+        "Kontak dengan Darah: Penggunaan jarum suntik bersama (misalnya pada pengguna narkoba suntik). Transfusi darah yang terkontaminasi. Cedera jarum atau alat medis yang tidak steril.",
+        "Hubungan Seksual: Penularan bisa terjadi melalui hubungan seksual tanpa kondom dengan orang yang terinfeksi, terutama melalui pertukaran cairan tubuh seperti darah, sperma, atau cairan vagina.",
+        "Penularan dari Ibu ke Bayi: Seorang ibu yang terinfeksi dapat menularkan virus hepatitis B kepada bayinya selama proses persalinan.",
+        "Penggunaan Alat Pribadi Bersama: Penggunaan alat-alat pribadi seperti sikat gigi atau pisau cukur yang terkontaminasi darah orang yang terinfeksi dapat meningkatkan risiko penularan.",
+        "Kontak Langsung dengan Luka Terbuka atau Cairan Tubuh: Virus ini dapat masuk ke dalam tubuh melalui luka terbuka atau selaput lendir yang bersentuhan dengan cairan tubuh yang terinfeksi."
+      ],
+      "Symptoms": [
+        "Hepatitis B Akut: Pada infeksi akut, banyak orang tidak menunjukkan gejala yang jelas. Gejala yang muncul biasanya ringan dan mirip dengan gejala flu.",
+        "Kelelahan yang Berlebihan: Merasa sangat lelah tanpa sebab yang jelas.",
+        "Demam: Biasanya demam ringan yang muncul pada tahap awal infeksi.",
+        "Mual dan Muntah: Sering kali disertai dengan penurunan nafsu makan.",
+        "Nyeri Sendi dan Otot: Nyeri yang tidak disebabkan oleh aktivitas fisik atau trauma.",
+        "Nyeri Perut: Terutama pada bagian kanan atas di mana hati berada.",
+        "Urin Berwarna Gelap: Urin bisa tampak lebih gelap dari biasanya.",
+        "Kulit dan Mata Menguning (Jaundice): Tanda khas dari masalah hati, akibat bilirubin yang menumpuk di tubuh.",
+        "Hepatitis B Kronis: Pada infeksi kronis, gejala biasanya tidak muncul selama bertahun-tahun hingga terjadi kerusakan hati yang signifikan."
+      ],
+      "Complications": [
+        "Sirosis Hati: Kondisi di mana hati mengalami kerusakan akibat jaringan parut yang terbentuk.",
+        "Gagal Hati: Kondisi serius di mana hati kehilangan kemampuannya untuk menjalankan fungsi normal.",
+        "Kanker Hati: Infeksi hepatitis B kronis meningkatkan risiko terjadinya kanker hati (hepatocellular carcinoma), terutama pada mereka yang juga memiliki sirosis hati.",
+        "Glomerulonefritis: Peradangan pada ginjal yang bisa disebabkan oleh infeksi hepatitis B kronis.",
+        "Peningkatan Risiko Infeksi Lainnya: Penderita hepatitis B mungkin lebih rentan terhadap infeksi lain, seperti hepatitis D.",
+        "Portal Hypertension: Tekanan darah tinggi di vena portal yang dapat menyebabkan pembesaran pembuluh darah di kerongkongan dan risiko perdarahan."
+      ],
+      "Image": "images/jpg/artikel-penyakit/hepatitis-B.jpg",
+      "Sumber": "Kemkes.go.id. (2024). Direktorat Jenderal Pelayanan Kesehatan. Available at: https://yankes.kemkes.go.id/view_artikel/3236/kapan-terapi-hepatitis-b-bisa-dilakukan [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P07",
+      "Name": "Serangan Jantung",
+      "Definition": "Serangan jantung adalah kondisi akut yang terjadi ketika aliran darah ke bagian otot jantung terganggu atau terhenti, sehingga otot jantung tidak mendapatkan cukup oksigen dan nutrisi yang diperlukan. Biasanya, kondisi ini terjadi karena penyumbatan arteri koroner oleh plak aterosklerosis, yaitu timbunan lemak, kolesterol, dan zat lain yang membentuk plak di dinding pembuluh darah. Plak yang pecah dapat membentuk gumpalan darah yang menghambat aliran darah secara mendadak, mengakibatkan kekurangan suplai darah ke otot jantung. Jika tidak segera ditangani, kekurangan suplai ini bisa mengakibatkan kerusakan jaringan jantung yang permanen. Ketika suplai darah terganggu, jaringan di sekitar jantung bisa rusak, yang dapat menyebabkan jantung tidak berfungsi dengan baik.",
+      "Causes": [
+        "Faktor usia: Adanya penambahan usia pada seseorang, maka semakin bertambah pula risiko penyakit jantung.",
+        "Riwayat penyakit jantung dalam keluarga.",
+        "Obesitas (Kegemukan): Obesitas juga dapat menjadi salah satu pemicu seseorang terkena penyakit jantung.",
+        "Pola hidup yang buruk: Kurangnya berolahraga, merokok, dan berbagai aktivitas yang buruk bagi kesehatan.",
+        "Stres: Ketika seseorang mengalami stres, maka tubuh akan mengeluarkan hormon kortisol yang berakibat pada kakunya pembuluh darah seseorang."
+      ],
+      "Symptoms": [
+        "Nyeri Dada: Rasa nyeri atau tekanan di bagian tengah dada, yang berlangsung lebih dari beberapa menit atau datang dan pergi.",
+        "Nyeri pada Lengan, Leher, Rahang, atau Punggung: Nyeri bisa menjalar ke bagian tubuh lain, terutama pada lengan kiri, leher, rahang, atau punggung.",
+        "Sesak Napas: Sesak napas bisa terjadi sebelum atau bersamaan dengan nyeri dada.",
+        "Berkeringat Berlebih: Banyak orang mengalami keringat dingin atau keringat berlebihan saat serangan jantung.",
+        "Kelelahan atau Kelemahan: Merasa sangat lemah, pusing, atau seperti akan pingsan.",
+        "Mual dan Muntah: Sebagian orang juga mengalami mual atau muntah selama serangan jantung."
+      ],
+      "Complications": [
+        "Gagal Jantung: Jantung tidak mampu memompa darah secara efektif ke seluruh tubuh.",
+        "Aritmia: Denyut jantung yang tidak normal, seperti detak yang terlalu cepat, lambat, atau tidak teratur.",
+        "Kerusakan Permanen pada Jantung: Sebagian jaringan otot jantung bisa mengalami kerusakan permanen.",
+        "Kejutan Kardiogenik: Kondisi di mana jantung mengalami kegagalan akut untuk memompa cukup darah.",
+        "Kematian Mendadak: Dalam beberapa kasus, serangan jantung yang parah atau komplikasi dapat menyebabkan kematian mendadak."
+      ],
+      "Image": "images/jpg/artikel-penyakit/jantung.jpg",
+      "Sumber": "Kemkes.go.id. (2022). 5 Faktor Pemicu Gejala Serangan Jantung. Available at: https://ayosehat.kemkes.go.id/5-faktor-pemicu-gejala-serangan-jantung [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P08",
+      "Name": "Tuberkulosis",
+      "Definition": "Tuberkulosis paru (TB paru) adalah penyakit infeksius, yang terutama menyerang penyakit parenkim paru. Nama Tuberkulosis berasal dari tuberkel yang berarti tonjolan kecil dan keras yang terbentuk waktu sistem kekebalan membangun tembok mengelilingi bakteri dalam paru. Tb paru ini bersifat menahun dan secara khas ditandai oleh pembentukan granuloma dan menimbulkan nekrosis jaringan. Tb paru dapat menular melalui udara, waktu seseorang dengan Tb aktif pada paru batuk, bersin atau bicara. Pengertian Tuberkulosis adalah suatu penyakit menular langsung yang disebabkan karena kuman TB yaitu Myobacterium Tuberculosis.",
+      "Causes": [
+        "Sistem Kekebalan Tubuh Lemah: Orang dengan HIV/AIDS, penderita diabetes, atau pengguna obat penekan sistem imun berisiko lebih tinggi terinfeksi TB.",
+        "Kontak Dekat: Penghirupan droplet udara yang mengandung bakteri TB dari penderita TB aktif.",
+        "Lingkungan yang Padat: Berada di lingkungan yang padat atau kurang ventilasi, seperti rumah susun, penjara, atau fasilitas kesehatan, meningkatkan risiko tertular TB.",
+        "Kontak dengan Penderita TB Aktif: Bakteri TB dapat menyebar lewat udara saat penderita TB aktif batuk atau bersin."
+      ],
+      "Symptoms": [
+        "Batuk Berdarah: Batuk yang berlangsung lebih dari 3 minggu dan disertai darah.",
+        "Penurunan Berat Badan yang Drastis: Penurunan berat badan yang tidak dapat dijelaskan.",
+        "Keringat Malam: Berkeringat banyak saat malam hari tanpa aktivitas fisik yang berlebihan.",
+        "Demam: Demam ringan atau sedang yang berlangsung beberapa minggu.",
+        "Sesak Napas: Rasa sesak atau sulit bernapas saat beraktivitas.",
+        "Kelelahan: Rasa lelah yang berlebihan tanpa penyebab yang jelas."
+      ],
+      "Complications": [
+        "Pneumonia: Infeksi sekunder akibat komplikasi TB paru.",
+        "Penyakit Paru Lainnya: Seperti fibrosis paru atau bronkitis kronis.",
+        "Infeksi Sistemik: Tuberkulosis dapat menyebar ke bagian tubuh lain seperti ginjal, tulang belakang, atau otak, menyebabkan komplikasi lebih lanjut.",
+        "Kematian: Jika tidak diobati, TB bisa berlanjut menjadi penyakit lanjut yang mengancam jiwa."
+      ],
+      "Image": "images/jpg/artikel-penyakit/tuberkulosis.jpg",
+      "Sumber": "Kemkes.go.id. (2023). Tuberkulosis. Available at: https://www.kemkes.go.id/tuberkulosis [Accessed 8 Nov. 2024]."
+    },
+    {
+      "Id_Penyakit": "P09",
+      "Name": "Ambeien",
+      "Definition": "Wasir / penyakit ambeien adalah kondisi ketika pembuluh darah vena yang terdapat di sekitar anus membengkak atau meradang. Ambeien muncul di dalam rektum, yaitu saluran yang menghubungkan usus besar dengan anus dan bisa juga muncul di sekitar anus. Biasanya ambeien disebabkan oleh sering mengejan saat buang air besar. Adapun Jenis-jenis ambeien sebagai berikut: Internal hemorrhoid dan Eksternal hemorrhoid.",
+      "Causes": [
+        "Sembelit Kronis: Tekanan berlebih saat buang air besar akibat sembelit dapat menyebabkan pembuluh darah di sekitar anus membengkak.",
+        "Kehamilan: Selama kehamilan, rahim yang membesar memberi tekanan pada pembuluh darah di sekitar anus, yang meningkatkan risiko terjadinya ambeien.",
+        "Duduk Terlalu Lama: Duduk terlalu lama, terutama di toilet, dapat meningkatkan tekanan pada pembuluh darah di area anus.",
+        "Angkat Beban Berat: Mengangkat barang berat secara berlebihan dapat meningkatkan tekanan pada area panggul dan menyebabkan ambeien.",
+        "Kegemukan atau Obesitas: Berat badan berlebih memberi tekanan pada pembuluh darah di area perut dan panggul.",
+        "Usia Tua: Seiring bertambahnya usia, dinding pembuluh darah menjadi lebih lemah, meningkatkan kemungkinan pembengkakan pembuluh darah di anus."
+      ],
+      "Symptoms": [
+        "Perdarahan Saat Buang Air Besar",
+        "Rasa Sakit atau Nyeri di Sekitar Anus",
+        "Gatal atau Iritasi",
+        "Benjolan atau Pembengkakan di Sekitar Anus",
+        "Perasaan Tidak Sempurna Saat Buang Air Besar"
+      ],
+      "Complications": [
+        "Pembekuan Darah (Trombosis)",
+        "Infeksi",
+        "Perdarahan Berlebihan",
+        "Prolaps"
+      ],
+      "Image": "images/jpg/artikel-penyakit/wasir.jpg",
+      "Sumber": "Kemkes.go.id"
+    },
+    {
+      "Id_Penyakit": "P10",
+      "Name": "Diabetes",
+      "Definition": "Diabetes mellitus adalah suatu kondisi yang ditandai dengan tingginya kadar gula (glukosa) dalam darah secara terus-menerus. Diabetes tipe 1 dan tipe 2 merupakan jenis yang paling umum. Pada diabetes tipe 1, sistem kekebalan tubuh menyerang sel penghasil insulin. Pada diabetes tipe 2, sel-sel tubuh menjadi kurang responsif terhadap insulin.",
+      "Causes": [
+        "Diabetes Tipe 1: Penyebab pasti belum diketahui, namun ini adalah penyakit autoimun di mana sistem kekebalan tubuh menyerang dan merusak sel-sel pankreas yang memproduksi insulin.",
+        "Diabetes Tipe 2: Tipe ini lebih sering disebabkan oleh faktor gaya hidup seperti obesitas, pola makan tidak sehat, dan kurangnya aktivitas fisik.",
+        "Faktor Risiko Lain: Kehamilan juga dapat mempengaruhi kadar gula darah dan menyebabkan diabetes gestasional, yang dapat meningkatkan risiko berkembangnya diabetes tipe 2 setelah melahirkan."
+      ],
+      "Symptoms": [
+        "Sering Buang Air Kecil",
+        "Rasa Haus yang Berlebihan",
+        "Kelelahan",
+        "Penurunan Berat Badan Tanpa Alasan yang Jelas",
+        "Penglihatan Kabur",
+        "Luka yang Lambat Sembuh",
+        "Kaki atau Tangan Kesemutan atau Mati Rasa"
+      ],
+      "Complications": [
+        "Penyakit Jantung dan Pembuluh Darah",
+        "Kerusakan Saraf (Neuropati)",
+        "Penyakit Ginjal (Nefropati)",
+        "Retinopati Diabetik",
+        "Infeksi dan Penyembuhan Luka yang Lambat",
+        "Ketoasidosis Diabetik (KAD)"
+      ],
+      "Image": "images/jpg/artikel-penyakit/diabetes.png",
+      "Sumber": "Kemkes.go.id"
+    },
+    {
+      "Id_Penyakit": "P11",
+      "Name": "Penyakit Kuning",
+      "Definition": "Penyakit kuning atau jaundice merupakan suatu kondisi medis ketika terjadinya perubahan warna menjadi kekuningan pada kulit, bagian putih dari mata dan juga membran mukosa seseorang. Penyakit kuning terjadi karena kadar bilirubin dalam sirkulasi darah seseorang meningkat.",
+      "Causes": [
+        "Masalah pada Pre-Produksi (Pre-Hepatik): Peningkatan bilirubin sebelum diproduksi oleh hati.",
+        "Masalah pada Proses Produksi Bilirubin (Hepatik): Gangguan pada proses pembentukan bilirubin di hati.",
+        "Masalah Setelah Produksi Bilirubin (Post-Hepatik): Gangguan pada pengeluaran bilirubin dari hati ke usus."
+      ],
+      "Symptoms": [
+        "Perubahan warna kulit menjadi kuning",
+        "Perubahan warna bagian putih mata menjadi kuning",
+        "Gejala penyerta lain sesuai dengan penyakit yang mendasari"
+      ],
+      "Complications": ["Penyakit hati kronis", "Gagal hati", "Infeksi"],
+      "Image": "images/jpg/artikel-penyakit/kuning.jpg",
+      "Sumber": "Kemkes.go.id"
+    },
+    {
+      "Id_Penyakit": "P12",
+      "Name": "Demam Berdarah",
+      "Definition": "Demam Berdarah Dengue (DBD) adalah suatu penyakit yang disebabkan oleh infeksi virus dengue. DBD adalah penyakit akut dengan manifestasi klinis perdarahan yang menimbulkan syok yang berujung kematian. DBD disebabkan oleh salah satu dari empat serotipe virus dari genus Flavivirus, famili Flaviviridae. Setiap serotipe cukup berbeda sehingga tidak ada proteksi silang dan wabah yang disebabkan beberapa serotipe (hiperendemisitas) dapat terjadi. Virus ini bisa masuk ke dalam tubuh manusia dengan perantara nyamuk Aedes aegypti dan Aedes albopictus. Kedua jenis nyamuk ini terdapat hampir di seluruh pelosok Indonesia, kecuali di tempat-tempat ketinggian lebih dari 1000 meter di atas permukaan laut. Seluruh wilayah di Indonesia mempunyai risiko untuk terjangkit penyakit demam berdarah dengue, sebab baik virus penyebab maupun nyamuk penularnya sudah tersebar luas di perumahan penduduk maupun di tempat-tempat umum di seluruh Indonesia kecuali tempat-tempat di atas ketinggian 100 meter dpl. Penyakit Demam Berdarah Dengue dapat menyerang semua golongan umur. Sampai saat ini penyakit Demam Berdarah Dengue lebih banyak menyerang anak-anak tetapi dalam dekade terakhir ini terlihat adanya kecenderungan kenaikan proporsi penderita Demam Berdarah Dengue pada orang dewasa.",
+      "Causes": ["Penyebab DBD adalah virus dengue yang ditularkan kepada manusia melalui nyamuk Aedes aegypti. Ketika nyamuk tersebut menggigit manusia, virus masuk ke dalam tubuh manusia. Nyamuk Aedes aegypti umumnya berukuran kecil dengan tubuh berwarna hitam pekat, memiliki dua garis vertikal putih di punggung dan garis-garis putih horizontal pada kaki. Nyamuk ini aktif terutama pada pagi hingga sore hari, meskipun kadang-kadang mereka juga menggigit pada malam hari. Mereka lebih sering ditemukan di dalam rumah yang gelap dan sejuk dibandingkan di luar rumah yang panas. Faktor risiko seseorang terkena demam berdarah dengue antara lain tinggal atau bepergian ke daerah tropis. Tinggal atau berada di daerah tropis dan subtropis meningkatkan risiko terkena virus dengue. Daerah yang berisiko meliputi Asia Tenggara, pulau-pulau di Pasifik Barat, Amerika Latin, dan Afrika. Selain itu, memiliki riwayat terinfeksi virus dengue sebelumnya juga meningkatkan risiko mengalami gejala yang lebih parah ketika terkena DBD. Usia di bawah 15 tahun juga memiliki risiko lebih tinggi terkena demam dengue dan demam berdarah dengue."] ,
+      "Symptoms": [
+        "Demam tinggi dengan mendadak dan terus-menerus selama 2-7 hari.",
+        "Manifestasi pendarahan, termasuk setidak-tidaknya uji torniket positif dan salah satu bentuk perdarahan lain, yaitu :",
+        "a. Petaka (bintik-bintik merah akibat pendarahan intradermal / submokosa).",
+        "b. Purpura (perdarahan di kulit).",
+        "c. Ekimosis (bercak perdarahan pada kulit dan selaput lendir).",
+        "d. Epistaksis (mimisan), perdarahan gusi.",
+        "e. Hematemesis (muntah darah).",
+        "f. Melena (tinja berwarna hitam karena adanya perdarahan).",
+        "Pembesaran hati",
+        "Disertai / tanpa disertai renjatan atau syok.",
+        "Trombositopeni (kekurangan trombosit dalam darah. 1.000.000/ul atau kurang).",
+        "Hemokosentrasi (pembesaran plasma) yang dapat ditafsirkan dari meningginya nilai hematocrit (yang mecermintan perembesan plasma) sebanyak 20% atau lebih dibandingkan dengan nilai Hematokrit pada masa konvalesan (masa penyembuhan)."
+      ],
+      "Complications": [
+        "Demam Berdarah Dengue (DBD): Merupakan bentuk penyakit yang lebih parah dan dapat menyebabkan perdarahan, penurunan tekanan darah yang sangat rendah, serta kerusakan organ. Gejala DBD meliputi perdarahan hebat, penurunan trombosit darah, dan kebocoran plasma darah yang bisa menyebabkan syok.",
+        "Syok Dengue: Penurunan tekanan darah yang tiba-tiba dan sangat rendah, yang bisa menyebabkan kegagalan organ dan kematian jika tidak ditangani dengan cepat.",
+        "Kegagalan Organ: Pada kasus yang sangat parah, organ vital seperti hati, ginjal, atau jantung bisa gagal berfungsi.",
+        "Pendarahan Berat: Kondisi ini bisa menyebabkan perdarahan yang sulit dikendalikan, seperti perdarahan di saluran pencernaan atau paru-paru."
+      ],
+      "Image": "images/jpg/artikel-penyakit/DBD.jpg",
+      "Sumber": "Kemkes.go.id. (2022). Demam Berdarah Dengue. [online] Available at: https://ayosehat.kemkes.go.id/topik/demam-berdarah-dengue#:~:text=Pengertian-,Demam%20berdarah%20dengue%20(DBD)%20adalah%20penyakit%20yang%20ditularkan%20oleh%20gigitan,antara%20negara%2Dnegara%20Asia%20Tenggara. [Accessed 8 Nov. 2024]."
+    }
+  ]
+}
