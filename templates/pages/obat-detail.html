@@ -24,8 +24,10 @@
         <div class="flex justify-between space-x-10">
             {% if medicines %}
                 <div class="space-y-4">
-                    <img src="{{ url_for('static', filename=medicines['Img']) }}" alt="{{ medicines['Nama'] }}" class="w-[400px] h-auto mb-4">
-
+                    <div class="w-[400px] h-auto mb-4 border-2  border-[#673AB7] shadow-lg overflow-hidden rounded-lg">
+                        <img src="{{ url_for('static', filename=medicines['Img']) }}" alt="{{ medicines['Nama'] }}" class="w-full h-auto">
+                    </div>
+                    
                     <h1 class="text-3xl font-semibold ">{{ medicines.Nama }}</h1>
                     <p class="text-justify">{{ medicines.Deskripsi }}</p>
                     
@@ -40,6 +42,9 @@
                             </li>
                         {% endfor %}
                     </ul>
+
+                    <h2 class="text-xl font-semibold ">Sumber</h2>
+                    <p class="text-justify">{{ medicines.Sumber }}</p>
                 </div>
             {% else %}
                 <p>No medicines found for "{{ request.args.get('pencarian', '') }}"</p>
