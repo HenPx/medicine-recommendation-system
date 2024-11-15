@@ -20,7 +20,7 @@ def slugify(text):
 # chatbot handler
 # Hugging Face API setup
 API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
-HUGGINGFACE_API_KEY = ""
+HUGGINGFACE_API_KEY = "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"
 
 PRIOR_PROMPT = (
     "You are a friendly chatbot acting as medical consultation assistant. Answer the following questions with detailed, relevant advice. "
