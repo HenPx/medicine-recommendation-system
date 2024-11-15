@@ -22,17 +22,28 @@
         <div class="flex flex-col sm:flex-row justify-between sm:space-x-10 ">
             {% if articles %}
                 <div class="space-y-4">
-                    <h1 class="text-3xl font-semibold ">{{ articles.title }}</h1>
-                    <p class="text-justify">{{ articles.content.definition }}</p>
+                    <h1 class="text-3xl font-semibold ">{{ articles.Name }}</h1>
+                    <p class="text-justify">{{ articles.Definition }}</p>
                     
-                    <h2 class="text-xl font-semibold ">Penyebab</h2>
-                    <p class="text-justify">{{ articles.content.causes }}</p>
+                    <h2 class="text-xl font-semibold">Penyebab</h2>
+                    {% if articles.Causes|length == 1 %}
+                        <p class="text-justify">{{ articles.Causes[0] }}</p> <!-- Display as a paragraph if only one item -->
+                    {% else %}
+                        <ul class="space-y-1 text-justify">
+                            {% for symptom in articles.Causes %}
+                                <li class="flex items-center space-x-4 text-justify">
+                                    <span>{{ loop.index }}. {{ symptom }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    
                     
                     <h2 class="text-xl font-semibold ">Gejala</h2>
-                    <p class="text-justify">Gejala {{ articles.title }} antara lain:</p>
+                    <p class="text-justify">Gejala {{ articles.Name }} antara lain:</p>
                     
                     <ul class="space-y-1 ">
-                        {% for symptom in articles.content.symptoms %}
+                        {% for symptom in articles.Symptoms %}
                             <li class="flex items-center space-x-4">
                                 <span>{{ loop.index }}. {{ symptom }}</span>
                             </li>
@@ -40,15 +51,18 @@
                     </ul>
 
                     <h2 class="text-xl font-semibold ">Komplikasi</h2>
-                    <p class="text-justify">Gejala {{ articles.title }} antara lain:</p>
+                    <p class="text-justify">Gejala {{ articles.Name }} antara lain:</p>
                     
                     <ul class="space-y-1 ">
-                        {% for symptom in articles.content.symptoms %}
+                        {% for symptom in articles.Symptoms %}
                             <li class="flex items-center space-x-4">
                                 <span>{{ loop.index }}. {{ symptom }}</span>
                             </li>
                         {% endfor %}
                     </ul>
+                    <h2 class="text-xl font-semibold ">Sumber</h2>
+                    <p class="text-justify">Gejala {{ articles.Sumber }} antara lain:</p>
+
                 </div>
             {% else %}
                 <p>No articles found for</p>
@@ -61,10 +75,10 @@
                     {% for article in recommend %}
                     <div class="bg-white p-6 rounded-[14px] border-2 border-[#B39DDB] shadow-md w-full lg:w-[393px] ">
                         <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
-                        <h2 class="text-xl font-semibold text-black mb-2">{{ article.title }}</h2>
+                        <h2 class="text-xl font-semibold text-black mb-2">{{ article.Name }}</h2>
                         
                         <p class="text-gray-700">
-                            {{ article.content.definition.split()[:15] | join(' ') }}{% if article.content.definition.split()|length > 15 %}...{% endif %}
+                            {{ article.Definition.split()[:15] | join(' ') }}{% if article.Definition.split()|length > 15 %}...{% endif %}
                         </p>
                         
                         <!-- Entire div as a clickable link -->
@@ -87,9 +101,9 @@
                 {% for medicine in medicines %}
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Obat</p>
-                        <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.medications.name }}</h2>
+                        <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.Nama }}</h2>
                         <p class="text-gray-700">
-                            {{ medicine.medications.description.split()[:15] | join(' ') }}{% if medicine.medications.description.split()|length > 15 %}...{% endif %}
+                            {{ medicine.Deskripsi.split()[:15] | join(' ') }}{% if medicine.Deskripsi.split()|length > 15 %}...{% endif %}
                         </p>
                         <a href="{{ url_for('medicine', slug=medicine.slug) }}" 
                         class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">

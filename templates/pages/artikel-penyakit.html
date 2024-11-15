@@ -50,9 +50,9 @@
             {% for article in articles %}
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
-                    <h2 class="text-xl font-semibold text-black mb-2">{{ article.title }}</h2>
+                    <h2 class="text-xl font-semibold text-black mb-2">{{ article.Name }}</h2>
                     <p class="text-gray-700">
-                        {{ article.content.definition.split()[:15] | join(' ') }}{% if article.content.definition.split()|length > 15 %}...{% endif %}
+                        {{ article.Definition.split()[:15] | join(' ') }}{% if article.Definition.split()|length > 15 %}...{% endif %}
                     </p>
                     <a href="{{ url_for('article', slug=article.slug) }}" 
                        class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
@@ -73,9 +73,9 @@
             {% for medicine in medicines %}
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Obat</p>
-                    <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.medications.name }}</h2>
+                    <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.Nama }}</h2>
                     <p class="text-gray-700">
-                        {{ medicine.medications.description.split()[:15] | join(' ') }}{% if medicine.medications.description.split()|length > 15 %}...{% endif %}
+                        {{ medicine.Deskripsi.split()[:15] | join(' ') }}{% if medicine.Deskripsi.split()|length > 15 %}...{% endif %}
                     </p>
                     <a href="{{ url_for('medicine', slug=medicine.slug) }}" 
                        class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">

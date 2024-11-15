@@ -3,14 +3,14 @@
         <a href="{{ url_for('home') }}" >
             <div class="flex items-center ">
                 <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="mr-3">
-                <span class="text-3xl font-semibold">HealthCare</span>
+                <span class="text-3xl font-semibold">GObat</span>
             </div>
         </a>
 
 
 
         <div class="nav-links hidden lg:flex space-x-10 font-medium text-xl">
-            <a href="{{ url_for('rekomendasi') }}" class="hover:text-gray-300">Rekomendasi Pengobatan</a>
+            <!-- <a href="{{ url_for('rekomendasi') }}" class="hover:text-gray-300">Rekomendasi Pengobatan</a> -->
             <a href="{{ url_for('artikel_penyakit') }}" class="hover:text-gray-300">Artikel Penyakit</a>
             <a href="{{ url_for('wawasan') }}" 
             class="hover:text-gray-300 border border-2 border-gray-300 rounded-lg px-3 transition duration-200 ease-in-out 
@@ -26,7 +26,7 @@
 
     <div class="mobile-menu hidden bg-[#673AB7] text-white space-y-4 py-4 font-medium ml-6 text-xl">
         <hr>
-        <a href="{{ url_for('rekomendasi') }}" class="block hover:text-gray-300">Rekomendasi Pengobatan</a>
+        <!-- <a href="{{ url_for('rekomendasi') }}" class="block hover:text-gray-300">Rekomendasi Pengobatan</a> -->
         <a href="{{ url_for('artikel_penyakit') }}" class="block hover:text-gray-300">Artikel Penyakit</a>
         <a href="{{ url_for('wawasan') }}" 
         class="inline-block hover:text-gray-300 border border-2 border-gray-300 rounded-lg px-3 py-1 transition duration-200 ease-in-out 

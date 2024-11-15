@@ -1,83 +1,71 @@
-{% extends 'layouts/mainMenu.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GObat</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/output-style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-{% block content %}
-<h1 class="text-2xl font-bold mb-4 text-center text-[#673AB7]" style="text-align:center;">Chat with Our HealthBot</h1>
-<div id="chatbox">
-    <div id="chat"></div>
-    <div class="input-container">
-        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="if(event.key === 'Enter') sendMessage()">
-        <button onclick="sendMessage()">Send</button>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body class="bg-[#F8F8FF]">
+    <div class="flex flex-col font-['Poppins'] bg-[#E5E7EB]">
+        <div class="flex flex-col md:flex-row p-6 bg-gray-200">
+            <!-- Sidebar -->
+            <div class="bg-[#673AB7] w-full md:w-20 flex md:flex-col rounded-lg items-center md:pt-8 py-2 md:py-0">
+                <div class="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </div>
+            </div>
+        
+            <!-- Chat Container with Fixed Background and Min Height -->
+            <div class="flex flex-col w-full bg-[#E5E7EB]">
+                <p class="text-2xl   text-center bg-[#E5E7EB] text-[#673AB7]">Chat with Our <strong>HealthBot</strong></p>
+                <div id="loading-indicator" class="text-center text-gray-500   hidden">Processing...</div>
+
+                <div id="chatbox" class="flex-1 overflow-y-auto bg-[#E5E7EB] px-6 py-4 pb-0 bg-purple-50  ">
+                    <div
+                        id="chat"
+                        class="space-y-4  bg-cover bg-no-repeat   rounded-lg  h-96 min-h-[500px] overflow-y-auto"
+                        style="background-image: url('/path/to/your/chat-wallpaper.png'); background-size: cover;"
+                    >
+                        <!-- Chat messages will appear here -->
+
+                    </div>
+                </div>
+        
+                <!-- Input Section -->
+                <div class="flex items-center p-4 pt-0 bg-[#E5E7EB]  border-purple-300  rounded-b-lg">
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Type your message..."
+                        onkeydown="if(event.key === 'Enter') sendMessage()"
+                        class="flex-1 p-3 rounded-l-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    />
+                    <button
+                        onclick="sendMessage()"
+                        class="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-r-lg flex items-center justify-center"
+                    >
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3-8m4 0l3 8h4M5 12h14M4 16h16M4 20h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-auto">
+            {% include 'partials/footer.html' %}
+        </div>
     </div>
-    <div id="loading-indicator" style="display: none; text-align: center; color: #555; margin-top: 10px;">
-        Processing...
-    </div>
-</div>
-
-<style>
-    /* Styling for the chat layout */
-    #chatbox {
-        width: 100%;
-        margin: auto;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background: #f9f9f9;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    #chat {
-        height: 400px;
-        overflow-y: auto;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background: #fff;
-    }
-    .user-message, .bot-message {
-        padding: 10px;
-        margin: 5px 0;
-        border-radius: 5px;
-        max-width: 80%;
-    }
-    .user-message {
-        text-align: right;
-        background-color: #d1e7dd;
-        color: #0f5132;
-        align-self: flex-end;
-        margin-left: auto;
-    }
-    .bot-message {
-        text-align: left;
-        background-color: #f8d7da;
-        color: #842029;
-        align-self: flex-start;
-        margin-right: auto;
-    }
-    /* Flex container for input and button */
-    .input-container {
-        display: flex;
-        width: 100%;
-    }
-    #user-input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px 0 0 5px; /* Rounded corners only on left */
-        border-right: none; /* Remove right border to align with button */
-    }
-    button {
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: 1px solid #007bff;
-        border-radius: 0 5px 5px 0; /* Rounded corners only on right */
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #0056b3;
-    }
-</style>
-
+    
+    
+</body>
 <script>
     function sendMessage() {
         const userInput = document.getElementById("user-input").value.trim();
@@ -87,16 +75,22 @@
         if (userInput === "") return;
 
         // Display user message
-        const userMessage = document.createElement("div");
-        userMessage.className = "user-message";
-        userMessage.textContent = userInput;
-        chat.appendChild(userMessage);
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.className = "user-message bg-green-100 text-green-800 p-3 rounded-xl shadow-md ml-auto w-fit max-w-[80%]";
+        userMessageDiv.textContent = userInput;
+        chat.appendChild(userMessageDiv);
 
-        // Clear input field immediately and show loading indicator
+        const marginMessage = document.createElement("div");
+        marginMessage.className = " mb-3 ";
+        marginMessage.textContent = "";
+        chat.appendChild(marginMessage);
+
+
+        // Clear input field and show loading indicator
         document.getElementById("user-input").value = "";
-        loadingIndicator.style.display = "block";
+        loadingIndicator.classList.remove("hidden");
 
-        // Auto-scroll to the bottom
+        // Auto-scroll to bottom
         chat.scrollTop = chat.scrollHeight;
 
         // Send user message to the chatbot API
@@ -109,31 +103,35 @@
         })
         .then(response => response.json())
         .then(data => {
-            const botMessage = document.createElement("div");
-            botMessage.className = "bot-message";
-            botMessage.textContent = data.response || "I'm sorry, I didn't understand that.";
-            chat.appendChild(botMessage);
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.className = "bot-message bg-red-100 text-red-800 p-3 mb-3 rounded-xl shadow-md mr-auto w-fit max-w-[80%]";
+            botMessageDiv.textContent = data.response || "I'm sorry, I didn't understand that.";
+            chat.appendChild(botMessageDiv);
+            
+            const marginMessage = document.createElement("div");
+            marginMessage.className = " mb-3 ";
+            marginMessage.textContent = "";
+            chat.appendChild(marginMessage);
 
             // Hide loading indicator after bot response
-            loadingIndicator.style.display = "none";
+            loadingIndicator.classList.add("hidden");
 
-            // Auto-scroll to the bottom after adding bot response
+            // Auto-scroll to bottom after adding bot response
             chat.scrollTop = chat.scrollHeight;
         })
         .catch(error => {
             console.error("Error:", error);
-            const errorMessage = document.createElement("div");
-            errorMessage.className = "bot-message";
-            errorMessage.textContent = "Oops! Something went wrong. Please try again.";
-            chat.appendChild(errorMessage);
+            const errorMessageDiv = document.createElement("div");
+            errorMessageDiv.className = "bot-message bg-red-100 text-red-800 p-3 rounded-xl shadow-md mr-auto w-fit max-w-[80%]";
+            errorMessageDiv.textContent = "Oops! Something went wrong. Please try again.";
+            chat.appendChild(errorMessageDiv);
 
             // Hide loading indicator after error message
-            loadingIndicator.style.display = "none";
+            loadingIndicator.classList.add("hidden");
 
-            // Auto-scroll to the bottom after adding error message
+            // Auto-scroll to bottom after adding error message
             chat.scrollTop = chat.scrollHeight;
         });
     }
 </script>
-
-{% endblock %}
+</html>
