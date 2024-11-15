@@ -79,7 +79,7 @@
         userMessageContainer.className = "flex items-end justify-end space-x-2 mb-3";
     
         const userMessageDiv = document.createElement("div");
-        userMessageDiv.className = "user-message  text-[#292929] p-3 rounded-lg bg-white border-r-4 border-[#B39DDB] shadow-md w-auto max-w-[80%]";
+        userMessageDiv.className = "user-message  text-[#292929] p-3 rounded-lg bg-white border-r-4 border-[#B39DDB] shadow-md w-auto max-w-60%]";
         userMessageDiv.textContent = userInput;
     
         const userProfileImg = document.createElement("img");
@@ -124,7 +124,7 @@
             
     
             const botMessageDiv = document.createElement("div");
-            botMessageDiv.className = "bot-message text-[#292929] p-3 rounded-lg bg-white border-l-4 border-[#96E7E5] shadow-md w-auto max-w-[80%]";
+            botMessageDiv.className = "bot-message text-[#292929] p-3 rounded-lg bg-white border-l-4 border-[#96E7E5] shadow-md w-auto max-w-[60%]";
             botMessageDiv.textContent = data.response || "I'm sorry, I didn't understand that.";
     
             botMessageContainer.appendChild(botProfileImg);

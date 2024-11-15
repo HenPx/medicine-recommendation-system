@@ -9,7 +9,7 @@
     </div>
 
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center z-20">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Diagnosa Penyakit</h1>
+        <h1 class="text-4xl font-bold  mb-4 mt-8">Diagnosa Penyakit!</h1>
 
         <!-- Search bar -->
         <div class="w-2/3 max-w-lg z-30">
@@ -19,15 +19,13 @@
                     <input 
                         type="text" 
                         id="search-bar" 
-                        placeholder="Select your symptoms" 
+                        placeholder="Pilih gejalamu" 
                         class="w-full py-3 px-4 border border-purple-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
                         autocomplete="off"
                     />
                     <!-- Dropdown button -->
                     <button type="button" id="dropdown-btn" class="absolute top-1/2 right-3 transform -translate-y-1/2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
+
                     </button>
 
                     <!-- Dropdown with symptoms -->
@@ -42,9 +40,10 @@
                 </div>
     
                 <!-- Selected symptoms container -->
-                <div id="selected-symptoms-container" class="flex flex-wrap gap-2 mt-2 max-h-32 overflow-y-auto">
+                <div id="selected-symptoms-container" class="flex gap-2 mt-2 max-h-16 overflow-x-auto overflow-y-hidden whitespace-nowrap  p-2 pt-0">
                     <!-- Dynamically added selected symptoms will appear here -->
                 </div>
+                
 
     
                 <input type="hidden" name="symptoms" id="selected-symptoms" value="">
@@ -56,7 +55,7 @@
             </form>
         </div>
 
-        <p class="mt-4 text-lg text-gray-800">Masukkan setidaknya 5 kata kunci untuk mendiagnosa penyakit anda.</p>
+        <p class="mt-4 text-lg font-bold text-gray-800">Masukkan setidaknya 5 kata kunci untuk mendiagnosa penyakit anda.</p>
     </div>
 
     <!-- Slide Indicators -->
@@ -79,18 +78,41 @@
         const selectedSymptomsContainer = document.getElementById('selected-symptoms-container');
         const predictBtn = document.getElementById('predict-btn');
         const selectedSymptoms = new Set();
-
+    
         // Slideshow function
         let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-image');
+        const indicators = document.querySelectorAll('.indicator');
+    
         function showSlides() {
-            const slides = document.querySelectorAll('.slideshow-image');
             slides.forEach((slide, index) => {
                 slide.classList.toggle('hidden', index !== slideIndex);
             });
-            slideIndex = (slideIndex + 1) % slides.length;
+    
+            // Update indicator style
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('bg-purple-600', index === slideIndex); // Change color when active
+                indicator.classList.toggle('opacity-100', index === slideIndex); // Make active indicator opaque
+                indicator.classList.toggle('opacity-50', index !== slideIndex); // Reduce opacity for inactive indicators
+            });
         }
-        setInterval(showSlides, 3000); // Change image every 3 seconds
-
+    
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlides();
+        }, 3000); // Change image every 3 seconds
+    
+        // Initialize the first slide and indicator
+        showSlides();
+    
+        // Add click event for indicators to change slides manually
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                slideIndex = index;
+                showSlides(); // Show the corresponding slide when the indicator is clicked
+            });
+        });
+    
         // Populate dropdown or suggestions with a list of items
         function populateList(listElement, items, handler) {
             listElement.innerHTML = '';
@@ -104,7 +126,7 @@
                 }
             });
         }
-
+    
         // Add symptom to the selected list
         function addSymptom(symptom) {
             if (!selectedSymptoms.has(symptom)) {
@@ -115,7 +137,7 @@
             dropdown.classList.add('hidden');
             suggestions.classList.add('hidden');
         }
-
+    
         // Update selected symptoms display
         function updateSelectedSymptoms() {
             selectedSymptomsContainer.innerHTML = '';
@@ -123,7 +145,7 @@
                 const tag = document.createElement('span');
                 tag.classList.add('px-3', 'py-1', 'rounded-lg', 'bg-red-500', 'text-white', 'cursor-pointer', 'flex', 'items-center');
                 tag.textContent = symptom;
-
+    
                 // Add 'x' button for removal
                 const removeBtn = document.createElement('span');
                 removeBtn.textContent = '✖';
@@ -132,20 +154,20 @@
                     selectedSymptoms.delete(symptom);
                     updateSelectedSymptoms();
                 });
-
+    
                 tag.appendChild(removeBtn);
                 selectedSymptomsContainer.appendChild(tag);
             });
-
+    
             selectedSymptomsInput.value = Array.from(selectedSymptoms).join(',');
-
+    
             predictBtn.disabled = selectedSymptoms.size < 5;
             predictBtn.classList.toggle('bg-[#673AB7]', selectedSymptoms.size >= 5);
             predictBtn.classList.toggle('bg-gray-400', selectedSymptoms.size < 5);
             predictBtn.classList.toggle('cursor-not-allowed', selectedSymptoms.size < 5);
             predictBtn.classList.toggle('cursor-pointer', selectedSymptoms.size >= 5);
         }
-
+    
         // Show dropdown with full list of symptoms when the dropdown button is clicked
         dropdownBtn.addEventListener('click', () => {
             if (dropdown.classList.contains('hidden')) {
@@ -153,7 +175,7 @@
             }
             dropdown.classList.toggle('hidden');
         });
-
+    
         // Show suggestions when typing in the search bar
         searchBar.addEventListener('input', () => {
             const query = searchBar.value.toLowerCase();
@@ -161,11 +183,12 @@
             populateList(suggestions, matches, addSymptom);
             suggestions.classList.toggle('hidden', matches.length === 0);
         });
-
+    
         // Hide dropdown and suggestions when clicking outside
         document.addEventListener('click', (e) => {
             if (!dropdown.contains(e.target) && e.target !== dropdownBtn) dropdown.classList.add('hidden');
             if (!suggestions.contains(e.target) && e.target !== searchBar) suggestions.classList.add('hidden');
         });
     });
+    
 </script>
