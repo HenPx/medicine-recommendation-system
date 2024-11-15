@@ -19,32 +19,40 @@
             </ol>
         </section>
 
-        <!-- <section class="mt-4">
+        <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Pengobatan</h3>
-            <ol class="list-decimal ml-5 text-gray-600">
-                {% for medication in medications %}
-                    <li>{{ medication }}</li>
-                {% endfor %}
-            </ol>
-        </section> -->
+            {% if medications and medications|length > 0 %}
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for medication in medications %}
+                        <li>{{ medication }}</li>
+                    {% endfor %}
+                </ol>
+            {% else %}
+                <p class="text-gray-600">Tidak ada rekomendasi pengobatan</p>
+            {% endif %}
+        </section>
 
         <section class="mt-4">
-            <h3 class="text-xl font-semibold  text-gray-700">Saran Olahraga</h3>
-            <ol class="list-decimal ml-5 text-justify text-gray-600">
+            <h3 class="text-xl font-semibold text-gray-700">Saran Olahraga</h3>
+            <ol class="list-decimal ml-5 text-gray-600">
                 {% for exercise in workout %}
                     <li>{{ exercise }}</li>
                 {% endfor %}
             </ol>
         </section>
 
-        <!-- <section class="mt-4">
+        <section class="mt-4">
             <h3 class="text-xl font-semibold text-gray-700">Rekomendasi Pola Makan</h3>
-            <ol class="list-decimal ml-5 text-gray-600">
-                {% for item in diet %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ol>
-        </section>         -->
+            {% if diet and diet|length > 0 %}
+                <ol class="list-decimal ml-5 text-gray-600">
+                    {% for item in diet %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ol>
+            {% else %}
+                <p class="text-gray-600">Tidak ada rekomendasi diet</p>
+            {% endif %}
+        </section> 
     </div>
 
     {% if articles %}
