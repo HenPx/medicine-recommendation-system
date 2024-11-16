@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: "npm run build-css"
+    startCommand: "python app.py"
+    envVars:
+      - key: HUGGINGFACE_API_KEY
+        sync: false
