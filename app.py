@@ -178,20 +178,20 @@ def wawasan():
 
 
 # Rekomendasi
-
-# Load the model and data files
-with open('data/Source/Source/Apps/RandomForest_model.pkl', 'rb') as f:
+# hai
+# Load the model and data filesA
+with open('Data/Source/Source/Apps/RandomForest_model.pkl', 'rb') as f:
     model = pickle.load(f)
-with open('data/Source/Source/Apps/diseases_list_indo.pkl', 'rb') as f:
+with open('Data/Source/Source/Apps/diseases_list_indo.pkl', 'rb') as f:
     diseases_list = pickle.load(f)
-with open('data/Source/Source/Apps/symptoms_dict_indo.pkl', 'rb') as f:
+with open('Data/Source/Source/Apps/symptoms_dict_indo.pkl', 'rb') as f:
     symptoms_dict = pickle.load(f)
 
-description = pd.read_csv('data/Source/Source/Data/new_desc.csv')
-precautions_df = pd.read_csv('data/Source/Source/Data/new_pre.csv')
-medications = pd.read_csv('data/Source/Source/Data/obat.csv')
-diets = pd.read_csv('data/Source/Source/Data/fix_diets.csv')
-workout_df = pd.read_csv('data/Source/Source/Data/workout.csv')
+description = pd.read_csv('Data/Source/Source/Data/new_desc.csv')
+precautions_df = pd.read_csv('Data/Source/Source/Data/new_pre.csv')
+medications = pd.read_csv('Data/Source/Source/Data/obat.csv')
+diets = pd.read_csv('Data/Source/Source/Data/fix_diets.csv')
+workout_df = pd.read_csv('Data/Source/Source/Data/workout.csv')
 
 # Helper function to process data
 def clean_text(data):
