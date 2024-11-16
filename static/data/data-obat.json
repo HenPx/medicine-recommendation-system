@@ -534,6 +534,205 @@
       ],
       "Sumber": "Alodokter.",
       "Img": "images/jpg/artikel-obat/pirazinamid.jpg"
+    },
+    {
+      "Id_Penyakit": "P09",
+      "Id_Obat": "O01-P9",
+      "Nama": "Obat Alami Ambien",
+      "Deskripsi": "1. Lidah buaya: Lidah buaya merupakan salah satu tumbuhan yang memiliki banyak manfaat untuk kesehatan dan termasuk sebagai obat ambeien alami. Tanaman ini mampu mengurangi peradangan pada ambeien dan meringankan rasa perih atau gatal pada anus akibat ambeien. Lidah buaya juga dapat membantu pemulihan pada ambeien yang mengalami luka. Anda bisa menggunakan krim atau gel yang mengandung ekstrak lidah buaya atau langsung mengoleskan lidah buaya yang dihaluskan pada bagian anus yang mengalami pembengkakan akibat ambeien. Lakukan sebanyak 2-3 kali sehari, sampai gejala ambeien dirasa membaik. Meski belum ada bukti klinis yang cukup tentang efektivitas lidah buaya terhadap ambeien, tetapi penggunaan obat alami ini terbilang aman.\n2. Witch hazel: Jenis tanaman herbal lain yang juga dianggap bisa mengatasi ambeien adalah witch hazel. Tanaman ini dapat mengurangi rasa gatal, perih, dan nyeri akibat ambeien. Witch hazel diketahui mengandung tanin dan minyak alami yang bisa membantu mengurangi peradangan, iritasi, dan pembengkakan pada anus akibat ambeien. Obat alami ambeien ini biasanya tersedia dalam bentuk salep atau krim yang mengandung ekstrak witch hazel.\n3. Minyak mineral dan essential oil: Ada banyak pilihan minyak mineral dan essential oil yang dapat digunakan sebagai obat alami ambeien. Beberapa contohnya adalah minyak kelapa, minyak vitamin E, petroleum jelly, serta minyak esensial yang mengandung chamomile, ekstrak kacang almond, dan minyak ikan. Beberapa macam minyak tersebut berfungsi untuk mengurangi peradangan dan pembengkakan akibat ambeien. Selain itu, minyak tersebut juga dapat berfungsi sebagai pelembap yang dapat mengurangi keluhan gatal dan perih akibat iritasi kulit pada anus.\n4. Berendam air hangat: Merendam area anus dengan air hangat bisa membantu meredakan berbagai keluhan akibat ambeien, seperti gatal, iritasi, dan nyeri pada anus. Caranya tidak sulit, kok. Anda cukup duduk di bak mandi berisi air hangat, kemudian berendamlah selama 20 menit. Setelahnya, keringkan daerah anus dengan lembut menggunakan handuk bersih. Lakukan cara ini sebanyak 2-3 kali sehari.\n5. Kompres es batu: Cara lain yang juga efektif untuk meredakan nyeri dan pembengkakan pada ambeien adalah mengompres dengan es batu. Caranya mudah, bungkus es terlebih dahulu dengan kain bersih, lalu kompreslah bagian anus yang terasa sakit selama 15 menit.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Mual, diare, atau sembelit.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, atau sesak napas."
+      ],
+      "Sumber": "https://www.alodokter.com/author/nunik (2022). Obat Alami Ambeien Ini Bisa Dicoba di Rumah.",
+      "Img": "images/jpg/artikel-obat/Ambien.jpg"
+    },
+    {
+      "Id_Penyakit": "P09",
+      "Id_Obat": "O02-P9",
+      "Nama": "Antihemoroid",
+      "Deskripsi": "Antihemoroid adalah jenis obat yang umumnya digunakan untuk meredakan gejala wasir atau hemoroid. Obat ini seringkali berbentuk supositoria (obat yang dimasukkan ke dalam anus) atau salep. Kandungan dalam obat ini biasanya bekerja untuk:\n• Mengurangi peradangan: Membantu mengurangi pembengkakan dan rasa tidak nyaman di sekitar anus.\n• Membekukan jaringan: Membantu menghentikan perdarahan kecil.\n• Membius lokal: Membantu mengurangi rasa sakit.",
+      "Efek_Samping": [
+        "Iritasi: Kulit di sekitar anus mungkin menjadi merah, gatal, atau terasa terbakar.",
+        "Reaksi alergi: Beberapa orang mungkin mengalami reaksi alergi yang ditandai dengan ruam, bengkak, atau kesulitan bernapas.",
+        "Diare: Efek samping ini jarang terjadi, namun beberapa orang mungkin mengalami diare setelah menggunakan obat ini."
+      ],
+      "Sumber": "Hello Sehat. (2024). 10 Pilihan Obat Ambeien yang Ampuh Redakan Nyeri. [online] Available at: https://hellosehat.com/pencernaan/ambeien/obat-ambeien/ [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Antihemoroid.jpg"
+    },
+    {
+      "Id_Penyakit": "P09",
+      "Id_Obat": "O03-P9",
+      "Nama": "Ambeven",
+      "Deskripsi": "Ambeven merupakan obat herbal yang umumnya digunakan untuk membantu meredakan gejala wasir. Obat ini terbuat dari bahan-bahan alami, terutama ekstrak daun ungu yang memiliki khasiat anti-inflamasi.\nBentuk: Biasanya tersedia dalam bentuk kapsul.\nKandungan utama: Ekstrak daun ungu (Graptophylli folium).\nFungsi:\n• Meringankan peradangan: Senyawa flavonoid dalam daun ungu membantu mengurangi pembengkakan dan rasa sakit pada area wasir.\n• Menghentikan perdarahan: Membantu mengurangi perdarahan yang sering terjadi pada penderita wasir.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Seperti mual, muntah, atau diare.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, atau sesak napas.",
+        "Pusing dan mengantuk: Efek ini bisa mengganggu aktivitas sehari-hari, terutama jika Anda mengonsumsi obat ini sebelum mengemudi atau mengoperasikan mesin berat."
+      ],
+      "Sumber": "Hello Sehat. (2024). 10 Pilihan Obat Ambeien yang Ampuh Redakan Nyeri. [online] Available at: https://hellosehat.com/pencernaan/ambeien/obat-ambeien/ [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Ambeven.jpg"
+    },
+    {
+      "Id_Penyakit": "P09",
+      "Id_Obat": "O04-P9",
+      "Nama": "Venosmil",
+      "Deskripsi": "Venosmil merupakan obat yang digunakan untuk meredakan gejala pada gangguan pembuluh darah vena seperti ambeien atau varises. Obat ini mengandung zat aktif hidrosmin yaitu turunan diosmin yang bekerja untuk mengurangi pembengkakan dan melancarkan aliran darah.\nAturan penggunaan obat ini untuk hemoroid akut atau kronik adalah 2 kapsul 3 kali sehari, dengan durasi pengobatan selama 1 – 3 minggu.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Seperti mual, muntah, atau diare.",
+        "Reaksi alergi: Ruam kulit, gatal-gatal, atau sesak napas.",
+        "Sakit kepala."
+      ],
+      "Sumber": "Hello Sehat. (2024). 10 Pilihan Obat Ambeien yang Ampuh Redakan Nyeri. [online] Available at: https://hellosehat.com/pencernaan/ambeien/obat-ambeien/ [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Venosmil.jpg"
+    },
+    {
+      "Id_Penyakit": "P10",
+      "Id_Obat": "O01-P10",
+      "Nama": "Obat alami diabetes",
+      "Deskripsi": "Kayu manis dikenal sebagai obat alami diabetes karena memiliki efek seperti insulin yang membantu menurunkan kadar gula darah serta mengurangi risiko komplikasi seperti penyakit jantung dan kerusakan saraf, meskipun penelitian lebih lanjut masih diperlukan. Ginseng, terutama jenis Amerika (Panax quinquefolius), dipercaya dapat menjaga kestabilan gula darah dan mencegah resistensi insulin, sehingga menurunkan risiko diabetes tipe 2. Lidah buaya, dengan kandungan fitosterolnya, membantu mengontrol kadar gula darah dengan mengurangi penyerapan gula di saluran cerna setelah makan. Jahe juga diyakini dapat menurunkan kadar gula darah yang tinggi dan menjaganya tetap stabil, meskipun studi mengenai khasiatnya masih terbatas. Cengkeh, melalui senyawa yang mampu meningkatkan produksi insulin, menjadi pilihan lain untuk mengontrol gula darah. Terakhir, gymnema, dengan efek antidiabetesnya, membantu menurunkan kadar gula darah dan meningkatkan efektivitas hormon insulin pada penderita diabetes tipe 2.",
+      "Efek_samping": [
+        "Gangguan pencernaan: Mual, diare, atau sembelit.",
+        "Alergi: Reaksi alergi dapat terjadi pada beberapa orang, terutama jika memiliki alergi terhadap bahan alami tersebut.",
+        "Interaksi dengan obat lain: Obat alami dapat berinteraksi dengan obat-obatan yang sedang dikonsumsi, sehingga penting untuk berkonsultasi dengan dokter sebelum mengonsumsinya."
+      ],
+      "Sumber": "https://www.alodokter.com/inilah-6-obat-diabetes-alami-yang-dapat-dicoba",
+      "Img": "images/jpg/artikel-obat/alami_diabetes.jpg"
+    },
+    {
+      "Id_Penyakit": "P10",
+      "Id_Obat": "O03-P10",
+      "Nama": "Metformin",
+      "Deskripsi": "Metformin adalah obat yang umum digunakan untuk mengontrol kadar gula darah pada penderita diabetes tipe 2. Obat ini bekerja dengan cara mengurangi produksi gula, meningkatkan sensitivitas insulin, dan menurunkan penyerapan gula dari makanan.",
+      "Efek_samping": [
+        "Asidosis laktat: Kondisi serius yang terjadi ketika tubuh memiliki terlalu banyak asam laktat. Gejalanya meliputi nyeri otot, kesulitan bernapas, dan rasa sakit perut.",
+        "Hipoglikemia: Kadar gula darah yang sangat rendah. Gejalanya meliputi keringat dingin, tremor, jantung berdebar, dan kebingungan."
+      ],
+      "Sumber": "https://www.halodoc.com/artikel/ini-5-rekomendasi-obat-diabetes-untuk-menurunkan-gula-darah-tinggi",
+      "Img": "images/jpg/artikel-obat/Metformin.jpg"
+    },
+    {
+      "Id_Penyakit": "P10",
+      "Id_Obat": "O04-P10",
+      "Nama": "Glucophage",
+      "Deskripsi": "Glucophage adalah obat yang umum digunakan untuk mengontrol kadar gula darah pada penderita diabetes melitus tipe 2. Obat ini mengandung metformin, yang bekerja dengan cara meningkatkan sensitivitas tubuh terhadap insulin, mengurangi produksi glukosa di hati, dan menunda penyerapan glukosa di usus.",
+      "Efek_samping": [
+        "Gangguan pencernaan: Mual, muntah, diare, kembung, dan kehilangan nafsu makan.",
+        "Rasa logam di mulut: Beberapa orang mungkin merasakan sensasi tidak menyenangkan seperti rasa logam di mulut.",
+        "Pusing dan sakit kepala: Efek samping ini biasanya ringan dan dapat hilang dengan sendirinya."
+      ],
+      "Sumber": "https://www.halodoc.com/artikel/ini-5-rekomendasi-obat-diabetes-untuk-menurunkan-gula-darah-tinggi",
+      "Img": "images/jpg/artikel-obat/Glucophage.jpg"
+    },
+    {
+      "Id_Penyakit": "P11",
+      "Id_Obat": "O01-P11",
+      "Nama": "Obat Alami Penyakit Kuning",
+      "Deskripsi": "Tomat dan air tebu berkhasiat untuk memulihkan fungsi hati; tomat kaya akan likopen, antioksidan, dan vitamin C, sedangkan air tebu memberikan energi untuk mempercepat pemulihan dari sakit kuning. Bawang putih, dengan kandungan antioksidan tinggi, membantu detoksifikasi hati dan mempercepat penyembuhan. Pepaya mengandung enzim peptin yang efektif untuk mengobati penyakit kuning, terutama jika dikonsumsi dalam campuran pepaya mentah, daun pepaya, dan madu. Kunyit dan jahe memiliki sifat antibakteri, antimikroba, anti-inflamasi, serta antioksidan, yang dapat mendukung proses penyembuhan, terutama jika dikonsumsi rutin dengan madu atau air jeruk nipis. Lemon, kaya akan vitamin C, membantu detoksifikasi tubuh dan membuka saluran empedu yang tersumbat, sementara wortel mendukung fungsi hati melalui kandungan beta-karoten dan rendah kolesterolnya. Nanas, dengan enzim detoksifikasinya, serta minyak esensial rosemary, yang dapat dioleskan ke perut untuk efek perlindungan hati, melengkapi daftar bahan alami untuk membantu penyembuhan penyakit kuning.",
+      "Efek_Samping": [
+        "Alergi: Reaksi alergi seperti ruam kulit, gatal-gatal, atau sesak napas.",
+        "Gangguan pencernaan: Mual, muntah, diare, atau sembelit.",
+        "Interaksi obat: Obat herbal dapat berinteraksi dengan obat-obatan lain yang sedang Anda konsumsi."
+      ],
+      "Sumber": "Umsu.ac.id. (2024). Obat Alami untuk Mengobati Penyakit Kuning: Solusi Tradisional yang Efektif – Berita dan Informasi. [online] Available at: https://umsu.ac.id/berita/obat-alami-untuk-mengobati-penyakit-kuning-solusi-tradisional-yang-efektif/ [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Alami Penyakit Kuning.jpg"
+    },
+    {
+      "Id_Penyakit": "P11",
+      "Id_Obat": "O02-P11",
+      "Nama": "Pengobatan Penyakit Kuning Pre-hepatic",
+      "Deskripsi": "Pengobatan penyakit kuning pre-hepatic bertujuan untuk mencegah sel darah merah hancur terlalu cepat atau terlalu banyak. Sebagai contoh, jika penyakit kuning pre-hepatic disebabkan oleh malaria, dokter akan meresepkan obat antimalaria, seperti doxycycline, chloroquine, atau artesunate.",
+      "Efek_Samping": [
+        "Mual dan muntah",
+        "Diare",
+        "Pusing",
+        "Reaksi alergi",
+        "Penurunan kekebalan tubuh"
+      ],
+      "Sumber": "https://www.alodokter.com/author/am1r (2014). Pengobatan Penyakit Kuning. [online] Alodokter. Available at: https://www.alodokter.com/penyakit-kuning/pengobatan [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/doxycycline.jpg"
+    },
+    {
+      "Id_Penyakit": "P11",
+      "Id_Obat": "O03-P11",
+      "Nama": "Pengobatan Penyakit Kuning Intra-hepatic",
+      "Deskripsi": "Pengobatan penyakit kuning intra-hepatic bertujuan untuk mencegah meluasnya kerusakan pada hati dan memperbaiki kerusakan tersebut. Misalnya, jika kerusakan hati disebabkan oleh kebiasaan mengonsumsi minuman beralkohol yang berlebihan, maka dokter akan menyarankan pasien untuk menghentikan kebiasaan tersebut.",
+      "Efek_Samping": [
+        "Mual dan muntah",
+        "Diare",
+        "Sakit kepala",
+        "Kelelahan",
+        "Peningkatan risiko infeksi",
+        "Gangguan hati"
+      ],
+      "Sumber": "https://www.alodokter.com/author/am1r (2014). Pengobatan Penyakit Kuning. [online] Alodokter. Available at: https://www.alodokter.com/penyakit-kuning/pengobatan [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/vaksin.jpg"
+    },
+    {
+      "Id_Penyakit": "P11",
+      "Id_Obat": "O04-P11",
+      "Nama": "Pengobatan Penyakit Kuning Post-hepatic",
+      "Deskripsi": "Pengobatan penyakit kuning post-hepatic bertujuan untuk menghilangkan sumbatan di dalam saluran empedu dan pankreas. Pada penyakit kuning post-hepatic yang terjadi akibat batu saluran empedu, dokter akan mengangkat batu tersebut melalui operasi.",
+      "Efek_Samping": [
+        "Operasi: Perdarahan, Infeksi, Pembekuan darah, Nyeri",
+        "Obat-obatan: Mual dan muntah, Diare, Sakit kepala, Reaksi alergi"
+      ],
+      "Sumber": "https://www.alodokter.com/author/am1r (2014). Pengobatan Penyakit Kuning. [online] Alodokter. Available at: https://www.alodokter.com/penyakit-kuning/pengobatan [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/cholestyramine.jpg"
+    },
+    {
+      "Id_Penyakit": "P12",
+      "Id_Obat": "O01-P12",
+      "Nama": "Obat Alami Demam Berdarah",
+      "Deskripsi": "Buah delima kaya akan vitamin dan mineral yang dapat mengurangi kelelahan serta memberikan energi tambahan pada pasien DBD. Air barley membantu menjaga hidrasi dan mengeluarkan racun dari tubuh, sementara air kelapa efektif dalam menggantikan cairan yang hilang akibat dehidrasi. Kunyit, dengan sifat antiinflamasinya, berkhasiat untuk menurunkan demam. Selain itu, daun pepaya terbukti secara signifikan meningkatkan jumlah trombosit, sehingga mempercepat proses penyembuhan pasien DBD.",
+      "Efek_Samping": ["Alergi", "Gangguan pencernaan", "Interaksi obat"],
+      "Sumber": "Nushratu, H. (2024). Kasus DBD Nanjak, 5 Herbal ini Bantu agar Cepat Pulih. [online] detikHealth. Available at: https://health.detik.com/berita-detikhealth/d-7263676/kasus-dbd-nanjak-5-herbal-ini-bantu-agar-cepat-pulih [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/alami_dbd.jpg"
+    },
+    {
+      "Id_Penyakit": "P12",
+      "Id_Obat": "O02-P12",
+      "Nama": "Fu Fang E Jiao Jiang",
+      "Deskripsi": "Fu Fang E Jiao Jiang adalah obat berjenis cairan herbal China yang dapat memelihara stamina tubuh. Obat ini bekerja menjadi zat penambah darah sehingga berguna digunakan saat mengalami kondisi seperti kurang trombosit (demam berdarah), anemia, atau menstruasi. Di dalam obat ini terdapat E-jiao (colla corini a.) yang dapat meningkatkan sel darah merah, Dangshen (radix codonopsis) sebagai antioksidan untuk melawan radikal bebas, Shu Di Huang (rehmannia) yang bisa menjaga kesehatan fungsi organ tubuh, serta Shan Zha (fructus crataegi) yang mampu memperlancar peredaran darah.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Mual, muntah, atau diare.",
+        "Reaksi alergi: Ruam kulit, gatal, atau sesak napas."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Gigitan nyamuk Aedes aegypti bisa menyebabkan seseorang menderita DBD. Gunakan obat seperti Fu Fang E Jiao hin. [online] halodoc. Available at: https://www.halodoc.com/artikel/ini-daftar-obat-dbd-paling-ampuh-yang-ada-di-apotik [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Fu Fang.jpg"
+    },
+    {
+      "Id_Penyakit": "P12",
+      "Id_Obat": "O03-P12",
+      "Nama": "Isoprinosine 500 mg 8 Tablet",
+      "Deskripsi": "Isoprinosine 500 mg 8 Tablet adalah salah satu opsi obat untuk membantu mengatasi DBD. Obat ini berperan dalam mengatur sistem kekebalan tubuh untuk melawan infeksi virus, termasuk virus dengue yang menjadi penyebab DBD. Obat ini sebaiknya dikonsumsi setelah makan dengan dosis rata-rata 50 mg/kg berat badan per hari, yang terbagi menjadi 3-4 dosis. Pada kondisi infeksi yang berat dan fase akut, dosis dapat ditingkatkan hingga sekitar 100 mg/kg berat badan per hari, dengan pembagian dalam 4-6 dosis. Durasi pengobatan umumnya adalah 7-10 hari, dan terapi dapat dilanjutkan selama 2 hari setelah gejala penyakit mulai mereda. Penting untuk selalu berkonsultasi dengan dokter sebelum menggunakan Isoprinosine karena obat ini termasuk dalam golongan obat keras.",
+      "Efek_Samping": [
+        "Gangguan pencernaan: Mual, muntah, diare",
+        "Sakit kepala",
+        "Vertigo (pusing)",
+        "Nyeri sendi (artralgia)",
+        "Sembelit",
+        "Rasa lelah",
+        "Ruam kulit",
+        "Gatal-gatal",
+        "Peningkatan kadar asam urat"
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Gigitan nyamuk Aedes aegypti bisa menyebabkan seseorang menderita DBD. Gunakan obat seperti Fu Fang E Jiao hin. [online] halodoc. Available at: https://www.halodoc.com/artikel/ini-daftar-obat-dbd-paling-ampuh-yang-ada-di-apotik [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Isoprinosine.jpg"
+    },
+    {
+      "Id_Penyakit": "P12",
+      "Id_Obat": "O04-P12",
+      "Nama": "Al Afiat Angkak",
+      "Deskripsi": "Seseorang akan mengalami penurunan trombosit secara drastis saat mengalami demam berdarah. Ini karena virus dengue merusak sel darah merah. Penurunan trombosit ini bisa mencapai 40.000 – 100.000 per mikroliter. Sementara, normal trombosit yang harus ada dalam tubuh adalah 150.000 – 400.000 per mikroliter. Oleh karena itu, kamu membutuhkan obat yang bisa menaikkan trombosit hingga mencapai kadar normalnya. Salah satunya yang bisa dikonsumsi adalah Al Afiat Angkak. Obat herbal ini mengandung Monascus purpurerus yang juga dikenal sebagai ekstrak angkak. Angkak bisa meningkatkan produksi trombosit di sumsum tulang serta memengaruhi proses infeksi agar tidak menurunkan trombosit secara terus-menerus.",
+      "Efek_Samping": [
+        "Gangguan Pencernaan: Seperti mual, muntah, diare, atau sakit perut.",
+        "Sakit Kepala: Beberapa orang mungkin mengalami sakit kepala setelah mengonsumsi angkak.",
+        "Rasa Tidak Nyaman pada Otot: Beberapa kasus melaporkan rasa nyeri atau kelemahan pada otot.",
+        "Reaksi Alergi: Bagi mereka yang alergi terhadap jamur atau produk fermentasi, angkak dapat memicu reaksi alergi seperti ruam kulit, gatal-gatal, atau sesak napas."
+      ],
+      "Sumber": "Redaksi Halodoc (2024). Gigitan nyamuk Aedes aegypti bisa menyebabkan seseorang menderita DBD. Gunakan obat seperti Fu Fang E Jiao hin. [online] halodoc. Available at: https://www.halodoc.com/artikel/ini-daftar-obat-dbd-paling-ampuh-yang-ada-di-apotik [Accessed 10 Nov. 2024].",
+      "Img": "images/jpg/artikel-obat/Al-Afiat.jpg"
     }
   ]
 }
