@@ -5,17 +5,19 @@ import json
 import random
 import pickle
 import pandas as pd
-import numpy as np
-import re
 
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 def slugify(text):
-    text = re.sub(r'\s+', '-', text)
-    text = re.sub(r'[^a-zA-Z0-9\-]', '', text)
+    # Ganti spasi dengan tanda hubung
+    text = text.replace(' ', '-')
+    # Hapus karakter selain huruf, angka, dan tanda hubung
+    allowed_chars = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-')
+    text = ''.join(char for char in text if char in allowed_chars)
     return text.lower()
+
 
 # chatbot handler
 # Hugging Face API setup
@@ -223,7 +225,7 @@ def helper(dis):
 
 
 def get_predicted_value(patient_symptoms):
-    input_vector = np.zeros(len(symptoms_dict))
+    input_vector = [0] * len(symptoms_dict)
     for item in patient_symptoms:
         input_vector[symptoms_dict[item]] = 1
     return diseases_list[model.predict([input_vector])[0]]
