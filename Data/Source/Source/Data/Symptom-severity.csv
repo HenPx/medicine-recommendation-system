@@ -1,136 +1,134 @@
 Gejala,berat
-gatal,1
-ruam kulit,3
-erupsi_kulit_nodal,4
-bersin_terus_menerus,4
-gemetaran,5
-panas dingin,3
-nyeri sendi,3
-sakit perut,5
-keasaman,3
-bisul_di_lidah,4
-pemborosan_otot,3
-muntah,5
-pembakaran_kemih,6
-bercak_buang air kecil,6
-kelelahan,4
-berat_naik,3
-kecemasan,4
-tangan dan kaki dingin,5
-perubahan suasana hati,3
-penurunan_berat_badan,3
-kegelisahan,5
-kelesuan,2
-bercak_di_tenggorokan,6
-kadar_gula_tidak_beraturan,5
-batuk,4
-demam tinggi,7
-mata_cekung,3
-sesak napas,4
-berkeringat,3
-dehidrasi,4
-gangguan pencernaan,5
-sakit kepala,3
-kulit kekuningan,3
-urin_gelap,4
-mual,5
-kehilangan_nafsu_nafsu_makan,4
-nyeri di belakang mata,4
-sakit punggung,3
-sembelit,4
-nyeri perut,4
-diare,6
-demam ringan,5
-urin_kuning,4
-menguningnya_mata,4
-gagal_hati_akut,6
-kelebihan cairan,6
-perut bengkak,7
-pembengkakan_kelenjar_getah_limfa,6
-rasa tidak enak,6
-penglihatan_kabur_dan_terdistorsi,5
-dahak,5
-iritasi_tenggorokan,4
-mata_merah,5
-tekanan_sinus,4
-pilek,5
-penyumbatan,5
-nyeri dada,7
-kelemahan_pada_anggota_tubuh,7
-detak_jantung_cepat,5
-nyeri_saat_buang_air_besar,5
-nyeri_di_daerah_anal,6
-tinja_berdarah,5
-iritasi_di_anus,6
-nyeri leher,5
-pusing,4
-kram,4
-memar,4
-kegemukan,4
-kaki_bengkak,5
-pembuluh_darah_bengkak,5
-wajah dan mata bengkak,5
-pembesaran_tiroid,6
-kuku_rapuh,5
-ekstremitas bengkak,5
-rasa lapar yang berlebihan,4
-kontak di luar nikah,5
-bibir_kering_dan_kesemutan,4
-bicara tidak jelas,4
-nyeri lutut,3
-nyeri sendi pinggul,2
-kelemahan otot,2
-leher kaku,4
-pembengkakan_sendi,5
-gerakan_kekakuan,5
-gerakan_berputar,6
-kehilangan keseimbangan,4
-kegoyangan,4
-kelemahan_satu_sisi_tubuh,4
-kehilangan_bau,3
-ketidaknyamanan kandung kemih,4
-bau_busuk_furin,5
-rasa_kencing_terus_menerus,6
-aliran_gas,5
-gatal_dalam,4
-tampilan_toksik_(tifos),5
-depresi,3
-sifat lekas marah,2
-nyeri otot,2
-sensorium yang diubah,2
-bintik_merah_di_tubuh,3
-sakit perut,4
-menstruasi_tidak_normal,6
-bercak_diskromik,6
-mata berair,4
-nafsu makan meningkat,5
-poliuria,4
-sejarah keluarga,5
-dahak_mucoid,4
-dahak berkarat,4
-kurangnya_konsentrasi,3
-gangguan_visual,3
-menerima_transfusi_darah,5
-menerima_suntikan_yang_tidak_steril,2
-makan,7
-pendarahan lambung,6
-distensi_perut,4
-sejarah_konsumsi_alkohol,5
-kelebihan cairan,4
-darah_dalam_dahak,5
-urat_yang_menonjol_di_betis,6
-palpitasi,4
-berjalan dengan menyakitkan,2
-jerawat_berisi_nanah,2
-komedo,2
-kulit berminyak,2
-kulit_terkelupas,3
-debu_seperti_perak,2
-lekukan kecil pada kuku,2
-kuku_inflamasi,2
-lepuh,4
-luka_merah_di_sekitar_hidung,2
-kerak_kuning_cairan_kerak,3
+Gatal,1
+Ruam kulit,3
+Benjolan kulit,4
+Bersin terus-menerus,4
+Gemetar,5
+Demam menggigil,3
+Nyeri sendi,3
+Sakit perut,5
+Asam lambung naik,3
+Luka di lidah,4
+Penyusutan otot,3
+Muntah,5
+Rasa panas saat buang air kecil,6
+Bercak saat buang air kecil,6
+Lelah,4
+Kenaikan berat badan,3
+Cemas,4
+Tangan dan kaki terasa dingin,5
+Perubahan suasana hati,3
+Penurunan berat badan,3
+Gelisah,5
+Lesu,2
+Bercak di tenggorokan,6
+Kadar gula darah tidak stabil,5
+Batuk,4
+Demam tinggi,7
+Mata cekung,3
+Sesak napas,4
+Berkeringat,3
+Kekurangan cairan (dehidrasi),4
+Perut terasa tidak nyaman,5
+Sakit kepala,3
+Kulit kekuningan,3
+Urin berwarna gelap,4
+Mual,5
+Hilang nafsu makan,4
+Nyeri di belakang mata,4
+Nyeri punggung,3
+Susah buang air besar (sembelit),4
+Sakit perut bagian bawah,4
+Diare,6
+Demam ringan,5
+Urin berwarna kuning,4
+Mata menguning,4
+Gagal hati akut,6
+Penumpukan cairan di tubuh,6
+Perut bengkak,7
+Pembengkakan kelenjar getah bening,6
+Rasa tidak enak badan,6
+Pandangan kabur,5
+Dahak,5
+Iritasi tenggorokan,4
+Mata merah,5
+Tekanan di sinus,4
+Hidung meler (pilek),5
+Hidung tersumbat,5
+Nyeri dada,7
+Kelemahan pada tangan atau kaki,7
+Detak jantung cepat,5
+Nyeri saat buang air besar,5
+Nyeri di sekitar anus,6
+Tinja berdarah,5
+Iritasi pada anus,6
+Sakit leher,5
+Pusing,4
+Kram,4
+Memar,4
+Obesitas (kelebihan berat badan),4
+Kaki bengkak,5
+Pembuluh darah membesar,5
+Wajah dan mata bengkak,5
+Tiroid membesar,6
+Kuku rapuh,5
+Pembengkakan tangan atau kaki,5
+Nafsu makan berlebihan,4
+Hubungan di luar pernikahan,5
+Bibir kering dan terasa kesemutan,4
+Bicara tidak jelas,4
+Nyeri lutut,3
+Nyeri sendi pinggul,2
+Lemah otot,2
+Leher kaku,4
+Sendi bengkak,5
+Kaku saat bergerak,5
+Rasa berputar (vertigo),6
+Kehilangan keseimbangan,4
+Rasa goyah,4
+Lemah di satu sisi tubuh,4
+Kehilangan penciuman,3
+Tidak nyaman di kandung kemih,4
+Bau busuk pada urin,5
+Rasa ingin buang air kecil terus-menerus,6
+Kentut terus-menerus,5
+Gatal di dalam tubuh,4
+Gejala khas tifus,5
+Depresi,3
+Mudah marah,2
+Nyeri otot,2
+Kesadaran terganggu,2
+Bintik merah di tubuh,3
+Sakit perut,4
+Menstruasi tidak teratur,6
+Perubahan warna kulit,6
+Mata berair,4
+Nafsu makan meningkat,5
+Sering buang air kecil,4
+Riwayat keluarga,5
+Dahak berlendir,4
+Dahak berwarna seperti karat,4
+Sulit berkonsentrasi,3
+Gangguan penglihatan,3
+Pernah menerima transfusi darah,5
+Pernah menerima suntikan tidak steril,2
+Koma,7
+Pendarahan lambung,6
+Perut kembung atau bengkak,4
+Riwayat konsumsi alkohol,5
+Penumpukan cairan di tubuh,4
+Darah dalam dahak,5
+Urat menonjol di betis,6
+Jantung berdebar,4
+Nyeri saat berjalan,2
+Jerawat bernanah,2
+Komedo,2
+Mengelupas,2
+Kulit mengelupas,3
+Lapisan putih seperti serpihan di kulit,2
+Lekukan kecil pada kuku,2
+Peradangan pada kuku,2
+Lepuh,4
+Luka merah di sekitar hidung,2
+Kerak kuning yang keluar cairan,3
 prognosa,5
-
-
