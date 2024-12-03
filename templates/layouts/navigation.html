@@ -2,12 +2,10 @@
     <nav class="w-full mx-auto flex justify-between items-center p-3">
         <a href="{{ url_for('home') }}" >
             <div class="flex items-center ">
-                <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="mr-3">
+                <img src="{{ url_for('static', filename='images/svg/logoTim.svg') }}" alt="HealthCare Logo" class="mr-3 w-[55px]">
                 <span class="text-3xl font-semibold">GObat</span>
             </div>
         </a>
-
-
 
         <div class="nav-links hidden lg:flex space-x-10 font-medium text-xl">
             <!-- <a href="{{ url_for('rekomendasi') }}" class="hover:text-gray-300">Rekomendasi Pengobatan</a> -->
@@ -24,7 +22,7 @@
         </div>
     </nav>
 
-    <div class="mobile-menu hidden bg-[#673AB7] text-white space-y-4 py-4 font-medium ml-6 text-xl">
+    <div class="mobile-menu hidden bg-[#673AB7] text-white space-y-4 py-3 font-medium ml-6 mr-6 text-xl">
         <hr>
         <!-- <a href="{{ url_for('rekomendasi') }}" class="block hover:text-gray-300">Rekomendasi Pengobatan</a> -->
         <a href="{{ url_for('artikel_penyakit') }}" class="block hover:text-gray-300">Artikel Penyakit</a>
