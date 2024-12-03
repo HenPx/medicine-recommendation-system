@@ -314,7 +314,7 @@
       "Id_Obat": "O04-P5",
       "Nama": "Lasix Tablet",
       "Deskripsi": "Lasix adalah nama merek dagang dari obat yang mengandung zat aktif furosemide. Obat ini termasuk dalam golongan diuretik loop, yang bekerja dengan cara meningkatkan produksi urine.",
-      "Efek_Samping": "Perlu perhatian karena beberapa bahan dapat menimbulkan efek samping jika dikonsumsi berlebihan.",
+      "Efek_Samping": ["Diare", "Sakit tenggorokan", "Sembelit", "Pengelihatan buram"],
       "Sumber": "Alodokter (2019).",
       "Img": "images/jpg/artikel-obat/Lasix.jpg"
     },
@@ -322,8 +322,8 @@
       "Id_Penyakit": "P06",
       "Id_Obat": "O01-P6",
       "Nama": "Obat Alami Hepatitis B",
-      "Deskripsi": "1. Milk thistle\nPemberian milk thistle merupakan salah satu pengobatan hepatitis tradisional yang sudah terkenal sejak lama. Ekstrak tanaman ini telah banyak digunakan untuk mengatasi masalah kesehatan yang berkaitan dengan organ hati, saluran empedu, dan kantung empedu.\nPotensinya pernah dibuktikan oleh sebuah penelitian yang terbit pada jurnal Cellular Microbiology (2013). Dalam penelitian tersebut, terlihat bahwa obat herbal hepatitis ini dapat membantu menghambat virus hepatitis memasuki sel hati.\n2. Teh hijau\nMengonsumsi teh hijau bisa menjadi salah satu cara mengobati penyakit hepatitis secara alami.\n6. Temulawak\nTidak hanya kunyit, temulawak pun mengandung kurkumin. Senyawa kurkumin ini bersifat bersifat antioksidan sehingga bisa mengurangi peradangan pada liver. Jadi, obat herbal hepatitis ini berpotensi mengurangi komplikasi yang diakibatkan peradangan berkepanjangan, seperti kerusakan liver.\n",
-      "Efek_Samping": "Perlu perhatian karena beberapa bahan dapat menimbulkan efek samping jika dikonsumsi berlebihan.",
+      "Deskripsi": "Milk thistle\nPemberian milk thistle merupakan salah satu pengobatan hepatitis tradisional yang sudah terkenal sejak lama. Ekstrak tanaman ini telah banyak digunakan untuk mengatasi masalah kesehatan yang berkaitan dengan organ hati, saluran empedu, dan kantung empedu.\nPotensinya pernah dibuktikan oleh sebuah penelitian yang terbit pada jurnal Cellular Microbiology (2013). Dalam penelitian tersebut, terlihat bahwa obat herbal hepatitis ini dapat membantu menghambat virus hepatitis memasuki sel hati.\n2. Teh hijau\nMengonsumsi teh hijau bisa menjadi salah satu cara mengobati penyakit hepatitis secara alami.\n6. Temulawak\nTidak hanya kunyit, temulawak pun mengandung kurkumin. Senyawa kurkumin ini bersifat bersifat antioksidan sehingga bisa mengurangi peradangan pada liver. Jadi, obat herbal hepatitis ini berpotensi mengurangi komplikasi yang diakibatkan peradangan berkepanjangan, seperti kerusakan liver.\n",
+      "Efek_Samping": ["Pusing apabila tidak cocok terhadap bahan tersebut", "Mual dan juga muntah"],
       "Sumber": "Hello Sehat. (2022). 7 Obat Herbal yang Berpotensi Mengatasi Hepatitis - Hello Sehat. [online] Available at: https://hellosehat.com/pencernaan/hati/berbagai-cara-mengobati-hepatitis/ [Accessed 9 Nov. 2024].",
       "Img": "images/jpg/artikel-obat/hepatitisB_alami.jpg"
     },
