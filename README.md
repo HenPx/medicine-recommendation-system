@@ -1,4 +1,4 @@
-# ![](static/images/logo.svg) Shorten URL
+# ![](static/images/logo.svg) GObat
 
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
