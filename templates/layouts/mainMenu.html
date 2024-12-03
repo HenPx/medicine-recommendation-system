@@ -6,8 +6,8 @@
     <title>GObat</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/output-style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/svg/logoTim.svg') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="flex flex-col min-h-screen font-['Poppins'] bg-[#FFFDE7]">
@@ -15,7 +15,7 @@
             {% include 'layouts/navigation.html' %}
         </div>    
         <!-- Main content area -->
-         <div class="mt-[100px] mb-4 md:px-8">
+         <div class="mt-[80px] mb-4 md:px-8">
             {% block content %}
             <!-- This will be replaced by the specific content of the page -->
             
@@ -26,7 +26,12 @@
             {% include 'partials/footer.html' %}
         </div>
     </div>
-    
-    
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

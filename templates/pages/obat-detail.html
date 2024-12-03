@@ -1,7 +1,7 @@
 {% extends 'layouts/mainMenu.html' %}
 
 {% block content %}
-    <div class="p-6 pt-2 pb-2 space-y-4">
+    <div data-aos="fade-up" class="p-6 pt-2 pb-2 space-y-4">
         <!-- Sidebar with Search Bar -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0 md:ml-auto">
             <form action="{{ url_for('artikel_penyakit') }}" method="GET" class="flex items-center">
@@ -41,13 +41,13 @@
                     <ul class="space-y-1">
                         {% for effect in medicines.Efek_Samping %}
                             <li class="flex items-center space-x-4">
-                                <span>{{ loop.index }}. {{ effect }}</span>
+                                <span data-aos="fade-right" >{{ loop.index }}. {{ effect }}</span>
                             </li>
                         {% endfor %}
                     </ul>
 
-                    <h2 class="text-xl font-semibold ">Sumber</h2>
-                    <p class="text-justify break-words">{{ medicines.Sumber }}</p>
+                    <h2 data-aos="fade-right"  class="text-xl font-semibold ">Sumber</h2>
+                    <p data-aos="fade-right"  class="text-justify break-words">{{ medicines.Sumber }}</p>
                 </div>
             {% else %}
                 <p>No medicines found for "{{ request.args.get('pencarian', '') }}"</p>

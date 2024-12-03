@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="flex justify-between items-center p-6 pt-0 pb-4 space-x-4">
+<div  class="flex justify-between items-center p-6 pt-0 pb-4 space-x-4">
     <div class="flex space-x-4">
         <button id="articleBtn" class="px-4 py-2 rounded-lg border border-[#673AB7] {% if section == 'articles' %}bg-[#673AB7] text-white{% else %}text-[#673AB7]{% endif %} font-semibold" onclick="showSection('articles')">
             Artikel
@@ -44,11 +44,11 @@
 </div>
 
 <!-- Article Content Section -->
-<div id="articlesSection" class="flex flex-col space-y-4 p-6 pt-0 pb-0" {% if section != 'articles' %}style="display: none;"{% endif %}>
+<div data-aos="fade-up" id="articlesSection" class="flex flex-col space-y-4 p-6 pt-0 pb-0" {% if section != 'articles' %}style="display: none;"{% endif %}>
     {% if articles %}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for article in articles %}
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
                     <h2 class="text-xl font-semibold text-black mb-2">{{ article.Name }}</h2>
                     <p class="text-gray-700">
@@ -71,7 +71,7 @@
     {% if medicines %}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for medicine in medicines %}
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Obat</p>
                     <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.Nama }}</h2>
                     <p class="text-gray-700">
