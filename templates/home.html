@@ -3,7 +3,7 @@
 {% block content %}
 <div class="space-y-6">
     <!-- Slideshow Section with Transparent Background -->
-    <div class="p-6 flex justify-center bg-[#673AB7] rounded-none md:rounded-xl shadow-lg w-fit mx-auto ">
+    <div data-aos="fade-up" class="p-6 flex justify-center bg-[#673AB7] rounded-none md:rounded-xl shadow-lg w-fit mx-auto ">
         <div class="bg-[#B39DDB] flex flex-col items-center p-4 pl-6 pr-6 rounded-xl shadow-lg w-full">
             <!-- Teks Informasi -->
             <div class="flex-1 text-white text-center">
@@ -24,32 +24,32 @@
     
     </div>
 
-    <div class="flex flex-col md:flex-row  py-4 px-6 md:px-16 md:space-x-16">
+    <div data-aos="fade-up" class="flex flex-col md:flex-row  py-4 px-6 md:px-16 md:space-x-16">
         <div class="space-y-4 md:max-w-3xl 2xl:max-w-full text-justify">
             <h1 class="text-3xl font-semibold">Aplikasi Kami</h1>
             <div class="text-md space-y-4">
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Menu Rekomendasi Pengobatan</p>
                     <ol class="list-decimal pl-6">
                         <li>Buka aplikasi <strong>GObat.</strong></li>
                         <li>Pada halaman utama, pilih menu "Rekomendasi Pengobatan" untuk memulai proses diagnosis.</li>
                     </ol>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Memilih Gejala</p>
                     <ol class="list-decimal pl-6">
                         <li>Setelah masuk ke menu Rekomendasi Pengobatan, Anda akan melihat daftar gejala yang tersedia.</li>
                         <li>Pilih gejala-gejala yang sesuai dengan kondisi Anda saat ini. Anda dapat memilih lebih dari satu gejala jika diperlukan.
                     </ol>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Output Diagnosa Penyakit</p>
                     <ol class="list-decimal pl-6">
                         <li>Setelah memilih gejala, klik tombol "Prediksi Penyakit."</li>
                         <li>Sistem akan menganalisis gejala yang Anda pilih dan menampilkan hasil diagnosa penyakit yang mungkin Anda alami.</li>
                     </ol>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Informasi Penyakit</p>
                     <p>Setelah hasil diagnosa muncul, Anda akan mendapatkan informasi berikut:</p>
                     <ol class="list-decimal pl-6">
@@ -57,31 +57,28 @@
                         <li>Pengobatan: Rekomendasi pengobatan yang dapat dilakukan, baik pengobatan medis maupun opsi pengobatan rumah.</li>
                     </ol>
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Tips Pencegahan</p>
                     <p>Anda juga akan diberikan tips-tips pencegahan untuk menghindari komplikasi atau memperparah kondisi.</p>
                     
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <p class="text-xl font-bold">Rekomendasi Olahraga</p>
                     <p>Berdasarkan diagnosa, aplikasi akan memberikan rekomendasi jenis olahraga yang sesuai untuk membantu proses penyembuhan atau menjaga kesehatan.</p>
                     
                 </div>
-                
-                
-                
             </div>
         </div>
 
         <!-- Artikel Kesehatan -->
         {% if articles %}
         <div class="mt-2 w-full max-w-md">
-            <h1 class="text-2xl font-semibold mb-6">Artikel Kesehatan</h1>
+            <h1 data-aos="fade-up" class="text-2xl font-semibold mb-3">Artikel Kesehatan</h1>
             
             <!-- Stack articles vertically -->
             <div class="space-y-6">
                 {% for article in articles %}
-                <div class="bg-white p-6 rounded-[14px] border-2 border-[#B39DDB] shadow-md w-full">
+                <div data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}" class="bg-white p-6 rounded-[14px] border-2 border-[#B39DDB] shadow-md w-full">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
                     <h2 class="text-xl font-semibold text-black mb-2">{{ article.Name }}</h2>
                     

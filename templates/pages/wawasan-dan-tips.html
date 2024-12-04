@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/output-style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-[#F8F8FF]">
-    <div class="flex flex-col font-['Poppins'] bg-[#E5E7EB]">
+    <div data-aos="fade" class="flex flex-col font-['Poppins'] bg-[#E5E7EB]">
         <div class="flex flex-col md:flex-row p-6 bg-gray-200">
             <!-- Sidebar -->
             <div class="bg-[#673AB7] w-full md:w-20 flex md:flex-col items-start md:items-center md:pt-8 py-2 mb-4 rounded-lg">
@@ -28,7 +26,7 @@
                 <div id="loading-indicator" class="text-center text-gray-500   hidden">Processing...</div>
 
                 <div id="chatbox" class="flex-1 overflow-y-auto bg-[#E5E7EB] md:px-6 py-4 pb-0  ">
-                    <div
+                    <div 
                         id="chat"
                         class="space-y-4  bg-cover bg-no-repeat   rounded-lg  h-96 min-h-[500px] overflow-y-auto pr-4"
                         style="background-image: url('/path/to/your/chat-wallpaper.png'); background-size: cover;"
@@ -46,7 +44,7 @@
                             id="user-input"
                             placeholder="Type your message..."
                             onkeydown="if(event.key === 'Enter') sendMessage()"
-                            class="w-full p-3 pr-10 rounded-lg border border-x-4 border-b-4 border-purple-300 focus:outline-none focus:ring-purple-500"
+                            class="w-full p-3 pr-12 rounded-lg border border-x-4 border-b-4 border-purple-300 focus:outline-none focus:ring-purple-500"
                         />
                         <button
                             onclick="sendMessage()"
@@ -63,104 +61,112 @@
             {% include 'partials/footer.html' %}
         </div>
     </div>
-    
-    
-</body>
-<script>
-    function sendMessage() {
-        const userInput = document.getElementById("user-input").value.trim();
-        const chat = document.getElementById("chat");
-        const loadingIndicator = document.getElementById("loading-indicator");
-    
-        if (userInput === "") return;
-    
-        // Display user message with profile image
-        const userMessageContainer = document.createElement("div");
-        userMessageContainer.className = "flex items-end justify-end space-x-2 mb-3";
-    
-        const userMessageDiv = document.createElement("div");
-        userMessageDiv.className = "user-message  text-[#292929] p-3 rounded-lg bg-white border-r-4 border-[#B39DDB] shadow-md w-auto max-w-60%]";
-        userMessageDiv.textContent = userInput;
-    
-        const userProfileImg = document.createElement("img");
-        userProfileImg.src = "{{ url_for('static', filename='images/svg/user-chatbot.svg') }}";
-        userProfileImg.alt = "User Profile";
-        userProfileImg.className = "w-9 h-9  rounded-lg bg-[#B39DDB] ";
-    
-        userMessageContainer.appendChild(userMessageDiv);
-        userMessageContainer.appendChild(userProfileImg);
-        chat.appendChild(userMessageContainer);
-    
-        // Add spacing below user message
-        const marginMessageUser = document.createElement("div");
-        marginMessageUser.className = "mb-3";
-        chat.appendChild(marginMessageUser);
-    
-        // Clear input field and show loading indicator
-        document.getElementById("user-input").value = "";
-        loadingIndicator.classList.remove("hidden");
-    
-        // Auto-scroll to bottom
-        chat.scrollTop = chat.scrollHeight;
-    
-        // Send user message to the chatbot API
-        fetch("/chatbot-konsultasi", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ message: userInput })
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Display bot message with profile image
-            const botMessageContainer = document.createElement("div");
-            botMessageContainer.className = "flex items-start space-x-2 mb-3";
-    
-            const botProfileImg = document.createElement("img");
-            botProfileImg.src = "{{ url_for('static', filename='images/svg/bot-chatbot.svg') }}";
-            botProfileImg.alt = "Bot Profile";
-            botProfileImg.className = "w-9 h-9 rounded-lg bg-[#96E7E5] p-1 pb-0"; // Added padding for the background effect
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById("user-input").value.trim();
+            const chat = document.getElementById("chat");
+            const loadingIndicator = document.getElementById("loading-indicator");
+        
+            if (userInput === "") return;
+        
+            // Display user message with profile image
+            const userMessageContainer = document.createElement("div");
+            userMessageContainer.className = "flex items-end justify-end space-x-2 mb-3";
+        
+            const userMessageDiv = document.createElement("div");
+            userMessageDiv.className = "user-message  text-[#292929] p-3 rounded-lg bg-white border-r-4 border-[#B39DDB] shadow-md w-auto max-w-[70%] md:max-w-60%]";
+            userMessageDiv.textContent = userInput;
             
-    
-            const botMessageDiv = document.createElement("div");
-            botMessageDiv.className = "bot-message text-[#292929] p-3 rounded-lg bg-white border-l-4 border-[#96E7E5] shadow-md w-auto max-w-[60%]";
-            botMessageDiv.textContent = data.response || "I'm sorry, I didn't understand that.";
-    
-            botMessageContainer.appendChild(botProfileImg);
-            botMessageContainer.appendChild(botMessageDiv);
-            chat.appendChild(botMessageContainer);
-    
-            // Add spacing below bot message
-            const marginMessageBot = document.createElement("div");
-            marginMessageBot.className = "mb-3";
-            chat.appendChild(marginMessageBot);
-    
-            // Hide loading indicator after bot response
-            loadingIndicator.classList.add("hidden");
-    
-            // Auto-scroll to bottom after adding bot response
+        
+            const userProfileImg = document.createElement("img");
+            userProfileImg.src = "{{ url_for('static', filename='images/svg/user-chatbot.svg') }}";
+            userProfileImg.alt = "User Profile";
+            userProfileImg.className = "w-9 h-9  rounded-lg bg-[#B39DDB] ";
+        
+            userMessageContainer.appendChild(userMessageDiv);
+            userMessageContainer.appendChild(userProfileImg);
+            chat.appendChild(userMessageContainer);
+        
+            // Add spacing below user message
+            const marginMessageUser = document.createElement("div");
+            marginMessageUser.className = "mb-3";
+            chat.appendChild(marginMessageUser);
+        
+            // Clear input field and show loading indicator
+            document.getElementById("user-input").value = "";
+            loadingIndicator.classList.remove("hidden");
+        
+            // Auto-scroll to bottom
             chat.scrollTop = chat.scrollHeight;
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            const errorMessageDiv = document.createElement("div");
-            errorMessageDiv.className = "bot-message bg-red-100 text-red-800 p-3 rounded-xl shadow-md mr-auto w-full max-w-[80%]";
-            errorMessageDiv.textContent = "Oops! Something went wrong. Please try again.";
-            chat.appendChild(errorMessageDiv);
-    
-            // Add spacing below error message
-            const marginMessageError = document.createElement("div");
-            marginMessageError.className = "mb-3";
-            chat.appendChild(marginMessageError);
-    
-            // Hide loading indicator after error message
-            loadingIndicator.classList.add("hidden");
-    
-            // Auto-scroll to bottom after adding error message
-            chat.scrollTop = chat.scrollHeight;
-        });
-    }
-    
-</script>
+        
+            // Send user message to the chatbot API
+            fetch("/chatbot-konsultasi", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display bot message with profile image
+                const botMessageContainer = document.createElement("div");
+                botMessageContainer.className = "flex items-start space-x-2 mb-3";
+        
+                const botProfileImg = document.createElement("img");
+                botProfileImg.src = "{{ url_for('static', filename='images/svg/bot-chatbot.svg') }}";
+                botProfileImg.alt = "Bot Profile";
+                botProfileImg.className = "w-9 h-9 rounded-lg bg-[#96E7E5] p-1 pb-0"; // Added padding for the background effect
+                
+        
+                const botMessageDiv = document.createElement("div");
+                botMessageDiv.className = "bot-message text-[#292929] p-3 rounded-lg bg-white border-l-4 border-[#96E7E5] shadow-md w-auto max-w-[70%] md:max-w-60%]";
+                botMessageDiv.textContent = data.response || "I'm sorry, I didn't understand that.";
+        
+                botMessageContainer.appendChild(botProfileImg);
+                botMessageContainer.appendChild(botMessageDiv);
+                chat.appendChild(botMessageContainer);
+        
+                // Add spacing below bot message
+                const marginMessageBot = document.createElement("div");
+                marginMessageBot.className = "mb-3";
+                chat.appendChild(marginMessageBot);
+        
+                // Hide loading indicator after bot response
+                loadingIndicator.classList.add("hidden");
+        
+                // Auto-scroll to bottom after adding bot response
+                chat.scrollTop = chat.scrollHeight;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                const errorMessageDiv = document.createElement("div");
+                errorMessageDiv.className = "bot-message bg-red-100 text-red-800 p-3 rounded-xl shadow-md mr-auto w-full max-w-[80%]";
+                errorMessageDiv.textContent = "Oops! Something went wrong. Please try again.";
+                chat.appendChild(errorMessageDiv);
+        
+                // Add spacing below error message
+                const marginMessageError = document.createElement("div");
+                marginMessageError.className = "mb-3";
+                chat.appendChild(marginMessageError);
+        
+                // Hide loading indicator after error message
+                loadingIndicator.classList.add("hidden");
+        
+                // Auto-scroll to bottom after adding error message
+                chat.scrollTop = chat.scrollHeight;
+            });
+        }
+        
+    </script>
+</body>
 </html>

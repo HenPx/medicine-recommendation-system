@@ -113,7 +113,7 @@
       "Id_Obat": "O01-P3",
       "Nama": "Tenofovir/lamivudine/dolutegravir (TLD)",
       "Deskripsi": "Tenofovir/lamivudine/dolutegravir (TLD) adalah kombinasi obat antiretroviral yang digunakan untuk mengobati infeksi HIV. Obat ini merupakan salah satu pilihan utama dalam pengobatan HIV karena efektif dalam menekan virus HIV dan memiliki efek samping yang relatif lebih sedikit dibandingkan obat-obatan HIV generasi sebelumnya. TLD terdiri dari tiga jenis obat: Tenofovir: Mencegah virus HIV memperbanyak diri. Lamivudine: Juga mencegah virus HIV memperbanyak diri. Dolutegravir: Mencegah virus HIV menginfeksi sel-sel baru. TLD bekerja dengan cara menghambat siklus hidup virus HIV pada berbagai tahap, sehingga dapat menekan jumlah virus dalam darah dan memperkuat sistem kekebalan tubuh.",
-      "EfekSamping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, muntah, diare, atau sakit perut.",
         "Sakit kepala: Rasa tidak nyaman atau nyeri pada kepala.",
         "Pusing: Sensasi berputar atau tidak seimbang.",
@@ -134,7 +134,7 @@
       "Id_Obat": "O02-P3",
       "Nama": "Tenofovir/lamivudine/efavirenz (TLE)",
       "Deskripsi": "Tenofovir/lamivudine/efavirenz (TLE) adalah kombinasi obat antiretroviral yang umum digunakan untuk mengobati infeksi HIV. Kombinasi ini terdiri dari tiga obat aktif: Tenofovir, Lamivudine, Efavirenz. TLE bekerja dengan cara menghambat enzim yang dibutuhkan virus HIV untuk bereplikasi, memperlambat kerusakan sistem kekebalan tubuh yang disebabkan oleh HIV dan membantu meningkatkan kualitas hidup penderita HIV.",
-      "EfekSamping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, muntah, diare, dan sakit perut.",
         "Gangguan saraf: Pusing, sakit kepala, insomnia, dan kesulitan berkonsentrasi.",
         "Ruam kulit: Ruam kemerahan atau gatal-gatal.",
@@ -152,7 +152,7 @@
       "Id_Obat": "O03-P3",
       "Nama": "Acriptega",
       "Deskripsi": "Acriptega adalah obat yang digunakan untuk mengobati infeksi virus HIV pada orang dewasa dan remaja berusia 12 tahun ke atas. Obat ini termasuk dalam golongan obat antiretroviral dan merupakan kombinasi dari tiga obat aktif: Tenofovir, Lamivudine, dan Dolutegravir. Acriptega bekerja dengan cara menghambat enzim yang dibutuhkan virus HIV untuk memperbanyak diri, menekan jumlah virus HIV dalam darah dan membantu memulihkan sistem kekebalan tubuh.",
-      "EfekSamping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, muntah, diare, sakit perut.",
         "Pusing dan sakit kepala.",
         "Insomnia (susah tidur).",
@@ -172,7 +172,7 @@
       "Id_Obat": "O04-P3",
       "Nama": "Raltegravir",
       "Deskripsi": "Raltegravir (RGV) adalah obat yang dipakai sebagai bagian dari terapi antiretroviral (ART) yang dikenal dengan nama merek Isentress. Obat ini adalah inhibitor integrase pertama yang bekerja dengan menghambat enzim integrase, mencegah integrasi DNA HIV ke dalam DNA sel induk. Raltegravir tersedia dalam dosis 400mg dua kali sehari, atau tablet kunyah untuk anak-anak yang disesuaikan dengan berat badan.",
-      "EfekSamping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, muntah, diare, dan sakit perut.",
         "Sakit kepala.",
         "Pusing.",
@@ -591,7 +591,7 @@
       "Id_Obat": "O01-P10",
       "Nama": "Obat alami diabetes",
       "Deskripsi": "Kayu manis dikenal sebagai obat alami diabetes karena memiliki efek seperti insulin yang membantu menurunkan kadar gula darah serta mengurangi risiko komplikasi seperti penyakit jantung dan kerusakan saraf, meskipun penelitian lebih lanjut masih diperlukan. Ginseng, terutama jenis Amerika (Panax quinquefolius), dipercaya dapat menjaga kestabilan gula darah dan mencegah resistensi insulin, sehingga menurunkan risiko diabetes tipe 2. Lidah buaya, dengan kandungan fitosterolnya, membantu mengontrol kadar gula darah dengan mengurangi penyerapan gula di saluran cerna setelah makan. Jahe juga diyakini dapat menurunkan kadar gula darah yang tinggi dan menjaganya tetap stabil, meskipun studi mengenai khasiatnya masih terbatas. Cengkeh, melalui senyawa yang mampu meningkatkan produksi insulin, menjadi pilihan lain untuk mengontrol gula darah. Terakhir, gymnema, dengan efek antidiabetesnya, membantu menurunkan kadar gula darah dan meningkatkan efektivitas hormon insulin pada penderita diabetes tipe 2.",
-      "Efek_samping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, diare, atau sembelit.",
         "Alergi: Reaksi alergi dapat terjadi pada beberapa orang, terutama jika memiliki alergi terhadap bahan alami tersebut.",
         "Interaksi dengan obat lain: Obat alami dapat berinteraksi dengan obat-obatan yang sedang dikonsumsi, sehingga penting untuk berkonsultasi dengan dokter sebelum mengonsumsinya."
@@ -604,7 +604,7 @@
       "Id_Obat": "O03-P10",
       "Nama": "Metformin",
       "Deskripsi": "Metformin adalah obat yang umum digunakan untuk mengontrol kadar gula darah pada penderita diabetes tipe 2. Obat ini bekerja dengan cara mengurangi produksi gula, meningkatkan sensitivitas insulin, dan menurunkan penyerapan gula dari makanan.",
-      "Efek_samping": [
+      "Efek_Samping": [
         "Asidosis laktat: Kondisi serius yang terjadi ketika tubuh memiliki terlalu banyak asam laktat. Gejalanya meliputi nyeri otot, kesulitan bernapas, dan rasa sakit perut.",
         "Hipoglikemia: Kadar gula darah yang sangat rendah. Gejalanya meliputi keringat dingin, tremor, jantung berdebar, dan kebingungan."
       ],
@@ -616,7 +616,7 @@
       "Id_Obat": "O04-P10",
       "Nama": "Glucophage",
       "Deskripsi": "Glucophage adalah obat yang umum digunakan untuk mengontrol kadar gula darah pada penderita diabetes melitus tipe 2. Obat ini mengandung metformin, yang bekerja dengan cara meningkatkan sensitivitas tubuh terhadap insulin, mengurangi produksi glukosa di hati, dan menunda penyerapan glukosa di usus.",
-      "Efek_samping": [
+      "Efek_Samping": [
         "Gangguan pencernaan: Mual, muntah, diare, kembung, dan kehilangan nafsu makan.",
         "Rasa logam di mulut: Beberapa orang mungkin merasakan sensasi tidak menyenangkan seperti rasa logam di mulut.",
         "Pusing dan sakit kepala: Efek samping ini biasanya ringan dan dapat hilang dengan sendirinya."
