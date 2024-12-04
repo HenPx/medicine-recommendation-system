@@ -125,7 +125,7 @@ def search_articles():
 
         filtered_articles = data['articles']
     else:
-        filtered_articles = [article for article in data['articles'] if search_query in article['Name'].lower()]
+        filtered_articles = [article for article in data['articles'] if search_query in article['Definition'].lower()]
     return render_template('pages/artikel-penyakit.html', articles=filtered_articles, search_query=search_query, new=data['articles'])
 
 @app.route('/search-obat.html')
@@ -181,7 +181,7 @@ def artikel_penyakit():
     total_pages = 1
 
     if section == 'articles':
-        filtered_articles = [article for article in data['articles'] if search_query in article['Name'].lower()] if search_query else data['articles']
+        filtered_articles = [article for article in data['articles'] if search_query in article['Definition'].lower()] if search_query else data['articles']
 
         # Calculate pagination
         total = len(filtered_articles)
