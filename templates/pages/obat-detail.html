@@ -9,7 +9,7 @@
                     type="text" 
                     name="pencarian" 
                     placeholder="Cari obat" 
-                    class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                    class="w-full py-2 px-4 bg-[#FFFDE7] border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
                     value="{{ request.args.get('pencarian', '') }}"
                 />
                 <!-- Add hidden input to specify the section as 'medicines' -->
@@ -31,7 +31,7 @@
                     </div>
 
                     
-                    <h1 class="text-3xl font-semibold ">{{ medicines.Nama }}</h1>
+                    <h1 class="text-3xl font-semibold break-all">{{ medicines.Nama }}</h1>
                     <p class="text-justify">{{ medicines.Deskripsi }}</p>
                     
 
@@ -47,7 +47,7 @@
                     </ul>
 
                     <h2 data-aos="fade-right"  class="text-xl font-semibold ">Sumber</h2>
-                    <p data-aos="fade-right"  class="text-justify break-words">{{ medicines.Sumber }}</p>
+                    <p data-aos="fade-right"  class="text-justify break-all">{{ medicines.Sumber }}</p>
                 </div>
             {% else %}
                 <p>No medicines found for "{{ request.args.get('pencarian', '') }}"</p>

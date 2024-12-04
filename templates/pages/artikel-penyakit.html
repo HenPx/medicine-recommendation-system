@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div  class="flex justify-between items-center p-6 pt-0 pb-4 space-x-4">
-    <div class="flex space-x-4">
+<div  class="flex justify-between items-center p-6 pt-0 pb-4 space-x-3">
+    <div class="flex space-x-3">
         <button id="articleBtn" class="px-4 py-2 rounded-lg border border-[#673AB7] {% if section == 'articles' %}bg-[#673AB7] text-white{% else %}text-[#673AB7]{% endif %} font-semibold" onclick="showSection('articles')">
             Artikel
         </button>
@@ -18,7 +18,7 @@
                 type="text" 
                 name="search_query" 
                 placeholder="Cari artikel" 
-                class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                class="w-full py-2 px-4 border border-purple-400 bg-[#FFFDE7] rounded-lg focus:outline-none focus:border-purple-600"
                 value="{{ search_query }}"
             />
             <input type="hidden" name="section" value="articles">
@@ -32,7 +32,7 @@
                 type="text" 
                 name="pencarian" 
                 placeholder="Cari obat" 
-                class="w-full py-2 px-4 border border-purple-400 rounded-lg focus:outline-none focus:border-purple-600"
+                class="w-full py-2 px-4 border border-purple-400 bg-[#FFFDE7] rounded-lg focus:outline-none focus:border-purple-600"
                 value="{{ pencarian }}"
             />
             <input type="hidden" name="section" value="medicines">
@@ -46,21 +46,52 @@
 <!-- Article Content Section -->
 <div data-aos="fade-up" id="articlesSection" class="flex flex-col space-y-4 p-6 pt-0 pb-0" {% if section != 'articles' %}style="display: none;"{% endif %}>
     {% if articles %}
-        <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for article in articles %}
-                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md" 
+                    data-aos="fade-up" 
+                    data-aos-delay="{{ loop.index * 100 }}">  <!-- Add delay based on loop index -->
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Artikel</p>
                     <h2 class="text-xl font-semibold text-black mb-2">{{ article.Name }}</h2>
                     <p class="text-gray-700">
                         {{ article.Definition.split()[:15] | join(' ') }}{% if article.Definition.split()|length > 15 %}...{% endif %}
                     </p>
                     <a href="{{ url_for('article', slug=article.slug) }}" 
-                       class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
+                    class="block bg-[#673AB7] rounded-[14px] mt-3 py-2 px-4 text-center text-white font-semibold hover:bg-[#B39DDB] transition-colors duration-200">
                         Selengkapnya →
                     </a>
                 </div>
             {% endfor %}
         </div>
+        
+
+        <!-- Pagination for Articles -->
+        <div class="flex justify-center space-x-2 mt-6">
+            {% if page > 1 %}
+                <a href="?section={{ section }}&page={{ page - 1 }}&{% if section == 'articles' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                   class="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-md font-bold">
+                    <
+                </a>
+            {% endif %}
+        
+            {% for p in pagination %}
+                {% if p == '...' %}
+                    <span class="px-3 py-1">...</span>
+                {% else %}
+                    <a href="?section={{ section }}&page={{ p }}&{% if section == 'articles' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                       class="px-3 py-1 rounded-md {% if p == page %}bg-[#673AB7] text-white{% else %}bg-gray-200 hover:bg-gray-300{% endif %}">
+                        {{ p }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        
+            {% if page < total_pages %}
+                <a href="?section={{ section }}&page={{ page + 1 }}&{% if section == 'articles' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                   class="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-md font-bold">
+                    >
+                </a>
+            {% endif %}
+        </div>        
     {% else %}
         <p>Artikel tentang "{{ search_query }}" tidak ditemukan.</p>
     {% endif %}
@@ -71,9 +102,9 @@
     {% if medicines %}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for medicine in medicines %}
-                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow-md">
+                <div data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}" class="bg-white p-6 rounded-lg shadow-md">
                     <p class="mb-3 p-1 pl-3 pr-3 text-xs bg-[#673AB7] text-white rounded-md inline-block">Obat</p>
-                    <h2 class="text-xl font-semibold text-black mb-2">{{ medicine.Nama }}</h2>
+                    <h2 class="text-xl font-semibold text-black mb-2 break-words">{{ medicine.Nama }}</h2>
                     <p class="text-gray-700">
                         {{ medicine.Deskripsi.split()[:15] | join(' ') }}{% if medicine.Deskripsi.split()|length > 15 %}...{% endif %}
                     </p>
@@ -84,10 +115,40 @@
                 </div>
             {% endfor %}
         </div>
+
+        <!-- Pagination for Medicines -->
+        <div class="flex justify-center space-x-2 mt-6">
+            {% if page > 1 %}
+                <a href="?section={{ section }}&page={{ page - 1 }}&{% if section == 'medicines' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                   class="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-md font-bold">
+                    <
+                </a>
+            {% endif %}
+        
+            {% for p in pagination %}
+                {% if p == '...' %}
+                    <span class="px-3 py-1">...</span>
+                {% else %}
+                    <a href="?section={{ section }}&page={{ p }}&{% if section == 'medicines' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                       class="px-3 py-1 rounded-md {% if p == page %}bg-[#673AB7] text-white{% else %}bg-gray-200 hover:bg-gray-300{% endif %}">
+                        {{ p }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        
+            {% if page < total_pages %}
+                <a href="?section={{ section }}&page={{ page + 1 }}&{% if section == 'medicines' %}search_query={{ search_query }}{% else %}pencarian={{ pencarian }}{% endif %}" 
+                   class="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-md font-bold">
+                    >
+                </a>
+            {% endif %}
+        </div>
+        
     {% else %}
         <p>Obat tentang "{{ pencarian }}" tidak ditemukan.</p>
     {% endif %}
 </div>
+
 
 <script>
     function showSection(section) {

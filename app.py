@@ -142,6 +142,28 @@ def search_medicines():
         filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower()]
     return render_template('pages/artikel-penyakit.html', medicines=filtered_medicines, pencarian=pencarian)
 
+def generate_pagination(current_page, total_pages, max_visible=3):
+    pagination = []
+    end = 0
+    if total_pages <= max_visible + 2:
+        # Show all pages if total pages are few
+        pagination = list(range(1, total_pages + 1))
+    else:
+        # Always include first and last pages
+        pagination = [1]
+
+        if current_page > total_pages - 2:
+            pagination.extend(range(total_pages - 2, total_pages + 1))
+        else:
+            start = max(2, current_page - 1)
+            end = min(total_pages - 1, current_page + 1)
+            pagination.extend(range(start, end + 1))
+            if pagination[-1] < total_pages - 1:
+                pagination.append('...')
+            # Always include the last page
+            if total_pages > 1:
+                pagination.append(total_pages)
+    return pagination
 
     
 @app.route('/artikel-penyakit')
@@ -152,22 +174,58 @@ def artikel_penyakit():
     section = request.args.get('section', 'articles')
     search_query = request.args.get('search_query', '').lower()
     pencarian = request.args.get('pencarian', '').lower()
-    
+
+    # Pagination parameters
+    per_page = 6
+    page = int(request.args.get('page', 1))
+    total_pages = 1
+
     if section == 'articles':
-        data = load_article()
-        if search_query:
-            filtered_articles = [article for article in data['articles'] if search_query in article['Name'].lower()]
-        else:
-            filtered_articles = data['articles']
-        return render_template('pages/artikel-penyakit.html', articles=filtered_articles, section=section, search_query=search_query)
+        filtered_articles = [article for article in data['articles'] if search_query in article['Name'].lower()] if search_query else data['articles']
+
+        # Calculate pagination
+        total = len(filtered_articles)
+        total_pages = (total + per_page - 1) // per_page
+        start = (page - 1) * per_page
+        end = start + per_page
+        paginated_articles = filtered_articles[start:end]
+
+        # Generate pagination numbers
+        pagination = generate_pagination(page, total_pages)
+
+        return render_template(
+            'pages/artikel-penyakit.html',
+            articles=paginated_articles,
+            section=section,
+            search_query=search_query,
+            page=page,
+            total_pages=total_pages,
+            pagination=pagination,  # Pass pagination
+        )
 
     elif section == 'medicines':
-        obat = load_medicine()
-        if pencarian:
-            filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower()]
-        else:
-            filtered_medicines = obat['items']
-        return render_template('pages/artikel-penyakit.html', medicines=filtered_medicines, section=section, pencarian=pencarian)
+        filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower()] if pencarian else obat['items']
+
+        # Calculate pagination
+        total = len(filtered_medicines)
+        total_pages = (total + per_page - 1) // per_page
+        start = (page - 1) * per_page
+        end = start + per_page
+        paginated_medicines = filtered_medicines[start:end]
+
+        # Generate pagination numbers
+        pagination = generate_pagination(page, total_pages)
+
+        return render_template(
+            'pages/artikel-penyakit.html',
+            medicines=paginated_medicines,
+            section=section,
+            pencarian=pencarian,
+            page=page,
+            total_pages=total_pages,
+            pagination=pagination,  # Pass pagination
+        )
+
 
 
 @app.route('/rekomendasi-pengobatan')
