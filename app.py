@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify, session
+from stopWords import list_words
 import requests
 import os
 import json
@@ -115,32 +116,6 @@ def article(slug):
     else:
         return "Article tidak ditemukan", 404
     
-@app.route('/search-artikel.html')
-def search_articles():
-    data = load_article()
-    search_query = request.args.get('search_query', '').lower()
-    # Jika search_query kosong, tampilkan semua artikel
-    if not search_query or search_query == '':
-        data = load_article()
-
-        filtered_articles = data['articles']
-    else:
-        filtered_articles = [article for article in data['articles'] if search_query in article['Definition'].lower()]
-    return render_template('pages/artikel-penyakit.html', articles=filtered_articles, search_query=search_query, new=data['articles'])
-
-@app.route('/search-obat.html')
-def search_medicines():
-    obat = load_medicine()
-
-    pencarian = request.args.get('pencarian', '').lower()
-    # Jika pencarian kosong, tampilkan semua obat
-    if not pencarian or pencarian == '':
-        obat = load_medicine()
-
-        filtered_medicines = obat['items']
-    else:
-        filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower()]
-    return render_template('pages/artikel-penyakit.html', medicines=filtered_medicines, pencarian=pencarian)
 
 def generate_pagination(current_page, total_pages, max_visible=3):
     pagination = []
@@ -174,15 +149,28 @@ def artikel_penyakit():
     section = request.args.get('section', 'articles')
     search_query = request.args.get('search_query', '').lower()
     pencarian = request.args.get('pencarian', '').lower()
+    # Daftar kata dasar yang akan diabaikan
+    
+    stop_words = list_words
 
     # Pagination parameters
     per_page = 6
     page = int(request.args.get('page', 1))
     total_pages = 1
+    ambigu = False
 
     if section == 'articles':
-        filtered_articles = [article for article in data['articles'] if search_query in article['Definition'].lower()] if search_query else data['articles']
 
+         # Periksa apakah search_query kosong atau mengandung kata dasar
+        if search_query and (search_query in stop_words or all(word in stop_words for word in search_query.split())):
+            ambigu = True
+            filtered_articles = data['articles']
+        else:
+            filtered_articles = [
+                article for article in data['articles'] 
+                if search_query in article['Definition'].lower() or search_query in article['Name'].lower() 
+            ] if search_query else data['articles']
+            
         # Calculate pagination
         total = len(filtered_articles)
         total_pages = (total + per_page - 1) // per_page
@@ -201,10 +189,15 @@ def artikel_penyakit():
             page=page,
             total_pages=total_pages,
             pagination=pagination,  # Pass pagination
+            ambigu=ambigu,
         )
 
     elif section == 'medicines':
-        filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower()] if pencarian else obat['items']
+        if pencarian and (pencarian in stop_words or all(word in stop_words for word in pencarian.split())):
+            ambigu = True
+            filtered_medicines = obat['items']
+        else:
+            filtered_medicines = [item for item in obat['items'] if pencarian in item['Nama'].lower() or pencarian in item['Deskripsi'].lower()] if pencarian else obat['items']
 
         # Calculate pagination
         total = len(filtered_medicines)
@@ -224,6 +217,7 @@ def artikel_penyakit():
             page=page,
             total_pages=total_pages,
             pagination=pagination,  # Pass pagination
+            ambigu=ambigu,
         )
 
 
